@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aurora Solutions – Électricien à Pons (17800). Intervention rapide 7j/7. Dépannage, installation, rénovation électrique, bornes IRVE. Saintes, Royan, Cognac, Jonzac.">
+<title>Aurora Solutions – Électricien à Pons | Intervention Rapide 7j/7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue: #1a3c6e;
+    --blue-mid: #1e4d9b;
+    --blue-light: #2563eb;
+    --blue-pale: #e8f0fe;
+    --yellow: #f59e0b;
+    --yellow-dark: #d97706;
+    --yellow-light: #fef3c7;
+    --white: #ffffff;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-400: #94a3b8;
+    --gray-600: #475569;
+    --gray-800: #1e293b;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
+    --transition: 0.25s ease;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--gray-800);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  img { display: block; width: 100%; height: auto; }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ─── NAVBAR ─── */
+  .navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 999;
+    background: rgba(26, 60, 110, 0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-logo-icon {
+    width: 38px; height: 38px;
+    background: var(--yellow);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .nav-logo span { color: var(--yellow); }
+
+  .nav-links {
+    display: none;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+
+  .nav-links a:hover { color: var(--yellow); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-nav-phone {
+    background: var(--yellow);
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background var(--transition), transform var(--transition);
+    white-space: nowrap;
+  }
+
+  .btn-nav-phone:hover {
+    background: var(--yellow-dark);
+    transform: translateY(-1px);
+  }
+
+  @media (min-width: 768px) {
+    .nav-links { display: flex; }
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 28px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--blue);
+  }
+
+  .btn-primary:hover {
+    background: var(--yellow-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245,158,11,0.4);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.7);
+  }
+
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: var(--white);
+    transform: translateY(-2px);
+  }
+
+  .btn-blue {
+    background: var(--blue-light);
+    color: var(--white);
+  }
+
+  .btn-blue:hover {
+    background: var(--blue-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37,99,235,0.35);
+  }
+
+  /* ─── SECTION LAYOUT ─── */
+  .section {
+    padding: 80px 24px;
+  }
+
+  .section-gray {
+    background: var(--gray-50);
+  }
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: inline-block;
+    background: var(--yellow-light);
+    color: var(--yellow-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .section-title span { color: var(--blue-light); }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    margin-top: 12px;
+    max-width: 540px;
+  }
+
+  .section-header {
+    margin-bottom: 52px;
+  }
+
+  .section-header.center {
+    text-align: center;
+  }
+
+  .section-header.center .section-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 24px 60px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.25);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26,60,110,0.92) 0%, rgba(30,77,155,0.75) 60%, rgba(0,0,0,0.5) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+  }
+
+  .badge.yellow {
+    background: rgba(245,158,11,0.2);
+    border-color: var(--yellow);
+    color: var(--yellow);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5.5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+
+  .hero-title .highlight {
+    color: var(--yellow);
+    position: relative;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 36px;
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 52px;
+  }
+
+  .hero-ctas .btn {
+    font-size: 1.05rem;
+    padding: 18px 32px;
+  }
+
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .trust-icon {
+    width: 36px; height: 36px;
+    background: rgba(245,158,11,0.2);
+    border: 1px solid rgba(245,158,11,0.4);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+
+  .stars { color: var(--yellow); letter-spacing: 2px; font-size: 1rem; }
+
+  /* ─── REASSURANCE BAR ─── */
+  .reassurance {
+    background: var(--blue);
+    padding: 0 24px;
+  }
+
+  .reassurance-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .reassurance-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 20px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .reassurance-item:nth-child(even) { border-right: none; }
+  .reassurance-item:nth-child(n+3) { border-bottom: none; }
+
+  .r-icon {
+    width: 44px; height: 44px;
+    min-width: 44px;
+    background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .r-text strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .r-text span {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    .reassurance-inner {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .reassurance-item {
+      border-bottom: none;
+    }
+    .reassurance-item:nth-child(even) { border-right: 1px solid rgba(255,255,255,0.08); }
+    .reassurance-item:last-child { border-right: none; }
+  }
+
+  /* ─── SERVICES ─── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue-light), var(--yellow));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-icon {
+    width: 60px; height: 60px;
+    background: var(--blue-pale);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    color: var(--gray-600);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+
+  .service-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .service-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: var(--gray-600);
+  }
+
+  .service-list li::before {
+    content: '✓';
+    color: var(--blue-light);
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  /* ─── RÉALISATIONS ─── */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .gallery-item {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-item:hover img { transform: scale(1.06); }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,60,110,0.85) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity var(--transition);
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+  }
+
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  .gallery-overlay span {
+    color: var(--white);
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  /* ─── AVIS ─── */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 640px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: box-shadow var(--transition);
+  }
+
+  .review-card:hover { box-shadow: var(--shadow); }
+
+  .review-stars { color: var(--yellow); font-size: 1.1rem; margin-bottom: 12px; }
+
+  .review-text {
+    color: var(--gray-600);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .review-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--blue-pale);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    color: var(--blue);
+    font-size: 0.9rem;
+  }
+
+  .review-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+  }
+
+  .review-location {
+    font-size: 0.78rem;
+    color: var(--gray-400);
+  }
+
+  .review-badge {
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  .reviews-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    background: var(--blue-pale);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    flex-wrap: wrap;
+  }
+
+  .summary-score {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--blue);
+    line-height: 1;
+  }
+
+  .summary-right { text-align: left; }
+
+  .summary-right .stars { font-size: 1.2rem; }
+
+  .summary-right p {
+    color: var(--gray-600);
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
+
+  /* ─── ZONE D'INTERVENTION ─── */
+  .zone-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .zone-content { grid-template-columns: 1fr 1fr; }
+  }
+
+  .zone-map-placeholder {
+    background: var(--blue-pale);
+    border-radius: var(--radius);
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border: 2px dashed var(--blue-light);
+    color: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .zone-map-placeholder .map-icon { font-size: 3rem; }
+
+  .zone-cities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .city-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    transition: all var(--transition);
+    cursor: default;
+  }
+
+  .city-tag:hover {
+    border-color: var(--blue-light);
+    background: var(--blue-pale);
+  }
+
+  .city-tag.main {
+    border-color: var(--blue-light);
+    background: var(--blue-pale);
+    grid-column: span 2;
+  }
+
+  .city-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--blue-light);
+    flex-shrink: 0;
+  }
+
+  .city-tag.main .city-dot { background: var(--yellow); width: 10px; height: 10px; }
+
+  .city-tag span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .city-tag.main span { color: var(--blue); font-size: 1rem; }
+
+  .zone-note {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ─── PROCESS ─── */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .process-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .process-card {
+    text-align: center;
+    padding: 32px 20px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    transition: all var(--transition);
+  }
+
+  .process-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--blue-light);
+  }
+
+  .process-num {
+    width: 56px; height: 56px;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .process-icon {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
+
+  .process-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .process-card p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* ─── FAQ ─── */
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: border-color var(--transition);
+  }
+
+  .faq-item:hover { border-color: var(--blue-light); }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--blue);
+    user-select: none;
+    list-style: none;
+  }
+
+  .faq-question::-webkit-details-marker { display: none; }
+
+  .faq-chevron {
+    font-size: 1.2rem;
+    color: var(--blue-light);
+    transition: transform var(--transition);
+    flex-shrink: 0;
+  }
+
+  details[open] .faq-chevron { transform: rotate(180deg); }
+
+  .faq-answer {
+    padding: 0 24px 20px;
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    line-height: 1.75;
+    border-top: 1px solid var(--gray-100);
+  }
+
+  /* ─── CONTACT ─── */
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .contact-wrapper { grid-template-columns: 1fr 1.2fr; }
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-phone-block {
+    background: var(--blue);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+  }
+
+  .contact-phone-block p {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+
+  .phone-number {
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    font-weight: 900;
+    color: var(--yellow);
+    letter-spacing: 0.02em;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+  }
+
+  .detail-icon {
+    width: 40px; height: 40px;
+    min-width: 40px;
+    background: var(--blue-pale);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .detail-text strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .detail-text span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .response-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    color: #2e7d32;
+    font-weight: 600;
+  }
+
+  /* ─── FORM ─── */
+  .contact-form {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 36px;
+    box-shadow: var(--shadow);
+  }
+
+  .contact-form h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .contact-form > p {
+    font-size: 0.88rem;
+    color: var(--gray-600);
+    margin-bottom: 24px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 480px) {
+    .form-row { grid-template-columns: 1fr 1fr; }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    font-size: 0.93rem;
+    font-family: inherit;
+    color: var(--gray-800);
+    background: var(--white);
+    transition: border-color var(--transition);
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue-light);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-submit {
+    width: 100%;
+    font-size: 1rem;
+    padding: 16px;
+  }
+
+  .form-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    margin-top: 12px;
+  }
+
+  /* ─── CTA FINAL ─── */
+  .cta-final {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+    padding: 80px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-final::before {
+    content: '⚡';
+    position: absolute;
+    top: -20px; right: 5%;
+    font-size: 10rem;
+    opacity: 0.04;
+    line-height: 1;
+  }
+
+  .cta-final h2 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .cta-final p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .cta-phone-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+  }
+
+  .cta-phone-display strong { color: var(--yellow); font-size: 1.1rem; }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    background: #0f1f3d;
+    padding: 60px 24px 0;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .footer-grid {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .footer-grid { grid-template-columns: 2fr 1.2fr 1.2fr 1.5fr; } }
+
+  .footer-brand .nav-logo { margin-bottom: 16px; }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .footer-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-email {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .footer-col h4 {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links li a {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    transition: color var(--transition);
+  }
+
+  .footer-links li a:hover { color: var(--yellow); }
+
+  .footer-zones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .zone-chip {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+  }
+
+  .footer-bottom {
+    max-width: 1160px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .footer-bottom a {
+    color: rgba(255,255,255,0.45);
+    transition: color var(--transition);
+  }
+
+  .footer-bottom a:hover { color: var(--yellow); }
+
+  /* ─── PHONE STICKY MOBILE ─── */
+  .sticky-phone {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 998;
+    background: var(--yellow);
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 1.05rem;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    text-decoration: none;
+  }
+
+  @media (max-width: 767px) {
+    .sticky-phone { display: flex; }
+    body { padding-bottom: 60px; }
+  }
+
+  /* ─── CERT STRIP ─── */
+  .cert-strip {
+    background: var(--yellow-light);
+    border-top: 2px solid var(--yellow);
+    border-bottom: 2px solid var(--yellow);
+    padding: 18px 24px;
+    text-align: center;
+  }
+
+  .cert-strip-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--blue);
+  }
+
+  .cert-badge {
+    background: var(--blue);
+    color: var(--yellow);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── STAT BAR ─── */
+  .stat-bar {
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 36px 24px;
+  }
+
+  .stat-bar-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .stat-bar-inner { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .stat-item .stat-number {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--blue);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .stat-item .stat-number span { color: var(--yellow); }
+
+  .stat-item p {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * {
+    animation: fadeInUp 0.6s ease both;
+  }
+
+  .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+  @media (min-width: 768px) {
+    .section { padding: 100px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">⚡</div>
+    Aurora <span>Solutions</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#realisations">Réalisations</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#zone">Zone</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="tel:+33XXXXXXXXX" class="btn-nav-phone">
+      📞 Appeler
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <div class="hero-badges">
+      <span class="badge yellow">⭐ 5/5 – Avis clients</span>
+      <span class="badge">🏅 Certifié IRVE</span>
+      <span class="badge">📍 Pons & Charente-Maritime</span>
+    </div>
+    <h1 class="hero-title">
+      Électricien à Pons –<br>
+      Intervention <span class="highlight">rapide 7j/7</span>
+    </h1>
+    <p class="hero-subtitle">
+      Dépannage, installation, rénovation électrique et bornes IRVE.<br>
+      Saintes, Royan, Cognac, Jonzac et toute la Charente-Maritime.
+    </p>
+    <div class="hero-ctas">
+      <a href="tel:+33XXXXXXXXX" class="btn btn-primary">📞 Appeler maintenant</a>
+      <a href="#contact" class="btn btn-outline">✉️ Demander un devis</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <div class="trust-icon">⭐</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <span>5/5 · +80 avis clients</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🚗</div>
+        <span>Certifié IRVE</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">⚡</div>
+        <span>Devis gratuit sous 24h</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <span>Travaux garantis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BARRE DE RÉASSURANCE -->
+<div class="reassurance">
+  <div class="reassurance-inner">
+    <div class="reassurance-item">
+      <div class="r-icon">⚡</div>
+      <div class="r-text">
+        <strong>Intervention rapide</strong>
+        <span>Dépannage en urgence</span>
+      </div>
+    </div>
+    <div class="reassurance-item">
+      <div class="r-icon">💶</div>
+      <div class="r-text">
+        <strong>Devis gratuit</strong>
+        <span>Sans engagement</span>
+      </div>
+    </div>
+    <div class="reassurance-item">
+      <div class="r-icon">🏅</div>
+      <div class="r-text">
+        <strong>Certifié IRVE</strong>
+        <span>Bornes de recharge</span>
+      </div>
+    </div>
+    <div class="reassurance-item">
+      <div class="r-icon">📅</div>
+      <div class="r-text">
+        <strong>7j/7</strong>
+        <span>Disponible week-end</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-bar-inner">
+    <div class="stat-item">
+      <div class="stat-number">+<span>800</span></div>
+      <p>Chantiers réalisés</p>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>10</span>+</div>
+      <p>Ans d'expérience</p>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>5</span>/5</div>
+      <p>Note moyenne clients</p>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>24</span>h</div>
+      <p>Délai devis gratuit</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Nos prestations</span>
+      <h2 class="section-title">Des services <span>complets</span><br>pour tous vos besoins</h2>
+      <p class="section-sub">Artisan qualifié, nous intervenons pour les particuliers et les professionnels en Charente-Maritime.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Dépannage électrique</h3>
+        <p>Panne, court-circuit, disjoncteur qui saute ? Nous intervenons rapidement pour remettre votre installation en sécurité.</p>
+        <ul class="service-list">
+          <li>Urgence 7j/7, même le week-end</li>
+          <li>Recherche et localisation de pannes</li>
+          <li>Remplacement de composants défectueux</li>
+          <li>Mise en sécurité immédiate</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚗</div>
+        <h3>Borne IRVE – Wallbox</h3>
+        <p>Installation de bornes de recharge pour véhicules électriques, à domicile ou en entreprise. Certifié IRVE.</p>
+        <ul class="service-list">
+          <li>Installation wallbox maison / garage</li>
+          <li>Solutions entreprises et copropriétés</li>
+          <li>Étude technique et dimensionnement</li>
+          <li>Compatible toutes marques VE</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Rénovation électrique</h3>
+        <p>Mise aux normes, remplacement de tableau, installation complète. Votre sécurité avant tout.</p>
+        <ul class="service-list">
+          <li>Mise aux normes NF C 15-100</li>
+          <li>Remplacement et modernisation tableau</li>
+          <li>Câblage et prises courant / communication</li>
+          <li>Éclairage LED et domotique</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT STRIP -->
+<div class="cert-strip">
+  <div class="cert-strip-inner">
+    <div class="cert-item">
+      <span class="cert-badge">IRVE</span>
+      Qualification borne de recharge véhicule électrique
+    </div>
+    <div class="cert-item">
+      <span class="cert-badge">RGE</span>
+      Reconnu Garant de l'Environnement
+    </div>
+    <div class="cert-item">
+      <span class="cert-badge">NF C</span>
+      Conformité norme NF C 15-100
+    </div>
+    <div class="cert-item">
+      <span class="cert-badge">QUALIFELEC</span>
+      Électricien qualifié
+    </div>
+  </div>
+</div>
+
+<!-- RÉALISATIONS -->
+<section class="section section-gray" id="realisations">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">Nos <span>réalisations</span></h2>
+      <p class="section-sub">Des travaux soignés, conformes aux normes, réalisés avec rigueur et professionnalisme.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Tableau électrique rénové">
+        <div class="gallery-overlay"><span>Tableau électrique neuf</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1601904767768-72f48b9d2d47?w=600&q=80&auto=format&fit=crop" alt="Installation LED">
+        <div class="gallery-overlay"><span>Éclairage LED moderne</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop" alt="Installation borne IRVE">
+        <div class="gallery-overlay"><span>Borne IRVE – Wallbox</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&q=80&auto=format&fit=crop" alt="Intervention électricien">
+        <div class="gallery-overlay"><span>Dépannage en urgence</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80&auto=format&fit=crop" alt="Câblage propre">
+        <div class="gallery-overlay"><span>Câblage et rénovation</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format&fit=crop" alt="Installation extérieure">
+        <div class="gallery-overlay"><span>Installation extérieure</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section class="section" id="avis">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">Témoignages</span>
+      <h2 class="section-title">Ce que disent <span>nos clients</span></h2>
+    </div>
+    <div class="reviews-summary">
+      <div class="summary-score">5.0</div>
+      <div class="summary-right">
+        <div class="stars">★★★★★</div>
+        <p>Note parfaite · +80 avis vérifiés</p>
+        <p>Google My Business · Pages Jaunes</p>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Intervention super rapide après ma panne de tableau électrique un samedi matin. Professionnel, efficace et prix correct. Je recommande vivement !"</p>
+        <div class="review-author">
+          <div class="review-avatar">MF</div>
+          <div>
+            <div class="review-name">Marie-France D.</div>
+            <div class="review-location">Saintes (17)</div>
+            <div class="review-badge">✓ Avis vérifié Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Installation de ma wallbox en moins de 2 heures. Très bon travail, câblage impeccable et explications claires. Merci Aurora Solutions !"</p>
+        <div class="review-author">
+          <div class="review-avatar">JL</div>
+          <div>
+            <div class="review-name">Jean-Luc M.</div>
+            <div class="review-location">Pons (17)</div>
+            <div class="review-badge">✓ Avis vérifié Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Rénovation électrique complète de notre maison. Travail soigné, respect des délais et du devis initial. Une équipe vraiment sérieuse et de confiance."</p>
+        <div class="review-author">
+          <div class="review-avatar">SC</div>
+          <div>
+            <div class="review-name">Sophie & Christophe R.</div>
+            <div class="review-location">Royan (17)</div>
+            <div class="review-badge">✓ Avis vérifié Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Dépannage rapide pour un problème d'éclairage extérieur. Diagnostic précis en quelques minutes. Prix honnête. Je n'hésiterai pas à faire appel à eux."</p>
+        <div class="review-author">
+          <div class="review-avatar">PB</div>
+          <div>
+            <div class="review-name">Pierre-André B.</div>
+            <div class="review-location">Jonzac (17)</div>
+            <div class="review-badge">✓ Avis vérifié Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Mise aux normes de notre local commercial. Travail de qualité, respect des normes et disponibilité exemplaire. Merci pour votre professionnalisme !"</p>
+        <div class="review-author">
+          <div class="review-avatar">AL</div>
+          <div>
+            <div class="review-name">Amélie L.</div>
+            <div class="review-location">Cognac (16)</div>
+            <div class="review-badge">✓ Avis vérifié Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Excellent artisan ! Rapide, propre dans son travail et très à l'écoute. Le tableau électrique a été refait parfaitement. Je recommande sans hésitation."</p>
+        <div class="review-author">
+          <div class="review-avatar">TG</div>
+          <div>
+            <div class="review-name">Thomas G.</div>
+            <div class="review-location">Gémozac (17)</div>
+            <div class="review-badge">✓ Avis vérifié Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONE D'INTERVENTION -->
+<section class="section section-gray" id="zone">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Zone d'intervention</span>
+      <h2 class="section-title">Nous intervenons dans<br>toute la <span>Charente-Maritime</span></h2>
+      <p class="section-sub">Basés à Pons, nous couvrons un large secteur autour de la Saintonge et du littoral charentais.</p>
+    </div>
+    <div class="zone-content">
+      <div>
+        <div class="zone-cities">
+          <div class="city-tag main">
+            <div class="city-dot"></div>
+            <span>📍 Pons (17800) – Siège principal</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Saintes</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Royan</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Cognac</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Jonzac</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Gémozac</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Île d'Oléron</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Cozes</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Saujon</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Mirambeau</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Archiac</span>
+          </div>
+          <div class="city-tag">
+            <div class="city-dot"></div>
+            <span>Saint-Genis-de-S.</span>
+          </div>
+        </div>
+        <p class="zone-note">
+          🗺️ Vous ne voyez pas votre commune ? Contactez-nous, nous étudions chaque demande.
+        </p>
+      </div>
+      <div class="zone-map-placeholder">
+        <div class="map-icon">🗺️</div>
+        <strong>Charente-Maritime (17)</strong>
+        <p style="font-size:0.82rem;color:var(--gray-600);text-align:center;padding:0 20px">Zone couverte : Pons · Saintes · Royan · Cognac · Jonzac et alentours</p>
+        <a href="tel:+33XXXXXXXXX" class="btn btn-blue" style="margin-top:8px">📞 Vérifier ma zone</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">Comment ça marche ?</span>
+      <h2 class="section-title">Une intervention <span>simple</span> en 4 étapes</h2>
+      <p class="section-sub">Du premier appel à la validation des travaux, on vous accompagne à chaque étape.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-icon">📞</div>
+        <div class="process-num">1</div>
+        <h3>Prise de contact</h3>
+        <p>Appelez-nous ou envoyez une demande de devis. Réponse garantie en moins de 2h.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon">🔍</div>
+        <div class="process-num">2</div>
+        <h3>Diagnostic</h3>
+        <p>Évaluation précise de votre besoin, devis clair et transparent, sans surprise.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon">⚡</div>
+        <div class="process-num">3</div>
+        <h3>Intervention</h3>
+        <p>Nos électriciens qualifiés interviennent rapidement, proprement et efficacement.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon">✅</div>
+        <div class="process-num">4</div>
+        <h3>Validation</h3>
+        <p>Contrôle final avec vous, explication des travaux réalisés et remise des certificats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-gray" id="faq">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Questions <span>fréquentes</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">
+          Quel est le délai d'intervention pour un dépannage urgent ?
+          <span class="faq-chevron">▼</span>
+        </summary>
+        <div class="faq-answer">
+          Pour les dépannages en urgence, nous faisons tout notre possible pour intervenir le jour même, souvent dans les heures qui suivent votre appel. Nous sommes disponibles 7 jours sur 7, week-ends et jours fériés inclus. Appelez-nous directement pour un délai précis selon votre zone.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          Le devis est-il vraiment gratuit et sans engagement ?
+          <span class="faq-chevron">▼</span>
+        </summary>
+        <div class="faq-answer">
+          Oui, absolument. Nous réalisons tous nos devis gratuitement et sans aucun engagement de votre part. Vous recevez un chiffrage détaillé et transparent sous 24h. Vous êtes libre d'accepter ou de refuser, sans frais.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          Êtes-vous certifié pour installer des bornes de recharge IRVE ?
+          <span class="faq-chevron">▼</span>
+        </summary>
+        <div class="faq-answer">
+          Oui, Aurora Solutions est certifié IRVE (Infrastructure de Recharge pour Véhicules Électriques). Cette certification est obligatoire pour bénéficier des aides de l'État (crédit d'impôt, bonus Advenir). Nous installons des wallbox pour les particuliers comme pour les professionnels.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          Quelles garanties sur les travaux réalisés ?
+          <span class="faq-chevron">▼</span>
+        </summary>
+        <div class="faq-answer">
+          Tous nos travaux sont couverts par la garantie décennale et la garantie biennale sur les équipements. Nous sommes assurés en responsabilité civile professionnelle. Vous pouvez faire appel à nous en toute sérénité pour vos installations électriques.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          Intervenez-vous chez les professionnels et entreprises ?
+          <span class="faq-chevron">▼</span>
+        </summary>
+        <div class="faq-answer">
+          Oui, nous intervenons aussi bien chez les particuliers que chez les professionnels : commerces, bureaux, entrepôts, restaurants, hôtels, copropriétés. Nos équipes s'adaptent à vos contraintes horaires pour minimiser la gêne liée aux travaux.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Nous contacter</span>
+      <h2 class="section-title">Besoin d'un électricien ?<br><span>Contactez-nous</span></h2>
+      <p class="section-sub">Un problème électrique, un projet de rénovation ou une question ? On répond vite.</p>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="contact-phone-block">
+          <p>📞 Appelez-nous directement</p>
+          <a href="tel:+33XXXXXXXXX" class="phone-number">05 XX XX XX XX</a>
+          <a href="tel:+33XXXXXXXXX" class="btn btn-primary" style="width:100%">Appeler maintenant</a>
+        </div>
+        <div class="contact-detail">
+          <div class="detail-icon">📍</div>
+          <div class="detail-text">
+            <strong>Adresse</strong>
+            <span>Pons, 17800 – Charente-Maritime</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="detail-icon">✉️</div>
+          <div class="detail-text">
+            <strong>Email</strong>
+            <span>contact@aurora-solutions.fr</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="detail-icon">⏰</div>
+          <div class="detail-text">
+            <strong>Disponibilité</strong>
+            <span>7j/7 – Urgences 24h/24</span>
+          </div>
+        </div>
+        <div class="response-notice">
+          ✅ Réponse garantie sous 24h ouvrées
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Demande de devis gratuit</h3>
+        <p>Décrivez votre besoin, nous vous rappelons rapidement.</p>
+        <form action="#" method="POST" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom:0">
+              <label for="nom">Nom complet *</label>
+              <input type="text" id="nom" name="nom" placeholder="Jean Dupont" required>
+            </div>
+            <div class="form-group" style="margin-bottom:0">
+              <label for="tel">Téléphone *</label>
+              <input type="tel" id="tel" name="telephone" placeholder="06 XX XX XX XX" required>
+            </div>
+          </div>
+          <div class="form-row" style="margin-top:16px">
+            <div class="form-group" style="margin-bottom:0">
+              <label for="ville">Ville *</label>
+              <input type="text" id="ville" name="ville" placeholder="Saintes, Royan…" required>
+            </div>
+            <div class="form-group" style="margin-bottom:0">
+              <label for="service">Type de prestation</label>
+              <select id="service" name="service">
+                <option value="">Sélectionner…</option>
+                <option>Dépannage urgent</option>
+                <option>Installation borne IRVE</option>
+                <option>Rénovation électrique</option>
+                <option>Mise aux normes</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Décrivez votre besoin</label>
+            <textarea id="message" name="message" placeholder="Ex : Mon disjoncteur saute fréquemment, j'ai besoin d'un diagnostic…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            ✉️ Envoyer ma demande
+          </button>
+          <p class="form-note">🔒 Vos données restent confidentielles · Réponse sous 24h</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="container">
+    <h2>Besoin d'un électricien en Charente-Maritime ?</h2>
+    <p>Intervention rapide, devis gratuit, travail garanti. Appelez maintenant ou demandez votre devis en ligne.</p>
+    <div class="cta-buttons">
+      <a href="tel:+33XXXXXXXXX" class="btn btn-primary" style="font-size:1.1rem;padding:18px 36px">📞 Appeler maintenant</a>
+      <a href="#contact" class="btn btn-outline" style="font-size:1.05rem;padding:18px 32px">Demander un devis gratuit</a>
+    </div>
+    <div class="cta-phone-display">
+      <span>Ou composez directement le</span>
+      <strong>05 XX XX XX XX</strong>
+      <span>· Disponible 7j/7</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:16px">
+        <div class="nav-logo-icon">⚡</div>
+        Aurora <span>Solutions</span>
+      </div>
+      <p>Électricien artisan basé à Pons (17800), intervenant en Charente-Maritime. Dépannage, rénovation, installation et bornes IRVE.</p>
+      <div class="footer-phone">📞 05 XX XX XX XX</div>
+      <div class="footer-email">contact@aurora-solutions.fr</div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Dépannage électrique</a></li>
+        <li><a href="#services">Installation borne IRVE</a></li>
+        <li><a href="#services">Rénovation électrique</a></li>
+        <li><a href="#services">Mise aux normes NF C 15-100</a></li>
+        <li><a href="#services">Éclairage LED</a></li>
+        <li><a href="#services">Domotique</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informations</h4>
+      <ul class="footer-links">
+        <li><a href="#avis">Avis clients</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#process">Notre méthode</a></li>
+        <li><a href="#contact">Devis gratuit</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Zone d'intervention</h4>
+      <div class="footer-zones">
+        <span class="zone-chip">Pons</span>
+        <span class="zone-chip">Saintes</span>
+        <span class="zone-chip">Royan</span>
+        <span class="zone-chip">Cognac</span>
+        <span class="zone-chip">Jonzac</span>
+        <span class="zone-chip">Gémozac</span>
+        <span class="zone-chip">Île d'Oléron</span>
+        <span class="zone-chip">Cozes</span>
+        <span class="zone-chip">Saujon</span>
+        <span class="zone-chip">Mirambeau</span>
+        <span class="zone-chip">Archiac</span>
+      </div>
+      <p style="margin-top:14px;font-size:0.78rem;color:rgba(255,255,255,0.4)">Charente-Maritime (17) et alentours</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Aurora Solutions – Tous droits réservés</span>
+    <span>
+      <a href="#">Mentions légales</a> ·
+      <a href="#">CGV</a> ·
+      <a href="#">Confidentialité</a>
+    </span>
+    <span>SIRET : XXX XXX XXX XXXXX</span>
+  </div>
+</footer>
+
+<!-- STICKY PHONE MOBILE -->
+<a href="tel:+33XXXXXXXXX" class="sticky-phone">
+  📞 Appeler – 05 XX XX XX XX
+</a>
+
+</body>
+</html>
