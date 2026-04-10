@@ -213,8 +213,8 @@ ul { list-style: none; }
 /* ── HERO ── */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 640px;
+  height: 88vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
 }
@@ -230,57 +230,304 @@ ul { list-style: none; }
   inset: 0;
   background: linear-gradient(
     108deg,
-    rgba(9,20,35,0.92) 0%,
-    rgba(13,31,53,0.78) 55%,
-    rgba(13,31,53,0.38) 100%
+    rgba(9,20,35,0.95) 0%,
+    rgba(13,31,53,0.82) 50%,
+    rgba(13,31,53,0.55) 100%
   );
 }
-.hero-inner {
+.hero-layout {
   position: relative;
   z-index: 2;
-  max-width: 660px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .hero-layout { grid-template-columns: 1fr; }
+  .hero-anim { display: none; }
+}
+.hero-inner {
+  background: rgba(10, 22, 40, 0.48);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 52px 56px;
+}
+@media (max-width: 640px) {
+  .hero-inner { padding: 36px 28px; }
 }
 .hero-label {
   display: block;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.42);
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .hero h1 {
-  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
   font-weight: 700;
   color: var(--white);
   line-height: 1.17;
   letter-spacing: -0.025em;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 .hero-sub {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.68);
-  line-height: 1.8;
-  margin-bottom: 42px;
-  max-width: 500px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.85;
+  margin-bottom: 44px;
   font-weight: 300;
 }
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 .hero-phone-link {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255,255,255,0.65);
   letter-spacing: 0.02em;
   transition: color var(--ease);
 }
 .hero-phone-link:hover { color: var(--white); }
+
+.hero-promises {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+.hero-promises li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.4;
+}
+.hero-promises li::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--gold-btn);
+  flex-shrink: 0;
+}
+
+.hero-reviews {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.hr-stars {
+  color: #e09a10;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+.hr-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.hr-score {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+.hr-count {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.06em;
+}
+.hr-sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+.hr-quote {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.42);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ── HERO ANIMATION ── */
+.hero-anim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elec-canvas {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1;
+  position: relative;
+}
+/* Outer ring */
+.elec-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(224, 154, 16, 0.15);
+  animation: rotateRing 18s linear infinite;
+}
+.elec-ring:nth-child(2) {
+  inset: 28px;
+  border-color: rgba(255,255,255,0.06);
+  animation-duration: 24s;
+  animation-direction: reverse;
+}
+.elec-ring:nth-child(3) {
+  inset: 56px;
+  border-color: rgba(224,154,16,0.08);
+  animation-duration: 14s;
+}
+@keyframes rotateRing {
+  to { transform: rotate(360deg); }
+}
+/* Orbit dots */
+.elec-ring::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-btn);
+  box-shadow: 0 0 10px 2px rgba(224,154,16,0.6);
+}
+.elec-ring:nth-child(2)::before {
+  width: 4px; height: 4px;
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.25);
+}
+.elec-ring:nth-child(3)::before {
+  width: 5px; height: 5px;
+  background: var(--gold);
+  box-shadow: 0 0 10px 3px rgba(200,137,10,0.5);
+  top: auto;
+  bottom: -3px;
+}
+/* Center core */
+.elec-core {
+  position: absolute;
+  inset: 84px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224,154,16,0.12) 0%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elec-core::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(224,154,16,0.2);
+  animation: pulseBorder 2.8s ease-in-out infinite;
+}
+@keyframes pulseBorder {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+.elec-bolt {
+  position: relative;
+  z-index: 2;
+}
+.elec-bolt svg {
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(0 0 12px rgba(224,154,16,0.7));
+  animation: boltPulse 2.4s ease-in-out infinite;
+}
+@keyframes boltPulse {
+  0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 8px rgba(224,154,16,0.5)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 20px rgba(224,154,16,0.9)); }
+}
+/* Circuit lines */
+.elec-lines {
+  position: absolute;
+  inset: 0;
+}
+.elec-lines svg {
+  width: 100%;
+  height: 100%;
+}
+.circuit-path {
+  stroke-dasharray: 6 4;
+  animation: dashMove 3s linear infinite;
+}
+.circuit-path:nth-child(2) { animation-duration: 4.5s; animation-direction: reverse; }
+.circuit-path:nth-child(3) { animation-duration: 2.8s; }
+@keyframes dashMove {
+  to { stroke-dashoffset: -40; }
+}
+.circuit-node {
+  animation: nodeGlow 2s ease-in-out infinite;
+}
+.circuit-node:nth-child(2) { animation-delay: 0.6s; }
+.circuit-node:nth-child(3) { animation-delay: 1.2s; }
+.circuit-node:nth-child(4) { animation-delay: 0.3s; }
+@keyframes nodeGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+/* Stats cards around animation */
+.elec-stat {
+  position: absolute;
+  background: rgba(10,22,40,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 12px 18px;
+  text-align: center;
+  min-width: 110px;
+}
+.elec-stat .s-num {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.elec-stat .s-lbl {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin-top: 4px;
+}
+.es-tl { top: 6%; left: -2%; animation: floatCard 5s ease-in-out infinite; }
+.es-tr { top: 6%; right: -2%; animation: floatCard 5s ease-in-out infinite 1.2s; }
+.es-bl { bottom: 8%; left: -2%; animation: floatCard 5s ease-in-out infinite 2.4s; }
+.es-br { bottom: 8%; right: -2%; animation: floatCard 5s ease-in-out infinite 0.6s; }
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 .scroll-indicator {
   position: absolute;
   bottom: 38px;
@@ -907,14 +1154,92 @@ ul { list-style: none; }
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="container">
-    <div class="hero-inner">
-      <span class="hero-label">Electricien a Pons &nbsp;&middot;&nbsp; Charente-Maritime (17)</span>
-      <h1>Installation, dépannage<br>et rénovation électrique</h1>
-      <p class="hero-sub">Aurora Solutions intervient chez les particuliers et les professionnels en Charente-Maritime avec réactivité, rigueur et engagement.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-gold btn-gold-lg">Demander un devis</a>
-        <a href="tel:+33XXXXXXXXX" class="hero-phone-link">05 XX XX XX XX</a>
+    <div class="hero-layout">
+
+      <!-- TEXTE -->
+      <div class="hero-inner">
+        <span class="hero-label">Electricien a Pons &nbsp;&middot;&nbsp; Charente-Maritime (17)</span>
+        <h1>Installation, dépannage<br>et rénovation électrique</h1>
+        <ul class="hero-promises">
+          <li>Intervention le jour même, 7 jours sur 7</li>
+          <li>Devis gratuit, prix ferme sans surprise</li>
+          <li>Travaux garantis, conformes aux normes en vigueur</li>
+        </ul>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-gold btn-gold-lg">Demander un devis</a>
+          <a href="tel:+33XXXXXXXXX" class="hero-phone-link">05 XX XX XX XX</a>
+        </div>
+        <div class="hero-reviews">
+          <div class="hr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="hr-text">
+            <span class="hr-score">5,0 / 5</span>
+            <span class="hr-count">+80 avis Google</span>
+          </div>
+          <div class="hr-sep"></div>
+          <div class="hr-quote">"Intervention rapide, travail soigné. Je recommande."</div>
+        </div>
       </div>
+
+      <!-- ANIMATION -->
+      <div class="hero-anim">
+        <div class="elec-canvas">
+
+          <!-- Stat cards -->
+          <div class="elec-stat es-tl">
+            <span class="s-num">800+</span>
+            <span class="s-lbl">Chantiers</span>
+          </div>
+          <div class="elec-stat es-tr">
+            <span class="s-num">10+</span>
+            <span class="s-lbl">Ans d'expérience</span>
+          </div>
+          <div class="elec-stat es-bl">
+            <span class="s-num">7j/7</span>
+            <span class="s-lbl">Disponibilité</span>
+          </div>
+          <div class="elec-stat es-br">
+            <span class="s-num">5/5</span>
+            <span class="s-lbl">Note clients</span>
+          </div>
+
+          <!-- Rings -->
+          <div class="elec-ring"></div>
+          <div class="elec-ring"></div>
+          <div class="elec-ring"></div>
+
+          <!-- Circuit lines SVG -->
+          <div class="elec-lines">
+            <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Horizontal lines -->
+              <line class="circuit-path" x1="60" y1="140" x2="180" y2="140" stroke="rgba(224,154,16,0.35)" stroke-width="1"/>
+              <line class="circuit-path" x1="240" y1="140" x2="360" y2="140" stroke="rgba(224,154,16,0.35)" stroke-width="1"/>
+              <line class="circuit-path" x1="60" y1="280" x2="180" y2="280" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <line class="circuit-path" x1="240" y1="280" x2="360" y2="280" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <!-- Vertical lines -->
+              <line class="circuit-path" x1="140" y1="60" x2="140" y2="180" stroke="rgba(224,154,16,0.25)" stroke-width="1"/>
+              <line class="circuit-path" x1="280" y1="60" x2="280" y2="180" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <line class="circuit-path" x1="140" y1="240" x2="140" y2="360" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <line class="circuit-path" x1="280" y1="240" x2="280" y2="360" stroke="rgba(224,154,16,0.25)" stroke-width="1"/>
+              <!-- Nodes -->
+              <circle class="circuit-node" cx="140" cy="140" r="4" fill="rgba(224,154,16,0.7)"/>
+              <circle class="circuit-node" cx="280" cy="140" r="4" fill="rgba(255,255,255,0.4)"/>
+              <circle class="circuit-node" cx="140" cy="280" r="4" fill="rgba(255,255,255,0.4)"/>
+              <circle class="circuit-node" cx="280" cy="280" r="4" fill="rgba(224,154,16,0.7)"/>
+            </svg>
+          </div>
+
+          <!-- Core -->
+          <div class="elec-core">
+            <div class="elec-bolt">
+              <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="30,4 14,28 24,28 22,48 38,24 28,24" fill="#e09a10"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="scroll-indicator"></div>
