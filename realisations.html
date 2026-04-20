@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aurora Solutions – Nos réalisations en électricité : dépannage, rénovation, bornes IRVE et installations neuves en Charente-Maritime.">
+<title>Réalisations – Aurora Solutions | Électricien à Pons</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1c2b3a; background: #ffffff;
+  line-height: 1.7; overflow-x: hidden;
+}
+img { display: block; width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+:root {
+  --navy:     #0d1f35;
+  --blue:     #1a3d6b;
+  --gold:     #c8890a;
+  --gold-btn: #e09a10;
+  --white:    #ffffff;
+  --off:      #f7f9fc;
+  --gray:     #edf0f5;
+  --muted:    #5c6e82;
+  --border:   #dde4ee;
+  --dark:     #0b1827;
+  --max:      1140px;
+  --ease:     0.28s ease;
+}
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 44px; }
+@media (max-width: 640px) { .container { padding: 0 22px; } }
+
+/* ── NAVBAR ── */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 1000;
+  height: 70px; display: flex; align-items: center;
+  background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px); transition: box-shadow var(--ease);
+}
+.nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+.nav .container {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; max-width: 100%; padding: 0 48px;
+}
+.brand { display: flex; flex-direction: column; gap: 1px; line-height: 1; flex-shrink: 0; }
+.brand-name { font-size: 0.95rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
+.brand-sub { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.nav-links { display: flex; align-items: center; gap: 52px; flex: 1; justify-content: center; }
+.nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color var(--ease); white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--navy); }
+.nav-right { display: flex; align-items: center; gap: 28px; flex-shrink: 0; }
+.nav-tel { font-size: 0.88rem; font-weight: 600; color: var(--navy); letter-spacing: 0.01em; transition: color var(--ease); }
+.nav-tel:hover { color: var(--gold); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 22px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 2px; transition: all var(--ease); font-family: inherit; }
+.btn-gold { background: var(--gold-btn); color: var(--white); }
+.btn-gold:hover { background: var(--gold); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+.btn-outline:hover { background: var(--navy); color: var(--white); }
+.btn-lg { padding: 15px 34px; font-size: 0.8rem; }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.ham span { display: block; width: 20px; height: 1.5px; background: var(--navy); }
+@media (max-width: 900px) { .nav-links { display: none; } .ham { display: flex; } }
+@media (max-width: 560px) { .nav-tel { display: none; } }
+.mob-menu { display: none; position: fixed; inset: 70px 0 0 0; z-index: 999; background: var(--white); padding: 36px 24px; border-top: 1px solid var(--border); flex-direction: column; gap: 0; }
+.mob-menu.open { display: flex; }
+.mob-menu a { padding: 18px 0; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); border-bottom: 1px solid var(--border); }
+.mob-tel { margin-top: 28px; font-size: 1.2rem; font-weight: 700; color: var(--navy); text-align: center; }
+
+/* ── PAGE HERO ── */
+.page-hero { padding-top: 70px; background: var(--dark); position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=70&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0.08; }
+.page-hero-inner { position: relative; z-index: 1; padding: 80px 0 88px; max-width: 680px; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 28px; }
+.breadcrumb a { color: rgba(255,255,255,0.3); transition: color var(--ease); }
+.breadcrumb a:hover { color: rgba(255,255,255,0.7); }
+.breadcrumb span { color: rgba(255,255,255,0.15); }
+.page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.025em; margin-bottom: 18px; }
+.page-hero p { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; font-weight: 300; max-width: 500px; }
+.hero-anchors { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.anchor-btn { padding: 9px 18px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.55); border-radius: 2px; transition: all var(--ease); }
+.anchor-btn:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+
+/* ── LAYOUT ── */
+.section { padding: 96px 0; }
+.bg-white { background: var(--white); }
+.bg-off   { background: var(--off); }
+.bg-dark  { background: var(--dark); }
+.lbl { display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.lbl-light { color: rgba(200,137,10,0.85); }
+.ttl { font-size: clamp(1.6rem, 2.8vw, 2.3rem); font-weight: 700; color: var(--navy); line-height: 1.2; letter-spacing: -0.025em; }
+.ttl-light { color: var(--white); }
+.body-text { font-size: 0.97rem; color: var(--muted); line-height: 1.88; }
+.rule { width: 36px; height: 2px; background: var(--gold); margin: 22px 0; }
+
+/* ── CAROUSEL SECTION ── */
+.carousel-section { padding: 88px 0; border-bottom: 1px solid var(--border); }
+.carousel-section:last-of-type { border-bottom: none; }
+.carousel-section.alt { background: var(--off); }
+
+.carousel-header { margin-bottom: 48px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.carousel-header-left {}
+.carousel-counter { font-size: 0.75rem; font-weight: 500; color: var(--muted); letter-spacing: 0.06em; }
+
+/* ── CAROUSEL ── */
+.carousel-wrap { position: relative; }
+.carousel-track-outer { overflow: hidden; border-radius: 2px; }
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 440px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+.alt .carousel-slide { background: var(--white); }
+@media (max-width: 760px) {
+  .carousel-slide { grid-template-columns: 1fr; min-height: auto; }
+}
+.slide-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+}
+.slide-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.carousel-slide:hover .slide-photo img { transform: scale(1.03); }
+.slide-tag {
+  position: absolute;
+  top: 20px; left: 20px;
+  background: var(--gold-btn);
+  color: var(--dark);
+  font-size: 0.62rem; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 2px;
+}
+.slide-body {
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--border);
+}
+@media (max-width: 760px) { .slide-body { padding: 32px 24px; border-left: none; border-top: 1px solid var(--border); } }
+
+.slide-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.slide-meta-item {
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.slide-meta-item::before {
+  content: '';
+  display: block; width: 4px; height: 4px;
+  border-radius: 50%; background: var(--gold);
+}
+.slide-meta-item:first-child::before { display: none; }
+.slide-title {
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 700; color: var(--navy);
+  line-height: 1.25; letter-spacing: -0.015em;
+  margin-bottom: 14px;
+}
+.slide-desc {
+  font-size: 0.88rem; color: var(--muted);
+  line-height: 1.82; margin-bottom: 24px;
+}
+.slide-details {
+  display: flex; flex-direction: column; gap: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.slide-detail-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.82rem; color: var(--navy); font-weight: 500;
+}
+.slide-detail-item::before {
+  content: '';
+  display: block; width: 14px; height: 1.5px;
+  background: var(--gold); flex-shrink: 0; margin-top: 9px;
+}
+
+/* ── CAROUSEL CONTROLS ── */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.carousel-dots {
+  display: flex; gap: 8px; align-items: center;
+}
+.dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: all var(--ease);
+  border: none; padding: 0;
+}
+.dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
+.carousel-arrows { display: flex; gap: 10px; }
+.arrow {
+  width: 44px; height: 44px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  cursor: pointer;
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--ease);
+  font-size: 0; /* hide text fallback */
+}
+.arrow:hover { border-color: var(--navy); background: var(--navy); }
+.arrow:hover svg path { stroke: var(--white); }
+.arrow svg { width: 18px; height: 18px; }
+.arrow svg path { stroke: var(--navy); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke var(--ease); }
+
+/* ── CTA ── */
+.cta-strip { background: var(--off); border-top: 1px solid var(--border); padding: 80px 0; text-align: center; }
+.cta-strip h2 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin-bottom: 12px; }
+.cta-strip p { font-size: 0.97rem; color: var(--muted); margin-bottom: 36px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+.cta-row { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+/* ── FOOTER ── */
+.footer { background: #080f1a; padding: 60px 0 28px; }
+.footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 26px; }
+@media (max-width: 880px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .footer-top { grid-template-columns: 1fr; } }
+.foot-brand-name { display: block; font-size: 0.88rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 4px; }
+.foot-brand-sub { display: block; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 18px; }
+.foot-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.8; }
+.foot-col h4 { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.foot-col ul { display: flex; flex-direction: column; gap: 11px; }
+.foot-col ul li a { font-size: 0.82rem; color: rgba(255,255,255,0.48); transition: color var(--ease); }
+.foot-col ul li a:hover { color: rgba(255,255,255,0.85); }
+.foot-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.72rem; color: rgba(255,255,255,0.2); }
+.foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
+.foot-bottom a:hover { color: rgba(255,255,255,0.6); }
+.mob-bar { display: none; position: fixed; inset: auto 0 0 0; z-index: 900; background: var(--navy); border-top: 1px solid rgba(255,255,255,0.08); height: 58px; align-items: center; justify-content: space-between; padding: 0 22px; }
+@media (max-width: 767px) { .mob-bar { display: flex; } body { padding-bottom: 58px; } }
+.mob-bar span { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-weight: 500; }
+.mob-bar a { background: var(--gold-btn); color: var(--white); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; padding: 10px 22px; border-radius: 2px; }
+
+.fi { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fi.d1 { transition-delay: 0.08s; }
+.fi.d2 { transition-delay: 0.18s; }
+.fi.on { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="container" style="max-width:100%;padding:0 48px;display:flex;align-items:center;justify-content:space-between;width:100%">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Aurora Solutions</span>
+      <span class="brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="realisations.html" class="active">Réalisations</a></li>
+      <li><a href="about.html">A propos</a></li>
+      <li><a href="index.html#avis">Avis</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+33763094824" class="nav-tel">07 63 09 48 24</a>
+      <a href="index.html#contact" class="btn btn-gold">Devis gratuit</a>
+    </div>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobmenu">
+  <a href="services.html">Services</a>
+  <a href="realisations.html">Réalisations</a>
+  <a href="about.html">A propos</a>
+  <a href="index.html#avis">Avis clients</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="tel:+33763094824" class="mob-tel">07 63 09 48 24</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner fi">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,0.5)">Réalisations</span>
+      </div>
+      <h1>Nos réalisations<br>en Charente-Maritime</h1>
+      <p>Chaque chantier est une histoire. Voici quelques-unes des interventions réalisées chez nos clients particuliers et professionnels.</p>
+      <div class="hero-anchors">
+        <a href="#depannage" class="anchor-btn">Dépannage</a>
+        <a href="#renovation" class="anchor-btn">Rénovation</a>
+        <a href="#irve" class="anchor-btn">Borne IRVE</a>
+        <a href="#installation" class="anchor-btn">Installation neuve</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CAROUSEL 1 — DÉPANNAGE
+════════════════════════════════════════ -->
+<section class="carousel-section bg-white" id="depannage">
+  <div class="container">
+    <div class="carousel-header fi">
+      <div class="carousel-header-left">
+        <span class="lbl">Dépannage électrique</span>
+        <h2 class="ttl">Interventions d'urgence</h2>
+      </div>
+    </div>
+    <div class="carousel-wrap fi d1" data-carousel="depannage">
+      <div class="carousel-track-outer">
+        <div class="carousel-track">
+
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80&auto=format&fit=crop" alt="Dépannage disjoncteur">
+              <span class="slide-tag">Dépannage</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Saintes (17)</span>
+                <span class="slide-meta-item">Particulier</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Disjoncteur général qui sautait de façon répétée</h3>
+              <p class="slide-desc">Un client nous contacte un samedi matin : son disjoncteur général disjoncte toutes les heures sans raison apparente. Après diagnostic, nous identifions un défaut d'isolement sur le circuit cuisine, provoqué par une prise endommagée par l'humidité.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Diagnostic complet de l'installation en 45 minutes</div>
+                <div class="slide-detail-item">Remplacement de la prise défectueuse et du câble dégradé</div>
+                <div class="slide-detail-item">Vérification de l'ensemble des circuits du tableau</div>
+                <div class="slide-detail-item">Durée d'intervention : 2h — Résultat immédiat</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Panne tableau électrique">
+              <span class="slide-tag">Dépannage</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Jonzac (17)</span>
+                <span class="slide-meta-item">Particulier</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Perte totale d'alimentation sur un circuit éclairage</h3>
+              <p class="slide-desc">Coupure soudaine de l'éclairage dans toute la partie nuit d'une maison. La disjonction n'était pas visible au tableau. Après investigation, nous découvrons une connexion oxydée dans une boîte de dérivation mal protégée, accessible uniquement en comble.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Localisation de la panne par méthode de dérivation</div>
+                <div class="slide-detail-item">Nettoyage et reprise de toutes les connexions du circuit</div>
+                <div class="slide-detail-item">Remplacement de la boîte de dérivation non conforme</div>
+                <div class="slide-detail-item">Durée d'intervention : 3h — Problème résolu définitivement</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop" alt="Court-circuit réparation">
+              <span class="slide-tag">Dépannage</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Pons (17)</span>
+                <span class="slide-meta-item">Commerce</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Court-circuit dans un local commercial</h3>
+              <p class="slide-desc">Un commerce contacte Aurora Solutions en urgence : un court-circuit a provoqué la mise hors tension de toute la partie caisse et vitrine réfrigérée. Chaque heure d'arrêt représente une perte directe pour le client. Intervention prioritaire déclenchée.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Intervention en moins de 2h après l'appel</div>
+                <div class="slide-detail-item">Identification du court-circuit sur câble d'alimentation endommagé</div>
+                <div class="slide-detail-item">Remplacement du tronçon défectueux et remise sous tension</div>
+                <div class="slide-detail-item">Durée d'intervention : 1h30 — Commerce rouvert le matin même</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="carousel-dots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+        <div class="carousel-arrows">
+          <button class="arrow prev" aria-label="Précédent">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="arrow next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CAROUSEL 2 — RÉNOVATION
+════════════════════════════════════════ -->
+<section class="carousel-section alt" id="renovation">
+  <div class="container">
+    <div class="carousel-header fi">
+      <div class="carousel-header-left">
+        <span class="lbl">Rénovation électrique</span>
+        <h2 class="ttl">Mise aux normes &amp; rénovation</h2>
+      </div>
+    </div>
+    <div class="carousel-wrap fi d1" data-carousel="renovation">
+      <div class="carousel-track-outer">
+        <div class="carousel-track">
+
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop&crop=center" alt="Remplacement tableau électrique">
+              <span class="slide-tag">Rénovation</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Royan (17)</span>
+                <span class="slide-meta-item">Maison années 70</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Remplacement complet du tableau électrique</h3>
+              <p class="slide-desc">Maison de 1972 avec un tableau à fusibles en céramique, sans protection différentielle. L'installation présentait des risques sérieux : câbles vieillissants, absence de liaison équipotentielle en salle de bain. Rénovation complète réalisée en une journée.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Dépose de l'ancien tableau fusibles et remplacement par un tableau modulaire</div>
+                <div class="slide-detail-item">Installation de 3 interrupteurs différentiels 30mA de type A et AC</div>
+                <div class="slide-detail-item">Création de la liaison équipotentielle salle de bain et cuisine</div>
+                <div class="slide-detail-item">Attestation de conformité CONSUEL délivrée</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80&auto=format&fit=crop" alt="Rénovation électrique complète">
+              <span class="slide-tag">Rénovation</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Saintes (17)</span>
+                <span class="slide-meta-item">Appartement</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Rénovation électrique totale d'un appartement T4</h3>
+              <p class="slide-desc">Dans le cadre d'une rénovation globale, refonte intégrale de l'électricité d'un appartement de 95 m². Travail en coordination avec le plaquiste et le peintre pour optimiser les passages de câbles. Résultat : installation neuve, propre et conforme.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Dépose complète de l'ancienne installation</div>
+                <div class="slide-detail-item">Nouveau tableau 13 circuits avec disjoncteurs différentiels</div>
+                <div class="slide-detail-item">Câblage complet : 24 prises, 18 points lumineux, 4 circuits spécialisés</div>
+                <div class="slide-detail-item">Durée des travaux : 4 jours — Appartement prêt pour la peinture</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop" alt="Mise aux normes NF C 15-100">
+              <span class="slide-tag">Rénovation</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Gémozac (17)</span>
+                <span class="slide-meta-item">Maison individuelle</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Mise aux normes NF C 15-100 avant vente</h3>
+              <p class="slide-desc">Dans le cadre d'une vente immobilière, le diagnostic électrique avait révélé 14 anomalies. Le notaire exigeait une mise en conformité avant signature. Nous avons établi un plan d'intervention précis pour régulariser l'ensemble des points identifiés.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Reprise de 14 anomalies identifiées au diagnostic DPE</div>
+                <div class="slide-detail-item">Ajout des protections différentielles manquantes</div>
+                <div class="slide-detail-item">Sécurisation des installations salle de bain (zone 1 et 2)</div>
+                <div class="slide-detail-item">Attestation délivrée — Vente réalisée dans les délais</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="carousel-dots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+        <div class="carousel-arrows">
+          <button class="arrow prev" aria-label="Précédent">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="arrow next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CAROUSEL 3 — IRVE
+════════════════════════════════════════ -->
+<section class="carousel-section bg-white" id="irve">
+  <div class="container">
+    <div class="carousel-header fi">
+      <div class="carousel-header-left">
+        <span class="lbl">Borne IRVE</span>
+        <h2 class="ttl">Installations de bornes de recharge</h2>
+      </div>
+    </div>
+    <div class="carousel-wrap fi d1" data-carousel="irve">
+      <div class="carousel-track-outer">
+        <div class="carousel-track">
+
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80&auto=format&fit=crop" alt="Installation wallbox maison">
+              <span class="slide-tag">IRVE</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Pons (17)</span>
+                <span class="slide-meta-item">Particulier — Garage</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Installation d'une wallbox 7,4 kW en garage</h3>
+              <p class="slide-desc">Un particulier venait d'acquérir une Renault Mégane E-Tech. Après étude de l'installation existante, nous avons installé une wallbox 7,4 kW monophasée, avec création d'un circuit dédié depuis le tableau général et pose d'un disjoncteur différentiel adapté.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Étude préalable du tableau et de la puissance souscrite</div>
+                <div class="slide-detail-item">Création d'un circuit dédié 32A depuis le tableau</div>
+                <div class="slide-detail-item">Pose de la wallbox Schneider 7,4 kW avec câble T2</div>
+                <div class="slide-detail-item">Éligible au crédit d'impôt — Dossier ADVENIR constitué</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?w=800&q=80&auto=format&fit=crop" alt="Borne recharge entreprise">
+              <span class="slide-tag">IRVE</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Saintes (17)</span>
+                <span class="slide-meta-item">Entreprise — Parking</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">2 bornes de recharge sur parking d'entreprise</h3>
+              <p class="slide-desc">Une PME souhaitait équiper son parking de 2 bornes pour sa flotte de véhicules électriques. Dimensionnement du circuit principal, création d'un tableau secondaire dédié IRVE, pose de deux bornes 22 kW triphasées avec système de supervision à distance.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Étude de charge et dimensionnement du circuit alimentation</div>
+                <div class="slide-detail-item">Création d'un tableau divisionnaire IRVE dédié</div>
+                <div class="slide-detail-item">Installation de 2 bornes 22 kW triphasées avec gestion de charge</div>
+                <div class="slide-detail-item">Éligible aux aides ADVENIR entreprises — TVA 20% récupérable</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=800&q=80&auto=format&fit=crop" alt="Wallbox installation maison neuve">
+              <span class="slide-tag">IRVE</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Cognac (16)</span>
+                <span class="slide-meta-item">Maison neuve</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Pré-équipement IRVE sur maison en construction</h3>
+              <p class="slide-desc">Dans le cadre d'une construction neuve, le client souhaitait anticiper l'installation d'une borne de recharge sans encore posséder de VE. Pose du pré-équipement réglementaire (fourreau, câblage, protection) pour une installation ultérieure simplifiée.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Pose du fourreau et du câblage 6mm² depuis le tableau</div>
+                <div class="slide-detail-item">Installation du disjoncteur différentiel de type A 32A</div>
+                <div class="slide-detail-item">Boîtier de sortie étanche positionné en garage</div>
+                <div class="slide-detail-item">Conforme à la RE2020 — Branchement wallbox immédiat à terme</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="carousel-dots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+        <div class="carousel-arrows">
+          <button class="arrow prev" aria-label="Précédent">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="arrow next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CAROUSEL 4 — INSTALLATION NEUVE
+════════════════════════════════════════ -->
+<section class="carousel-section alt" id="installation">
+  <div class="container">
+    <div class="carousel-header fi">
+      <div class="carousel-header-left">
+        <span class="lbl">Installation neuve</span>
+        <h2 class="ttl">Constructions &amp; aménagements</h2>
+      </div>
+    </div>
+    <div class="carousel-wrap fi d1" data-carousel="installation">
+      <div class="carousel-track-outer">
+        <div class="carousel-track">
+
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="beautiful-shot-modern-house-kitchen-dining-room.jpg" alt="Installation électrique maison neuve" style="object-fit:cover;object-position:center center;">
+              <span class="slide-tag">Installation</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Pons (17)</span>
+                <span class="slide-meta-item">Maison individuelle</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Installation électrique complète d'une maison neuve</h3>
+              <p class="slide-desc">Construction d'une maison de 130 m² de plain-pied. Prise en charge de l'intégralité de l'installation électrique depuis le branchement EDF jusqu'aux finitions : tableau, câblage, prises, éclairages, circuits spécialisés, domotique et contrôle d'accès.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Tableau général 20 circuits — disjoncteurs différentiels type A</div>
+                <div class="slide-detail-item">36 prises de courant, 22 points lumineux, 6 circuits spécialisés</div>
+                <div class="slide-detail-item">Éclairage LED avec gradateurs dans les pièces de vie</div>
+                <div class="slide-detail-item">Pré-câblage domotique et VMC double flux — Conforme RE2020</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1572177215152-32f247303126?w=800&q=80&auto=format&fit=crop&crop=top" alt="Aménagement combles électricité">
+              <span class="slide-tag">Installation</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Royan (17)</span>
+                <span class="slide-meta-item">Aménagement combles</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Électricité d'un aménagement de combles en suite parentale</h3>
+              <p class="slide-desc">Transformation de combles bruts en suite parentale (chambre + salle de bain + dressing). Création de l'intégralité de l'électricité depuis le tableau existant au rez-de-chaussée jusqu'aux nouvelles pièces, avec respect des zones réglementaires en salle de bain.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Extension du tableau existant avec 4 nouveaux circuits</div>
+                <div class="slide-detail-item">Câblage complet : 12 prises, 8 points lumineux, sèche-serviette</div>
+                <div class="slide-detail-item">Respect des zones 1-2-3 en salle de bain (NF C 15-100)</div>
+                <div class="slide-detail-item">Durée des travaux : 2 jours — Coordination avec le plaquiste</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&auto=format&fit=crop" alt="Installation électrique extérieure">
+              <span class="slide-tag">Installation</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Saujon (17)</span>
+                <span class="slide-meta-item">Abri de jardin + terrasse</span>
+                <span class="slide-meta-item">2025</span>
+              </div>
+              <h3 class="slide-title">Alimentation électrique d'un abri de jardin et éclairage de terrasse</h3>
+              <p class="slide-desc">Un client souhaitait alimenter son atelier/abri de jardin et créer un éclairage d'ambiance sur sa terrasse. Pose d'une tranchée enterrée avec câble armé, installation d'un sous-tableau dans l'abri et mise en place d'un circuit éclairage extérieur avec détecteurs.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Tranchée 12 mètres avec câble armé U1000 R2V 6mm²</div>
+                <div class="slide-detail-item">Sous-tableau 4 circuits dans l'abri (éclairage, prises, outillage)</div>
+                <div class="slide-detail-item">6 spots LED étanches IP65 sur la terrasse avec détecteur de présence</div>
+                <div class="slide-detail-item">Durée des travaux : 1,5 jour — Conforme NF C 15-100 extérieur</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="carousel-dots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+        <div class="carousel-arrows">
+          <button class="arrow prev" aria-label="Précédent">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="arrow next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="container">
+    <div class="fi">
+      <h2>Votre projet, notre prochain chantier</h2>
+      <p>Demandez un devis gratuit. Nous répondons sous 24h et intervenons sur toute la Charente-Maritime.</p>
+      <div class="cta-row">
+        <a href="index.html#contact" class="btn btn-gold btn-lg">Demander un devis gratuit</a>
+        <a href="tel:+33763094824" class="btn btn-outline btn-lg">07 63 09 48 24</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="foot-brand">
+        <span class="foot-brand-name">Aurora Solutions</span>
+        <span class="foot-brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+        <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#depannage">Dépannage électrique</a></li>
+          <li><a href="services.html#renovation">Rénovation électrique</a></li>
+          <li><a href="services.html#irve">Installation borne IRVE</a></li>
+          <li><a href="services.html#installation">Installation neuve</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="about.html">A propos</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="index.html#avis">Avis clients</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33763094824">07 63 09 48 24</a></li>
+          <li><a href="mailto:contact@aurora-solutions.fr">contact@aurora-solutions.fr</a></li>
+          <li><a href="#">Pons (17800)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2025 Aurora Solutions &mdash; SIRET XXX XXX XXX XXXXX</span>
+      <span><a href="#">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="#">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mob-bar">
+  <span>Aurora Solutions</span>
+  <a href="tel:+33763094824">Appeler maintenant</a>
+</div>
+
+<script>
+(function () {
+  /* ── Navbar ── */
+  var nav = document.getElementById('nav');
+  var ham = document.getElementById('ham');
+  var menu = document.getElementById('mobmenu');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+  ham.addEventListener('click', function () { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function (l) {
+    l.addEventListener('click', function () { menu.classList.remove('open'); });
+  });
+
+  /* ── Fade in ── */
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fi').forEach(function (el) { obs.observe(el); });
+
+  /* ── Carousels ── */
+  document.querySelectorAll('.carousel-wrap').forEach(function (wrap) {
+    var track   = wrap.querySelector('.carousel-track');
+    var slides  = wrap.querySelectorAll('.carousel-slide');
+    var dots    = wrap.querySelectorAll('.dot');
+    var prev    = wrap.querySelector('.arrow.prev');
+    var next    = wrap.querySelector('.arrow.next');
+    var current = 0;
+    var total   = slides.length;
+
+    function goTo(n) {
+      current = (n + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+    }
+
+    prev.addEventListener('click', function () { goTo(current - 1); });
+    next.addEventListener('click', function () { goTo(current + 1); });
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () { goTo(parseInt(d.dataset.index)); });
+    });
+
+    /* Touch / swipe */
+    var startX = 0;
+    var trackOuter = wrap.querySelector('.carousel-track-outer');
+    trackOuter.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+    trackOuter.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+    });
+  });
+})();
+</script>
+</body>
+</html>
