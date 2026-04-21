@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demande envoyée – Aurora Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1c2b3a;
+  background: #f7f9fc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+:root {
+  --navy: #0d1f35;
+  --gold: #c8890a;
+  --gold-btn: #e09a10;
+  --white: #ffffff;
+  --muted: #5c6e82;
+  --border: #dde4ee;
+  --ease: 0.28s ease;
+}
+a { color: inherit; text-decoration: none; }
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  max-width: 540px;
+  width: 100%;
+  padding: 64px 56px;
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.06);
+}
+@media (max-width: 600px) { .card { padding: 48px 28px; } }
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(224,154,16,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+.icon svg { width: 28px; height: 28px; }
+.lbl {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+.rule {
+  width: 36px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 28px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--gold-btn);
+  color: var(--white);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background var(--ease), transform var(--ease);
+  font-family: inherit;
+}
+.btn:hover { background: var(--gold); transform: translateY(-1px); }
+.tel {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.tel a {
+  font-weight: 600;
+  color: var(--navy);
+  transition: color var(--ease);
+}
+.tel a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="icon">
+    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="14" cy="14" r="13" stroke="#e09a10" stroke-width="1.5"/>
+      <polyline points="8,14 12,18 20,10" stroke="#e09a10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <span class="lbl">Demande reçue</span>
+  <h1>Merci pour votre message</h1>
+  <div class="rule"></div>
+  <p>Votre demande de devis a bien été transmise à Aurora Solutions. Nous vous recontacterons sous 24h pour faire le point sur votre projet.</p>
+  <a href="index.html" class="btn">Retour à l'accueil</a>
+  <p class="tel">Besoin urgent ? Appelez directement le <a href="tel:+33763094824">07 63 09 48 24</a></p>
+</div>
+
+</body>
+</html>

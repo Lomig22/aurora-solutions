@@ -1111,6 +1111,84 @@ ul { list-style: none; }
 .fi.d4 { transition-delay: 0.38s; }
 .fi.on { opacity: 1; transform: none; }
 
+/* ── MODAL DEVIS ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(9,20,35,0.78);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--white);
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 52px 48px 44px;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+}
+@media (max-width: 640px) { .modal-box { padding: 40px 24px 32px; } }
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--muted);
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color var(--ease);
+  font-family: inherit;
+}
+.modal-close:hover { color: var(--navy); }
+.mform { display: flex; flex-direction: column; gap: 14px; }
+.mform .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .mform .frow { grid-template-columns: 1fr; } }
+.mform .fg { display: flex; flex-direction: column; gap: 6px; }
+.mform .fg label {
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.mform .fg input,
+.mform .fg select,
+.mform .fg textarea {
+  background: var(--off);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 13px 15px;
+  border-radius: 2px;
+  width: 100%;
+  transition: border-color var(--ease), background var(--ease);
+  -webkit-appearance: none;
+}
+.mform .fg input::placeholder,
+.mform .fg textarea::placeholder { color: rgba(28,43,58,0.3); }
+.mform .fg input:focus,
+.mform .fg select:focus,
+.mform .fg textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: var(--white);
+}
+.mform .fg select option { background: var(--white); color: var(--navy); }
+.mform .fg textarea { resize: vertical; min-height: 110px; }
+.mform .fnote { font-size: 0.72rem; color: var(--muted); margin-top: 10px; }
+
 </style>
 </head>
 <body>
@@ -1131,7 +1209,7 @@ ul { list-style: none; }
     </ul>
     <div class="nav-right">
       <a href="tel:+33763094824" class="nav-tel">07 63 09 48 24</a>
-      <a href="#contact" class="btn btn-gold">Devis gratuit</a>
+      <button class="btn btn-gold" data-devis>Devis gratuit</button>
     </div>
     <button class="ham" id="ham" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -1166,7 +1244,7 @@ ul { list-style: none; }
           <li>Travaux garantis, conformes aux normes en vigueur</li>
         </ul>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-gold btn-gold-lg">Demander un devis</a>
+          <button class="btn btn-gold btn-gold-lg" data-devis>Demander un devis</button>
           <a href="tel:+33763094824" class="hero-phone-link">07 63 09 48 24</a>
         </div>
         <div class="hero-reviews">
@@ -1339,7 +1417,7 @@ ul { list-style: none; }
         <h2 class="ttl">Nos domaines<br>d'intervention</h2>
         <div class="rule"></div>
         <p class="body-text">Au fil des années, nous avons développé une expertise complète en électricité résidentielle et tertiaire. Voici les principaux domaines dans lesquels nous intervenons.</p>
-        <a href="#contact" class="btn btn-outline" style="margin-top:36px">Prendre contact</a>
+        <button class="btn btn-outline" style="margin-top:36px" data-devis>Prendre contact</button>
       </div>
       <div class="fi d2">
         <div class="dom-list">
@@ -1483,7 +1561,10 @@ ul { list-style: none; }
           <dd>Gratuit &mdash; Réponse sous 24h</dd>
         </div>
       </dl>
-      <form class="cform fi d2" action="#" method="POST" onsubmit="return false;">
+      <form class="cform fi d2" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://lomig22.github.io/aurora-solutions/merci.html">
         <div class="frow">
           <div class="fg">
             <label>Nom</label>
@@ -1523,6 +1604,56 @@ ul { list-style: none; }
     </div>
   </div>
 </section>
+
+<!-- MODAL DEVIS -->
+<div class="modal-overlay" id="devisModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">&times;</button>
+    <span class="lbl">Demande de devis</span>
+    <h2 class="ttl" style="margin-bottom:6px">Parlons de votre projet</h2>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:28px">Nous vous recontactons sous 24h avec un devis détaillé et sans engagement.</p>
+    <form class="mform" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://lomig22.github.io/aurora-solutions/merci.html">
+      <div class="frow">
+        <div class="fg">
+          <label for="m-nom">Nom</label>
+          <input type="text" id="m-nom" name="nom" placeholder="Votre nom" required>
+        </div>
+        <div class="fg">
+          <label for="m-tel">Téléphone</label>
+          <input type="tel" id="m-tel" name="tel" placeholder="06 XX XX XX XX" required>
+        </div>
+      </div>
+      <div class="frow">
+        <div class="fg">
+          <label for="m-ville">Ville</label>
+          <input type="text" id="m-ville" name="ville" placeholder="Votre commune">
+        </div>
+        <div class="fg">
+          <label for="m-prest">Prestation</label>
+          <select id="m-prest" name="prestation">
+            <option value="">Sélectionner</option>
+            <option>Dépannage urgent</option>
+            <option>Installation borne IRVE</option>
+            <option>Rénovation électrique</option>
+            <option>Installation neuve</option>
+            <option>Autre</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg">
+        <label for="m-msg">Message</label>
+        <textarea id="m-msg" name="message" placeholder="Décrivez brièvement votre besoin..."></textarea>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-gold" style="padding:14px 30px;width:100%">Envoyer la demande</button>
+        <p class="fnote" style="margin-top:10px">Vos informations restent confidentielles.</p>
+      </div>
+    </form>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -1614,6 +1745,17 @@ ul { list-style: none; }
   document.querySelectorAll('.fi').forEach(function (el) {
     obs.observe(el);
   });
+
+  /* ── Modal devis ── */
+  var modal = document.getElementById('devisModal');
+  function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+  document.querySelectorAll('[data-devis]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+  });
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 })();
 </script>
 
