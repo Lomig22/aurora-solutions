@@ -1564,7 +1564,7 @@ ul { list-style: none; }
       <form class="cform fi d2" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://lomig22.github.io/aurora-solutions/merci.html">
+        <input type="hidden" name="_next" value="https://lomig22.github.io/aurora-solutions/index.html?merci=1">
         <div class="frow">
           <div class="fg">
             <label>Nom</label>
@@ -1615,7 +1615,7 @@ ul { list-style: none; }
     <form class="mform" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://lomig22.github.io/aurora-solutions/merci.html">
+      <input type="hidden" name="_next" value="https://lomig22.github.io/aurora-solutions/index.html?merci=1">
       <div class="frow">
         <div class="fg">
           <label for="m-nom">Nom</label>
@@ -1712,6 +1712,21 @@ ul { list-style: none; }
   <a href="tel:+33763094824">Appeler maintenant</a>
 </div>
 
+<!-- TOAST CONFIRMATION -->
+<div id="toastMerci" style="
+  display:none; position:fixed; bottom:32px; left:50%; transform:translateX(-50%);
+  z-index:9999; background:#1a7a4a; color:#fff;
+  padding:16px 28px 16px 20px; border-radius:4px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.18);
+  display:none; align-items:center; gap:14px;
+  font-family:'Inter',-apple-system,sans-serif; font-size:0.9rem; font-weight:500;
+  max-width:calc(100vw - 48px); white-space:nowrap;
+">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" stroke="#5fe89e" stroke-width="1.8"/><path d="M7.5 12.5l3 3 6-6" stroke="#5fe89e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span>Votre demande a bien été envoyée. Nous vous recontacterons sous 24h.</span>
+  <button onclick="document.getElementById('toastMerci').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:1.2rem;line-height:1;padding:0 0 0 8px;flex-shrink:0;">&times;</button>
+</div>
+
 <script>
 (function () {
   var nav    = document.getElementById('nav');
@@ -1756,6 +1771,14 @@ ul { list-style: none; }
   document.getElementById('modalClose').addEventListener('click', closeModal);
   modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+  /* ── Toast confirmation devis ── */
+  if (new URLSearchParams(window.location.search).get('merci') === '1') {
+    var toast = document.getElementById('toastMerci');
+    toast.style.display = 'flex';
+    history.replaceState(null, '', window.location.pathname);
+    setTimeout(function () { toast.style.display = 'none'; }, 7000);
+  }
 })();
 </script>
 
