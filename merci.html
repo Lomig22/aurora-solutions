@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="6;url=index.html">
 <title>Demande envoyée – Aurora Solutions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,8 +21,9 @@ body {
 }
 :root {
   --navy: #0d1f35;
-  --gold: #c8890a;
-  --gold-btn: #e09a10;
+  --green: #1a7a4a;
+  --green-light: #eaf7ef;
+  --green-border: #a8dfc0;
   --white: #ffffff;
   --muted: #5c6e82;
   --border: #dde4ee;
@@ -40,23 +42,24 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 600px) { .card { padding: 48px 28px; } }
 .icon {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: rgba(224,154,16,0.1);
+  background: var(--green-light);
+  border: 1.5px solid var(--green-border);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 28px;
 }
-.icon svg { width: 28px; height: 28px; }
+.icon svg { width: 30px; height: 30px; }
 .lbl {
   display: block;
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
   margin-bottom: 14px;
 }
 h1 {
@@ -76,7 +79,7 @@ p {
 .rule {
   width: 36px;
   height: 2px;
-  background: var(--gold);
+  background: var(--green);
   margin: 0 auto 28px;
 }
 .btn {
@@ -88,7 +91,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: var(--gold-btn);
+  background: var(--green);
   color: var(--white);
   border: none;
   border-radius: 2px;
@@ -96,37 +99,50 @@ p {
   transition: background var(--ease), transform var(--ease);
   font-family: inherit;
 }
-.btn:hover { background: var(--gold); transform: translateY(-1px); }
+.btn:hover { background: #155f3a; transform: translateY(-1px); }
 .tel {
   display: block;
   margin-top: 20px;
   font-size: 0.85rem;
   color: var(--muted);
 }
-.tel a {
-  font-weight: 600;
-  color: var(--navy);
-  transition: color var(--ease);
+.tel a { font-weight: 600; color: var(--navy); transition: color var(--ease); }
+.tel a:hover { color: var(--green); }
+.redirect-note {
+  margin-top: 28px;
+  font-size: 0.75rem;
+  color: rgba(92,110,130,0.55);
+  letter-spacing: 0.04em;
 }
-.tel a:hover { color: var(--gold); }
 </style>
 </head>
 <body>
 
 <div class="card">
   <div class="icon">
-    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="14" cy="14" r="13" stroke="#e09a10" stroke-width="1.5"/>
-      <polyline points="8,14 12,18 20,10" stroke="#e09a10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="15" cy="15" r="14" stroke="#1a7a4a" stroke-width="1.5"/>
+      <polyline points="8.5,15.5 12.5,19.5 21.5,10.5" stroke="#1a7a4a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </div>
   <span class="lbl">Demande reçue</span>
   <h1>Merci pour votre message</h1>
   <div class="rule"></div>
-  <p>Votre demande de devis a bien été transmise à Aurora Solutions. Nous vous recontacterons sous 24h pour faire le point sur votre projet.</p>
+  <p>Votre demande de devis a bien été transmise à Aurora Solutions.<br>Nous vous recontacterons sous 24h pour faire le point sur votre projet.</p>
   <a href="index.html" class="btn">Retour à l'accueil</a>
-  <p class="tel">Besoin urgent ? Appelez directement le <a href="tel:+33763094824">07 63 09 48 24</a></p>
+  <p class="tel">Besoin urgent ? Appelez le <a href="tel:+33763094824">07 63 09 48 24</a></p>
+  <p class="redirect-note" id="countdown">Redirection automatique dans 6 secondes…</p>
 </div>
+
+<script>
+var n = 6;
+var el = document.getElementById('countdown');
+var t = setInterval(function() {
+  n--;
+  if (n <= 0) { clearInterval(t); window.location.href = 'index.html'; }
+  else { el.textContent = 'Redirection automatique dans ' + n + ' seconde' + (n > 1 ? 's' : '') + '…'; }
+}, 1000);
+</script>
 
 </body>
 </html>
