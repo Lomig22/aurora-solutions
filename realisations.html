@@ -68,6 +68,9 @@ ul { list-style: none; }
 .ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
 .ham span { display: block; width: 20px; height: 1.5px; background: var(--navy); }
 @media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
+.ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+.ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
+.ham.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
 .mob-menu { display: none; position: fixed; inset: 70px 0 0 0; z-index: 999; background: var(--white); padding: 36px 24px; border-top: 1px solid var(--border); flex-direction: column; gap: 0; }
 .mob-menu.open { display: flex; }
 .mob-menu a { padding: 18px 0; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); border-bottom: 1px solid var(--border); }
@@ -258,10 +261,6 @@ ul { list-style: none; }
 .foot-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.72rem; color: rgba(255,255,255,0.2); }
 .foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
 .foot-bottom a:hover { color: rgba(255,255,255,0.6); }
-.mob-bar { display: none; position: fixed; inset: auto 0 0 0; z-index: 900; background: var(--navy); border-top: 1px solid rgba(255,255,255,0.08); height: 58px; align-items: center; justify-content: space-between; padding: 0 22px; }
-@media (max-width: 767px) { .mob-bar { display: flex; } body { padding-bottom: 58px; } }
-.mob-bar span { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-weight: 500; }
-.mob-bar a { background: var(--gold-btn); color: var(--white); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; padding: 10px 22px; border-radius: 2px; }
 
 .fi { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .fi.d1 { transition-delay: 0.08s; }
@@ -947,11 +946,6 @@ ul { list-style: none; }
   </div>
 </footer>
 
-<div class="mob-bar">
-  <span>Aurora Solutions</span>
-  <a href="tel:+33763094824">Appeler maintenant</a>
-</div>
-
 <script>
 (function () {
   /* ── Navbar ── */
@@ -961,9 +955,11 @@ ul { list-style: none; }
   window.addEventListener('scroll', function () {
     nav.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
-  ham.addEventListener('click', function () { menu.classList.toggle('open'); });
+  function openMenu() { menu.classList.add('open'); ham.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { menu.classList.remove('open'); ham.classList.remove('open'); document.body.style.overflow = ''; }
+  ham.addEventListener('click', function () { menu.classList.contains('open') ? closeMenu() : openMenu(); });
   menu.querySelectorAll('a').forEach(function (l) {
-    l.addEventListener('click', function () { menu.classList.remove('open'); });
+    l.addEventListener('click', closeMenu);
   });
 
   /* ── Fade in ── */
