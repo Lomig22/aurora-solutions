@@ -353,6 +353,30 @@ ul { list-style: none; }
 .mform .fg textarea { resize: vertical; min-height: 110px; }
 .mform .fnote { font-size: 0.72rem; color: var(--muted); margin-top: 10px; }
 
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 767px) {
+  .nav .container,
+  .nav > div { padding-left: 20px !important; padding-right: 20px !important; }
+  .section { padding: 56px 0; }
+  .domains-section { padding: 52px 0; }
+  .cta-strip { padding: 52px 0; }
+  .devis-section { padding: 64px 0; }
+  .devis-split { gap: 40px; }
+  .page-hero-inner { padding: 44px 0 52px; }
+  .hero-anchors { gap: 8px; }
+  .anchor-btn { padding: 8px 14px; font-size: 0.68rem; }
+  .svc-inner { padding: 36px 28px; }
+  .process-cell { padding: 28px 24px; }
+  .domain-cell { padding: 20px 16px; }
+}
+@media (max-width: 480px) {
+  .btn { min-height: 44px; }
+  .mob-menu a { min-height: 44px; display: flex; align-items: center; }
+  input, select, textarea { font-size: 1rem !important; }
+  .cta-row { flex-direction: column; align-items: stretch; }
+  .cta-row .btn { text-align: center; justify-content: center; }
+}
+
 </style>
 </head>
 <body>

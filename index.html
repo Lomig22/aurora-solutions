@@ -1189,6 +1189,50 @@ ul { list-style: none; }
 .mform .fg textarea { resize: vertical; min-height: 110px; }
 .mform .fnote { font-size: 0.72rem; color: var(--muted); margin-top: 10px; }
 
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 767px) {
+  /* Nav */
+  .nav .container,
+  .nav > div { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* Sections */
+  .section { padding: 56px 0; }
+  .devis-section { padding: 64px 0; }
+  .devis-split { gap: 40px; }
+
+  /* Hero — hauteur auto en mobile */
+  .hero { height: auto; min-height: 100svh; padding: calc(70px + 28px) 0 52px; align-items: flex-start; }
+  .hero-inner { padding: 32px 22px; }
+
+  /* Services */
+  .svc { padding: 32px 24px; }
+
+  /* KPIs */
+  .kpi { padding: 22px 14px; }
+  .kpi-num { font-size: 1.8rem; }
+
+  /* Témoignages */
+  .testi { padding: 26px 20px; }
+
+  /* Contact section */
+  .contact-top { padding-bottom: 40px; margin-bottom: 40px; }
+  .cinfo { gap: 24px; }
+}
+
+@media (max-width: 480px) {
+  /* Empiler les CTA hero */
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions > * { text-align: center; justify-content: center; }
+  .hr-sep, .hr-quote { display: none; }
+
+  /* Touch targets minimum 44px */
+  .btn { min-height: 44px; }
+  .mob-menu a { min-height: 44px; display: flex; align-items: center; }
+
+  /* iOS : empêche le zoom sur focus des inputs (font-size < 16px) */
+  input, select, textarea { font-size: 1rem !important; }
+}
+
 </style>
 </head>
 <body>

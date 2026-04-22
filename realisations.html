@@ -303,6 +303,23 @@ ul { list-style: none; }
 .mform .fg select option { background: var(--white); color: var(--navy); }
 .mform .fg textarea { resize: vertical; min-height: 110px; }
 .mform .fnote { font-size: 0.72rem; color: var(--muted); margin-top: 10px; }
+
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 767px) {
+  .nav .container,
+  .nav > div { padding-left: 20px !important; padding-right: 20px !important; }
+  .carousel-section { padding: 56px 0; }
+  .devis-section { padding: 64px 0; }
+  .devis-split { gap: 40px; }
+  .page-hero-inner { padding: 44px 0 52px; }
+  .hero-anchors { gap: 8px; }
+  .anchor-btn { padding: 8px 14px; font-size: 0.68rem; }
+}
+@media (max-width: 480px) {
+  .btn { min-height: 44px; }
+  .mob-menu a { min-height: 44px; display: flex; align-items: center; }
+  input, select, textarea { font-size: 1rem !important; }
+}
 </style>
 </head>
 <body>
