@@ -177,8 +177,7 @@ ul { list-style: none; }
   background: var(--navy);
   transition: all var(--ease);
 }
-@media (max-width: 900px) { .nav-links { display: none; } .ham { display: flex; } }
-@media (max-width: 560px) { .nav-tel { display: none; } }
+@media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
 
 /* MOBILE MENU */
 .mob-menu {
@@ -187,10 +186,11 @@ ul { list-style: none; }
   inset: 70px 0 0 0;
   z-index: 999;
   background: var(--white);
-  padding: 36px 24px;
+  padding: 28px 24px 32px;
   border-top: 1px solid var(--border);
   flex-direction: column;
   gap: 0;
+  overflow-y: auto;
 }
 .mob-menu.open { display: flex; }
 .mob-menu a {
@@ -202,6 +202,29 @@ ul { list-style: none; }
   color: var(--navy);
   border-bottom: 1px solid var(--border);
 }
+.mob-cta {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mob-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  border: 1.5px solid var(--border);
+  border-radius: 2px;
+  transition: all var(--ease);
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: 1.5px solid var(--border) !important;
+}
+.mob-phone:hover { border-color: var(--navy) !important; background: var(--off); }
 .mob-tel {
   margin-top: 28px;
   font-size: 1.2rem;
@@ -1263,12 +1286,15 @@ ul { list-style: none; }
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobmenu">
-  <a href="services.html" class="mob-link">Services</a>
-  <a href="realisations.html" class="mob-link">Réalisations</a>
-  <a href="about.html" class="mob-link">A propos</a>
-  <a href="#avis" class="mob-link">Avis clients</a>
-  <a href="#contact" class="mob-link">Contact</a>
-  <a href="tel:+33763094824" class="mob-tel">07 63 09 48 24</a>
+  <a href="services.html">Services</a>
+  <a href="realisations.html">Réalisations</a>
+  <a href="about.html">A propos</a>
+  <a href="#avis">Avis clients</a>
+  <a href="#contact">Contact</a>
+  <div class="mob-cta">
+    <a href="tel:+33763094824" class="mob-phone">07 63 09 48 24</a>
+    <button class="btn btn-gold" data-devis style="min-height:48px;width:100%;font-size:0.82rem">Devis gratuit</button>
+  </div>
 </div>
 
 <!-- HERO -->
