@@ -178,6 +178,9 @@ ul { list-style: none; }
   transition: all var(--ease);
 }
 @media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
+.ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+.ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
+.ham.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
 
 /* MOBILE MENU */
 .mob-menu {
@@ -1090,37 +1093,6 @@ ul { list-style: none; }
 .foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
 .foot-bottom a:hover { color: rgba(255,255,255,0.6); }
 
-/* ── MOBILE STICKY ── */
-.mob-bar {
-  display: none;
-  position: fixed;
-  inset: auto 0 0 0;
-  z-index: 900;
-  background: var(--navy);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  height: 58px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 22px;
-}
-@media (max-width: 767px) {
-  .mob-bar { display: flex; }
-  body { padding-bottom: 58px; }
-}
-.mob-bar span {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.5);
-  font-weight: 500;
-}
-.mob-bar a {
-  background: var(--gold-btn);
-  color: var(--white);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 10px 22px;
-  border-radius: 2px;
-}
 
 /* ── FADE IN ── */
 .fi {
@@ -1775,11 +1747,6 @@ ul { list-style: none; }
 </footer>
 
 <!-- MOBILE BAR -->
-<div class="mob-bar">
-  <span>Aurora Solutions</span>
-  <a href="tel:+33763094824">Appeler maintenant</a>
-</div>
-
 <!-- TOAST CONFIRMATION -->
 <div id="toastMerci" style="
   display:none; position:fixed; bottom:32px; left:50%; transform:translateX(-50%);
@@ -1806,14 +1773,23 @@ ul { list-style: none; }
     nav.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
 
+  function openMenu() {
+    menu.classList.add('open');
+    ham.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    ham.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   ham.addEventListener('click', function () {
-    menu.classList.toggle('open');
+    menu.classList.contains('open') ? closeMenu() : openMenu();
   });
 
   links.forEach(function (l) {
-    l.addEventListener('click', function () {
-      menu.classList.remove('open');
-    });
+    l.addEventListener('click', closeMenu);
   });
 
   var obs = new IntersectionObserver(function (entries) {
