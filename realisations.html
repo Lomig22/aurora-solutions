@@ -269,6 +269,11 @@ ul { list-style: none; }
 .foot-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.72rem; color: rgba(255,255,255,0.2); }
 .foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
 .foot-bottom a:hover { color: rgba(255,255,255,0.6); }
+.foot-credit { display: flex; align-items: center; justify-content: center; gap: 8px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.7rem; color: rgba(255,255,255,0.18); }
+.foot-credit a { display: flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.28); transition: color var(--ease); }
+.foot-credit a:hover { color: rgba(255,255,255,0.6); }
+.foot-credit img { height: 18px; width: auto; opacity: 0.45; transition: opacity var(--ease); }
+.foot-credit a:hover img { opacity: 0.75; }
 
 .fi { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .fi.d1 { transition-delay: 0.08s; }
@@ -935,7 +940,7 @@ ul { list-style: none; }
           <li><a href="about.html">A propos</a></li>
           <li><a href="realisations.html">Réalisations</a></li>
           <li><a href="index.html#avis">Avis clients</a></li>
-          <li><a href="#">Mentions légales</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -948,8 +953,15 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2025 Aurora Solutions &mdash; SIRET XXX XXX XXX XXXXX</span>
-      <span><a href="#">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="#">Confidentialité</a></span>
+      <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="politique-confidentialite.html">Confidentialité</a></span>
+    </div>
+    <div class="foot-credit">
+      <span>Site réalisé par</span>
+      <a href="https://payment-flow.fr" target="_blank" rel="noopener">
+        <img src="Design sans titre (27).png" alt="Payment Flow">
+        Payment Flow
+      </a>
     </div>
   </div>
 </footer>
