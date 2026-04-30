@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5WL3YGM6LY');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Mentions légales – Aurora Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1c2b3a;
+  background: #ffffff;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+:root {
+  --navy:     #0d1f35;
+  --blue:     #1a3d6b;
+  --gold:     #c8890a;
+  --gold-btn: #e09a10;
+  --white:    #ffffff;
+  --off:      #f7f9fc;
+  --muted:    #5c6e82;
+  --border:   #dde4ee;
+  --dark:     #0b1827;
+  --max:      1140px;
+  --ease:     0.28s ease;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 44px;
+}
+@media (max-width: 640px) { .container { padding: 0 22px; } }
+
+/* ── NAVBAR ── */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 1000;
+  height: 70px; display: flex; align-items: center;
+  background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px); transition: box-shadow var(--ease);
+}
+.nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+.nav .container {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; max-width: 100%; padding: 0 48px;
+}
+.brand { display: flex; flex-direction: column; gap: 1px; line-height: 1; flex-shrink: 0; }
+.brand-name { font-size: 0.95rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
+.brand-sub { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.nav-links { display: flex; align-items: center; gap: 52px; flex: 1; justify-content: center; }
+.nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color var(--ease); white-space: nowrap; }
+.nav-links a:hover { color: var(--navy); }
+.nav-right { display: flex; align-items: center; gap: 28px; flex-shrink: 0; }
+.nav-tel { font-size: 0.88rem; font-weight: 600; color: var(--navy); letter-spacing: 0.01em; transition: color var(--ease); }
+.nav-tel:hover { color: var(--gold); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 22px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 2px; transition: all var(--ease); font-family: inherit; }
+.btn-gold { background: var(--gold-btn); color: var(--white); }
+.btn-gold:hover { background: var(--gold); transform: translateY(-1px); }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.ham span { display: block; width: 20px; height: 1.5px; background: var(--navy); }
+@media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
+.ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+.ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
+.ham.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+.mob-menu { display: none; position: fixed; inset: 70px 0 0 0; z-index: 999; background: var(--white); padding: 36px 24px; border-top: 1px solid var(--border); flex-direction: column; gap: 0; }
+.mob-menu.open { display: flex; }
+.mob-menu a { padding: 18px 0; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); border-bottom: 1px solid var(--border); }
+.mob-cta { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+.mob-phone { display: flex; align-items: center; justify-content: center; padding: 14px 20px; font-size: 1rem; font-weight: 700; color: var(--navy); border: 1.5px solid var(--border); border-radius: 2px; transition: all var(--ease); text-transform: none; letter-spacing: 0; border-bottom: 1.5px solid var(--border) !important; }
+.mob-phone:hover { border-color: var(--navy) !important; background: var(--off); }
+
+/* ── PAGE HERO ── */
+.page-hero {
+  padding-top: 70px; background: var(--dark); position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, #0d1f35 0%, #1a3d6b 100%);
+  opacity: 0.6;
+}
+.page-hero-inner { position: relative; z-index: 1; padding: 72px 0 80px; max-width: 700px; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 28px; }
+.breadcrumb a { color: rgba(255,255,255,0.3); transition: color var(--ease); }
+.breadcrumb a:hover { color: rgba(255,255,255,0.7); }
+.breadcrumb span { color: rgba(255,255,255,0.15); }
+.page-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.025em; margin-bottom: 14px; }
+.page-hero p { font-size: 0.95rem; color: rgba(255,255,255,0.45); line-height: 1.8; font-weight: 300; }
+
+/* ── CONTENT ── */
+.legal-body { padding: 80px 0 100px; }
+.legal-wrap { max-width: 760px; }
+.legal-section { margin-bottom: 56px; }
+.legal-section h2 {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px;
+}
+.legal-section h3 {
+  font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 10px;
+}
+.legal-section p {
+  font-size: 0.93rem; color: var(--muted); line-height: 1.88; margin-bottom: 12px;
+}
+.legal-section p:last-child { margin-bottom: 0; }
+.legal-section a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.legal-divider { width: 36px; height: 2px; background: var(--gold); margin: 0 0 48px; }
+
+/* ── FOOTER ── */
+.footer { background: #080f1a; padding: 60px 0 28px; }
+.footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 26px; }
+@media (max-width: 880px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .footer-top { grid-template-columns: 1fr; } }
+.foot-brand-name { display: block; font-size: 0.88rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 4px; }
+.foot-brand-sub { display: block; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 18px; }
+.foot-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.8; }
+.foot-col h4 { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.foot-col ul { display: flex; flex-direction: column; gap: 11px; }
+.foot-col ul li a { font-size: 0.82rem; color: rgba(255,255,255,0.48); transition: color var(--ease); }
+.foot-col ul li a:hover { color: rgba(255,255,255,0.85); }
+.foot-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.72rem; color: rgba(255,255,255,0.2); margin-bottom: 18px; }
+.foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
+.foot-bottom a:hover { color: rgba(255,255,255,0.6); }
+.foot-credit { display: flex; align-items: center; justify-content: center; gap: 8px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.7rem; color: rgba(255,255,255,0.18); }
+.foot-credit a { display: flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.28); transition: color var(--ease); }
+.foot-credit a:hover { color: rgba(255,255,255,0.6); }
+.foot-credit img { height: 18px; width: auto; opacity: 0.45; transition: opacity var(--ease); }
+.foot-credit a:hover img { opacity: 0.75; }
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Aurora Solutions</span>
+      <span class="brand-sub">Électricien &middot; Pons</span>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="about.html">À propos</a>
+      <a href="index.html#avis">Avis clients</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav-right" style="padding:0 48px">
+      <a href="tel:+33763094824" class="nav-tel">07 63 09 48 24</a>
+      <button class="btn btn-gold" onclick="window.location.href='index.html#contact'">Devis gratuit</button>
+    </div>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobmenu">
+  <a href="services.html">Services</a>
+  <a href="realisations.html">Réalisations</a>
+  <a href="about.html">A propos</a>
+  <a href="index.html#avis">Avis clients</a>
+  <a href="index.html#contact">Contact</a>
+  <div class="mob-cta">
+    <a href="tel:+33763094824" class="mob-phone">07 63 09 48 24</a>
+    <button class="btn btn-gold" onclick="window.location.href='index.html#contact'" style="min-height:48px;width:100%;font-size:0.82rem">Devis gratuit</button>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,0.5)">Mentions légales</span>
+      </div>
+      <h1>Mentions légales</h1>
+      <p>Informations légales obligatoires relatives au site aurora-solutions.fr</p>
+    </div>
+  </div>
+</div>
+
+<div class="legal-body">
+  <div class="container">
+    <div class="legal-wrap">
+
+      <div class="legal-divider"></div>
+
+      <div class="legal-section">
+        <h2>Éditeur du site</h2>
+        <p><strong>Aurora Solutions</strong><br>
+        Société par Actions Simplifiée (SAS)<br>
+        Siège social : 7 B Impasse des Géraniums, 17800 Pons<br>
+        SIRET : 945 006 609 000 16<br>
+        TVA intracommunautaire : FR63945006609<br>
+        Directeur de la publication : Thomas Tesson</p>
+        <p>Téléphone : <a href="tel:+33763094824">07 63 09 48 24</a><br>
+        E-mail : <a href="mailto:contact@aurora-solutions.fr">contact@aurora-solutions.fr</a></p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Hébergement</h2>
+        <p>Ce site est hébergé par :<br>
+        <strong>GitHub, Inc.</strong><br>
+        88 Colin P. Kelly Jr. Street, San Francisco, CA 94107 – États-Unis<br>
+        <a href="https://github.com" target="_blank" rel="noopener">github.com</a></p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Propriété intellectuelle</h2>
+        <p>L'ensemble du contenu de ce site (textes, images, graphismes, logo, structure) est la propriété exclusive d'Aurora Solutions ou de ses partenaires, et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle.</p>
+        <p>Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable d'Aurora Solutions.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Responsabilité</h2>
+        <p>Aurora Solutions s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, Aurora Solutions ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.</p>
+        <p>En conséquence, Aurora Solutions décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur ce site, ainsi que pour tout dommage résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Liens hypertextes</h2>
+        <p>Ce site peut contenir des liens vers d'autres sites internet. Aurora Solutions n'est pas responsable du contenu de ces sites tiers et ne saurait être tenu pour responsable de tout dommage ou préjudice résultant de l'accès à ces sites.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Droit applicable</h2>
+        <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+        <p>Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter à l'adresse : <a href="mailto:contact@aurora-solutions.fr">contact@aurora-solutions.fr</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="foot-brand">
+        <span class="foot-brand-name">Aurora Solutions</span>
+        <span class="foot-brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+        <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Dépannage électrique</a></li>
+          <li><a href="index.html#services">Rénovation électrique</a></li>
+          <li><a href="index.html#services">Installation borne IRVE</a></li>
+          <li><a href="index.html#services">Installation neuve</a></li>
+          <li><a href="services.html">Tous les services</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Zones</h4>
+        <ul>
+          <li><a href="index.html#contact">Pons</a></li>
+          <li><a href="index.html#contact">Saintes</a></li>
+          <li><a href="index.html#contact">Royan</a></li>
+          <li><a href="index.html#contact">Cognac</a></li>
+          <li><a href="index.html#contact">Jonzac</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33763094824">07 63 09 48 24</a></li>
+          <li><a href="mailto:contact@aurora-solutions.fr">contact@aurora-solutions.fr</a></li>
+          <li><a href="index.html#contact">Devis gratuit</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
+      <span>
+        <a href="mentions-legales.html">Mentions légales</a>
+        &nbsp;&middot;&nbsp;
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      </span>
+    </div>
+    <div class="foot-credit">
+      <span>Site réalisé par</span>
+      <a href="https://payment-flow.fr" target="_blank" rel="noopener">
+        <img src="Design sans titre (27).png" alt="Payment Flow">
+        Payment Flow
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var nav = document.getElementById('nav');
+  var ham = document.getElementById('ham');
+  var menu = document.getElementById('mobmenu');
+  var links = menu.querySelectorAll('a');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+  function openMenu() { menu.classList.add('open'); ham.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { menu.classList.remove('open'); ham.classList.remove('open'); document.body.style.overflow = ''; }
+  ham.addEventListener('click', function () { menu.classList.contains('open') ? closeMenu() : openMenu(); });
+  links.forEach(function (l) { l.addEventListener('click', closeMenu); });
+})();
+</script>
+
+</body>
+</html>

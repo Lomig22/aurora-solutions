@@ -1102,6 +1102,11 @@ ul { list-style: none; }
 }
 .foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
 .foot-bottom a:hover { color: rgba(255,255,255,0.6); }
+.foot-credit { display: flex; align-items: center; justify-content: center; gap: 8px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.7rem; color: rgba(255,255,255,0.18); }
+.foot-credit a { display: flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.28); transition: color var(--ease); }
+.foot-credit a:hover { color: rgba(255,255,255,0.6); }
+.foot-credit img { height: 18px; width: auto; opacity: 0.45; transition: opacity var(--ease); }
+.foot-credit a:hover img { opacity: 0.75; }
 
 
 /* ── FADE IN ── */
@@ -1712,7 +1717,7 @@ ul { list-style: none; }
       <div class="foot-brand">
         <span class="foot-brand-name">Aurora Solutions</span>
         <span class="foot-brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
-        <p>Artisan électricien indépendant, intervenant chez les particuliers et professionnels de la Charente-Maritime depuis plus de dix ans.</p>
+        <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
       </div>
       <div class="foot-col">
         <h4>Services</h4>
@@ -1740,18 +1745,25 @@ ul { list-style: none; }
           <li><a href="tel:+33763094824">07 63 09 48 24</a></li>
           <li><a href="mailto:contact@aurora-solutions.fr">contact@aurora-solutions.fr</a></li>
           <li><a href="#contact">Devis gratuit</a></li>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Confidentialité</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="politique-confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2025 Aurora Solutions &mdash; SIRET XXX XXX XXX XXXXX</span>
+      <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
       <span>
-        <a href="#">Mentions légales</a>
+        <a href="mentions-legales.html">Mentions légales</a>
         &nbsp;&middot;&nbsp;
-        <a href="#">Politique de confidentialité</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
       </span>
+    </div>
+    <div class="foot-credit">
+      <span>Site réalisé par</span>
+      <a href="https://payment-flow.fr" target="_blank" rel="noopener">
+        <img src="Design sans titre (27).png" alt="Payment Flow">
+        Payment Flow
+      </a>
     </div>
   </div>
 </footer>
