@@ -1092,14 +1092,14 @@ ul { list-style: none; }
 }
 .foot-col ul li a:hover { color: rgba(255,255,255,0.85); }
 .foot-bottom {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  flex-wrap: wrap;
   gap: 10px;
   font-size: 0.72rem;
   color: rgba(255,255,255,0.2);
 }
+.foot-bottom > span:last-child { justify-self: end; }
 .foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
 .foot-bottom a:hover { color: rgba(255,255,255,0.6); }
 .foot-credit { display: flex; align-items: center; gap: 6px; font-size: 0.7rem; color: rgba(255,255,255,0.18); }
@@ -1752,12 +1752,12 @@ ul { list-style: none; }
     </div>
     <div class="foot-bottom">
       <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
+      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow">Payment Flow</a></span>
       <span>
         <a href="mentions-legales.html">Mentions légales</a>
         &nbsp;&middot;&nbsp;
         <a href="politique-confidentialite.html">Politique de confidentialité</a>
       </span>
-      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow">Payment Flow</a></span>
     </div>
   </div>
 </footer>
