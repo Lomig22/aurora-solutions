@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.aurora-solutions-electricite.fr/sitemap.xml

@@ -1,18 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY"></script>
+<!-- Google tag (gtag.js) — chargé uniquement après consentement cookies -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5WL3YGM6LY');
+  window.auroraLoadGA = function () {
+    if (window.auroraGALoaded) return;
+    window.auroraGALoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-5WL3YGM6LY');
+  };
+  if (localStorage.getItem('auroraCookieConsent') === 'accepted') { window.auroraLoadGA(); }
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Aurora Solutions – Électricien à Pons (17800). Installation, dépannage, rénovation électrique et bornes IRVE en Charente-Maritime. Devis gratuit.">
+<meta name="description" content="Aurora Solutions – Électricien à Pons. Installation, dépannage, rénovation électrique, climatisation et bornes IRVE en Charente-Maritime. Devis gratuit.">
 <title>Aurora Solutions – Électricien à Pons | Charente-Maritime</title>
+<link rel="canonical" href="https://www.aurora-solutions-electricite.fr/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0d1f35">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Aurora Solutions">
+<meta property="og:title" content="Aurora Solutions – Électricien à Pons | Charente-Maritime">
+<meta property="og:description" content="Installation, dépannage, rénovation électrique, climatisation et bornes IRVE en Charente-Maritime. Devis gratuit.">
+<meta property="og:url" content="https://www.aurora-solutions-electricite.fr/">
+<meta property="og:image" content="https://www.aurora-solutions-electricite.fr/IMG_2628.JPG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aurora Solutions – Électricien à Pons | Charente-Maritime">
+<meta name="twitter:description" content="Installation, dépannage, rénovation électrique, climatisation et bornes IRVE en Charente-Maritime. Devis gratuit.">
+<meta name="twitter:image" content="https://www.aurora-solutions-electricite.fr/IMG_2628.JPG">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Electrician", "HVACBusiness"],
+  "name": "Aurora Solutions",
+  "image": "https://www.aurora-solutions-electricite.fr/IMG_2628.JPG",
+  "url": "https://www.aurora-solutions-electricite.fr/",
+  "hasMap": "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
+  "telephone": "+33763094824",
+  "email": "aurora.solutions.17800@gmail.com",
+  "description": "Électricien artisan à Pons (17800) : installation, dépannage, rénovation électrique, climatisation réversible (PAC air/air, partenaire Thermor) et bornes de recharge IRVE en Charente-Maritime.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7 B Impasse des Géraniums",
+    "postalCode": "17800",
+    "addressLocality": "Pons",
+    "addressRegion": "Charente-Maritime",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Pons" },
+    { "@type": "City", "name": "Saintes" },
+    { "@type": "City", "name": "Royan" },
+    { "@type": "City", "name": "Cognac" },
+    { "@type": "City", "name": "Jonzac" },
+    { "@type": "City", "name": "Gémozac" },
+    { "@type": "City", "name": "Île d'Oléron" },
+    { "@type": "City", "name": "Saujon" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "16"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -76,10 +136,21 @@ ul { list-style: none; }
 }
 .brand {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.brand-icon {
+  height: 34px;
+  width: 34px;
+  flex-shrink: 0;
+}
+.brand-text {
+  display: flex;
   flex-direction: column;
   gap: 1px;
   line-height: 1;
-  flex-shrink: 0;
 }
 .brand-name {
   font-size: 0.95rem;
@@ -145,7 +216,7 @@ ul { list-style: none; }
 }
 .btn-gold {
   background: var(--gold-btn);
-  color: var(--white);
+  color: var(--dark);
 }
 .btn-gold:hover { background: var(--gold); transform: translateY(-1px); }
 .btn-gold-lg {
@@ -972,6 +1043,15 @@ ul { list-style: none; }
 }
 .testi-dot.active { background: var(--gold); transform: scale(1.3); }
 
+/* ── AVIS PAGESJAUNES ── */
+.pj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 860px) { .pj-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .pj-grid { grid-template-columns: 1fr; } }
+
 /* ── CONTACT ── */
 .contact-top {
   text-align: center;
@@ -1289,13 +1369,16 @@ ul { list-style: none; }
 <nav class="nav" id="nav">
   <div class="container">
     <a href="#" class="brand">
-      <span class="brand-name">Aurora Solutions</span>
-      <span class="brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+      <img src="aurora-solutions-logo-icon.png" alt="Aurora Solutions" class="brand-icon" width="40" height="40" loading="eager">
+      <span class="brand-text">
+        <span class="brand-name">Aurora Solutions</span>
+        <span class="brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
+      </span>
     </a>
     <ul class="nav-links">
       <li><a href="services.html">Services</a></li>
       <li><a href="realisations.html">Réalisations</a></li>
-      <li><a href="about.html">A propos</a></li>
+      <li><a href="about.html">À propos</a></li>
       <li><a href="#avis">Avis</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1313,7 +1396,7 @@ ul { list-style: none; }
 <div class="mob-menu" id="mobmenu">
   <a href="services.html">Services</a>
   <a href="realisations.html">Réalisations</a>
-  <a href="about.html">A propos</a>
+  <a href="about.html">À propos</a>
   <a href="#avis">Avis clients</a>
   <a href="#contact">Contact</a>
   <div class="mob-cta">
@@ -1331,8 +1414,8 @@ ul { list-style: none; }
 
       <!-- TEXTE -->
       <div class="hero-inner">
-        <span class="hero-label">Electricien a Pons &nbsp;&middot;&nbsp; Charente-Maritime (17)</span>
-        <h1>Installation, dépannage<br>et rénovation électrique</h1>
+        <span class="hero-label">Électricien à Pons &nbsp;&middot;&nbsp; Charente-Maritime (17)</span>
+        <h1>Votre électricien à Pons<br>pour l'installation, le dépannage et la rénovation électrique</h1>
         <ul class="hero-promises">
           <li>Intervention le jour même, 7 jours sur 7</li>
           <li>Devis gratuit, prix ferme sans surprise</li>
@@ -1423,10 +1506,10 @@ ul { list-style: none; }
   <div class="container">
     <div class="intro-split">
       <div class="fi">
-        <span class="lbl">A propos</span>
+        <span class="lbl">À propos</span>
         <h2 class="ttl">Un électricien de confiance,<br>ancré dans son territoire</h2>
         <div class="rule"></div>
-        <p class="body-text">Basés à Pons depuis plus de dix ans, nous accompagnons particuliers et professionnels dans tous leurs travaux d'électricité. De la rénovation complète au dépannage d'urgence, chaque intervention est réalisée avec le même niveau d'exigence.</p>
+        <p class="body-text">Forts de plus de 6 ans d'expérience et basés à Pons, nous accompagnons particuliers et professionnels dans tous leurs travaux d'électricité. De la rénovation complète au dépannage d'urgence, chaque intervention est réalisée avec le même niveau d'exigence.</p>
         <p class="body-text" style="margin-top:13px">Notre approche est simple : écouter, proposer la solution la plus adaptée, et réaliser un travail durable. Nous ne sous-traitons jamais. Chaque chantier est suivi par notre équipe, du début à la fin.</p>
         <a href="#services" class="intro-link">Voir nos services</a>
       </div>
@@ -1477,7 +1560,7 @@ ul { list-style: none; }
       <div class="svc fi d1">
         <span class="svc-n">03</span>
         <h3>Installation borne IRVE</h3>
-        <p>Certifiés IRVE, nous installons des bornes de recharge pour véhicules électriques adaptées à vos usages, à domicile comme en entreprise. Éligible aux aides de l'État.</p>
+        <p>Certifiés IRVE, nous installons des bornes de recharge pour véhicules électriques adaptées à vos usages, à domicile comme en entreprise.</p>
         <a href="realisations.html#irve" class="arrow-link">En savoir plus</a>
       </div>
       <div class="svc fi d2">
@@ -1486,13 +1569,19 @@ ul { list-style: none; }
         <p>Construction, extension, aménagement : nous prenons en charge l'intégralité de vos installations électriques, du tableau aux prises en passant par l'éclairage et la domotique.</p>
         <a href="realisations.html#installation" class="arrow-link">En savoir plus</a>
       </div>
+      <div class="svc fi d1" style="grid-column: 1 / -1">
+        <span class="svc-n">05</span>
+        <h3>Climatisation réversible</h3>
+        <p>Installation de climatisation réversible mono-split et multi-split (PAC air/air), partenaires de la marque Thermor et formés à leurs outils de dimensionnement. Confort en été, chauffage d'appoint en hiver.</p>
+        <a href="climatisation.html" class="arrow-link">En savoir plus</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- INTERLUDE IMAGE -->
 <div class="interlude">
-  <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1600&q=80&auto=format&fit=crop&crop=center" alt="Chantier électrique">
+  <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1600&q=80&auto=format&fit=crop&crop=center" alt="Chantier électrique" loading="lazy">
   <div class="interlude-over">
     <div class="container">
       <div class="interlude-copy">
@@ -1517,12 +1606,13 @@ ul { list-style: none; }
       <div class="fi d2">
         <div class="dom-list">
           <div class="dom-item"><span class="dom-dot"></span>Tableau électrique</div>
-          <div class="dom-item"><span class="dom-dot"></span>Eclairage intérieur</div>
+          <div class="dom-item"><span class="dom-dot"></span>Éclairage intérieur</div>
           <div class="dom-item"><span class="dom-dot"></span>Prises &amp; interrupteurs</div>
-          <div class="dom-item"><span class="dom-dot"></span>Eclairage extérieur</div>
+          <div class="dom-item"><span class="dom-dot"></span>Éclairage extérieur</div>
           <div class="dom-item"><span class="dom-dot"></span>Câblage réseau</div>
           <div class="dom-item"><span class="dom-dot"></span>Chauffage électrique</div>
           <div class="dom-item"><span class="dom-dot"></span>Borne de recharge VE</div>
+          <div class="dom-item"><span class="dom-dot"></span>Climatisation réversible</div>
           <div class="dom-item"><span class="dom-dot"></span>VMC &amp; ventilation</div>
           <div class="dom-item"><span class="dom-dot"></span>Domotique</div>
           <div class="dom-item"><span class="dom-dot"></span>Alarme &amp; sécurité</div>
@@ -1688,6 +1778,30 @@ ul { list-style: none; }
               <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             </div>
           </div>
+          <div class="testi">
+            <div class="testi-q">&ldquo;</div>
+            <p class="testi-body">Super intervention de Thomas (Aurora Solutions) pour une rénovation électrique complète chez moi, avec en plus l'installation d'une clim et d'une borne de recharge électrique. Travail propre, sérieux, et bien expliqué. Je recommande sans hésiter pour toute électricité à Saint-Palais-sur-Mer !</p>
+            <div class="testi-foot">
+              <div class="testi-name">Timothé Marthe-Rose</div>
+              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+          <div class="testi">
+            <div class="testi-q">&ldquo;</div>
+            <p class="testi-body">Personnes très aimables !!</p>
+            <div class="testi-foot">
+              <div class="testi-name">RED SKAA</div>
+              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+          <div class="testi">
+            <div class="testi-q">&ldquo;</div>
+            <p class="testi-body">Je recommande à 100% pour vos futurs travaux électriques. Chantier laissé propre.</p>
+            <div class="testi-foot">
+              <div class="testi-name">Matteo Beck</div>
+              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="testi-nav">
@@ -1766,6 +1880,49 @@ ul { list-style: none; }
 })();
 </script>
 
+<!-- AVIS PAGESJAUNES -->
+<section class="section bg-white" id="avis-pagesjaunes">
+  <div class="container">
+    <div class="testi-head fi">
+      <div>
+        <span class="lbl">Autre plateforme</span>
+        <h2 class="ttl">Nos avis PagesJaunes</h2>
+      </div>
+      <div class="rating-blk">
+        <div class="rating-score">4.7 <em>/ 5</em></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-note">Basé sur 3 avis PagesJaunes</div>
+      </div>
+    </div>
+    <div class="pj-grid">
+      <div class="testi">
+        <div class="testi-q">&ldquo;</div>
+        <p class="testi-body">Merci à Thomas et Kaïs pour leur professionnalisme et leur ponctualité. Rien à redire.</p>
+        <div class="testi-foot">
+          <div class="testi-name">pierreloth</div>
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="testi-q">&ldquo;</div>
+        <p class="testi-body">Entreprise professionnelle, je recommande.</p>
+        <div class="testi-foot">
+          <div class="testi-name">FrédéricLeger</div>
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="testi-q">&ldquo;</div>
+        <p class="testi-body">J'aimerais remercier Thomas qui est intervenu très vite, très professionnel et à l'écoute. Je recommande.</p>
+        <div class="testi-foot">
+          <div class="testi-name">v57r278g6k</div>
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="section bg-dark" id="contact">
   <div class="container">
@@ -1799,7 +1956,7 @@ ul { list-style: none; }
               <span class="ztag">Cognac</span>
               <span class="ztag">Jonzac</span>
               <span class="ztag">Gémozac</span>
-              <span class="ztag">Ile d'Oléron</span>
+              <span class="ztag">Île d'Oléron</span>
               <span class="ztag">Saujon</span>
             </div>
           </dd>
@@ -1812,6 +1969,8 @@ ul { list-style: none; }
       <form class="cform fi d2" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.aurora-solutions-electricite.fr/merci.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="frow">
           <div class="fg">
             <label>Nom</label>
@@ -1835,6 +1994,7 @@ ul { list-style: none; }
               <option>Installation borne IRVE</option>
               <option>Rénovation électrique</option>
               <option>Installation neuve</option>
+              <option>Climatisation</option>
               <option>Autre</option>
             </select>
           </div>
@@ -1862,6 +2022,8 @@ ul { list-style: none; }
     <form class="mform" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.aurora-solutions-electricite.fr/merci.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="frow">
         <div class="fg">
           <label for="m-nom">Nom</label>
@@ -1885,6 +2047,7 @@ ul { list-style: none; }
             <option>Installation borne IRVE</option>
             <option>Rénovation électrique</option>
             <option>Installation neuve</option>
+            <option>Climatisation</option>
             <option>Autre</option>
           </select>
         </div>
@@ -1907,16 +2070,17 @@ ul { list-style: none; }
     <div class="footer-top">
       <div class="foot-brand">
         <span class="foot-brand-name">Aurora Solutions</span>
-        <span class="foot-brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+        <span class="foot-brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
         <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
       </div>
       <div class="foot-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Dépannage électrique</a></li>
-          <li><a href="#services">Rénovation électrique</a></li>
-          <li><a href="#services">Installation borne IRVE</a></li>
-          <li><a href="#services">Installation neuve</a></li>
+          <li><a href="services.html#depannage">Dépannage électrique</a></li>
+          <li><a href="services.html#renovation">Rénovation électrique</a></li>
+          <li><a href="services.html#irve">Installation borne IRVE</a></li>
+          <li><a href="services.html#installation">Installation neuve</a></li>
+          <li><a href="climatisation.html">Climatisation réversible</a></li>
           <li><a href="services.html">Tous les services</a></li>
         </ul>
       </div>
@@ -1928,6 +2092,9 @@ ul { list-style: none; }
           <li><a href="#contact">Royan</a></li>
           <li><a href="#contact">Cognac</a></li>
           <li><a href="#contact">Jonzac</a></li>
+          <li><a href="#contact">Gémozac</a></li>
+          <li><a href="#contact">Île d'Oléron</a></li>
+          <li><a href="#contact">Saujon</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -1943,7 +2110,7 @@ ul { list-style: none; }
     </div>
     <div class="foot-bottom">
       <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
-      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow">Payment Flow</a></span>
+      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow" loading="lazy" width="500" height="500">Payment Flow</a></span>
       <span>
         <a href="mentions-legales.html">Mentions légales</a>
         &nbsp;&middot;&nbsp;
@@ -2034,5 +2201,33 @@ ul { list-style: none; }
 </script>
 
 <script src="forms.js"></script>
+<!-- BANDEAU CONSENTEMENT COOKIES -->
+<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">En savoir plus</a></p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button id="cookieRefuse" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;font-family:inherit;">Refuser</button>
+      <button id="cookieAccept" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:#e09a10;color:#0b1827;border:none;border-radius:2px;cursor:pointer;font-family:inherit;">Accepter</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var consent = localStorage.getItem('auroraCookieConsent');
+  var banner = document.getElementById('cookieBanner');
+  if (!consent && banner) { banner.style.display = 'block'; }
+  var acceptBtn = document.getElementById('cookieAccept');
+  var refuseBtn = document.getElementById('cookieRefuse');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'accepted');
+    banner.style.display = 'none';
+    if (window.auroraLoadGA) window.auroraLoadGA();
+  });
+  if (refuseBtn) refuseBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'refused');
+    banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

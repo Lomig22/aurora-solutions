@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY"></script>
+<!-- Google tag (gtag.js) — chargé uniquement après consentement cookies -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5WL3YGM6LY');
+  window.auroraLoadGA = function () {
+    if (window.auroraGALoaded) return;
+    window.auroraGALoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-5WL3YGM6LY');
+  };
+  if (localStorage.getItem('auroraCookieConsent') === 'accepted') { window.auroraLoadGA(); }
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Aurora Solutions – Nos réalisations en électricité : dépannage, rénovation, bornes IRVE et installations neuves en Charente-Maritime.">
 <title>Réalisations – Aurora Solutions | Électricien à Pons</title>
+<link rel="canonical" href="https://www.aurora-solutions-electricite.fr/realisations.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0d1f35">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Aurora Solutions">
+<meta property="og:title" content="Réalisations – Aurora Solutions | Électricien à Pons">
+<meta property="og:description" content="Nos réalisations en électricité : dépannage, rénovation, bornes IRVE et installations neuves en Charente-Maritime.">
+<meta property="og:url" content="https://www.aurora-solutions-electricite.fr/realisations.html">
+<meta property="og:image" content="https://www.aurora-solutions-electricite.fr/IMG_2628.JPG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Réalisations – Aurora Solutions | Électricien à Pons">
+<meta name="twitter:description" content="Nos réalisations en électricité : dépannage, rénovation, bornes IRVE et installations neuves en Charente-Maritime.">
+<meta name="twitter:image" content="https://www.aurora-solutions-electricite.fr/IMG_2628.JPG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -58,7 +82,9 @@ ul { list-style: none; }
   display: flex; align-items: center; justify-content: space-between;
   width: 100%; max-width: 100%; padding: 0 48px;
 }
-.brand { display: flex; flex-direction: column; gap: 1px; line-height: 1; flex-shrink: 0; }
+.brand { display: flex; flex-direction: row; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand-icon { height: 40px; width: 40px; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; gap: 1px; line-height: 1; }
 .brand-name { font-size: 0.95rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
 .brand-sub { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
 .nav-links { display: flex; align-items: center; gap: 52px; flex: 1; justify-content: center; }
@@ -68,7 +94,7 @@ ul { list-style: none; }
 .nav-tel { font-size: 0.88rem; font-weight: 600; color: var(--navy); letter-spacing: 0.01em; transition: color var(--ease); }
 .nav-tel:hover { color: var(--gold); }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 22px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 2px; transition: all var(--ease); font-family: inherit; }
-.btn-gold { background: var(--gold-btn); color: var(--white); }
+.btn-gold { background: var(--gold-btn); color: var(--dark); }
 .btn-gold:hover { background: var(--gold); transform: translateY(-1px); }
 .btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
 .btn-outline:hover { background: var(--navy); color: var(--white); }
@@ -151,6 +177,23 @@ ul { list-style: none; }
   transition: transform 0.6s ease;
 }
 .carousel-slide:hover .slide-photo img { transform: scale(1.03); }
+.slide-photo-placeholder {
+  background: linear-gradient(145deg, var(--blue) 0%, var(--navy) 100%);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.slide-photo-placeholder .ph-label {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; line-height: 1.7; text-align: center;
+}
+/* ── GALERIE CHANTIER (lightbox) ── */
+.gallery-box { max-width: 720px; }
+.gallery-photo { width: 100%; border-radius: 2px; overflow: hidden; background: var(--off); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; min-height: 260px; }
+.gallery-photo img { width: 100%; height: auto; max-height: 60vh; object-fit: contain; display: block; margin: 0 auto; }
+.gallery-caption { font-size: 0.88rem; color: var(--muted); margin-bottom: 22px; text-align: center; line-height: 1.7; }
+.gallery-controls { display: flex; align-items: center; justify-content: center; gap: 22px; }
+.gallery-counter { font-size: 0.72rem; font-weight: 600; color: var(--muted); letter-spacing: 0.1em; min-width: 40px; text-align: center; }
 .slide-tag {
   position: absolute;
   top: 20px; left: 20px;
@@ -256,7 +299,7 @@ ul { list-style: none; }
 
 /* ── FOOTER ── */
 .footer { background: #080f1a; padding: 60px 0 28px; }
-.footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 26px; }
+.footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 26px; }
 @media (max-width: 880px) { .footer-top { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 460px) { .footer-top { grid-template-columns: 1fr; } }
 .foot-brand-name { display: block; font-size: 0.88rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 4px; }
@@ -342,13 +385,16 @@ ul { list-style: none; }
 <nav class="nav" id="nav">
   <div class="container" style="max-width:100%;padding:0 48px;display:flex;align-items:center;justify-content:space-between;width:100%">
     <a href="index.html" class="brand">
-      <span class="brand-name">Aurora Solutions</span>
-      <span class="brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+      <img src="aurora-solutions-logo-icon.png" alt="Aurora Solutions" class="brand-icon" width="40" height="40" loading="eager">
+      <span class="brand-text">
+        <span class="brand-name">Aurora Solutions</span>
+        <span class="brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
+      </span>
     </a>
     <ul class="nav-links">
       <li><a href="services.html">Services</a></li>
       <li><a href="realisations.html" class="active">Réalisations</a></li>
-      <li><a href="about.html">A propos</a></li>
+      <li><a href="about.html">À propos</a></li>
       <li><a href="index.html#avis">Avis</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
@@ -364,7 +410,7 @@ ul { list-style: none; }
 <div class="mob-menu" id="mobmenu">
   <a href="services.html">Services</a>
   <a href="realisations.html">Réalisations</a>
-  <a href="about.html">A propos</a>
+  <a href="about.html">À propos</a>
   <a href="index.html#avis">Avis clients</a>
   <a href="index.html#contact">Contact</a>
   <div class="mob-cta">
@@ -389,6 +435,7 @@ ul { list-style: none; }
         <a href="#renovation" class="anchor-btn">Rénovation</a>
         <a href="#irve" class="anchor-btn">Borne IRVE</a>
         <a href="#installation" class="anchor-btn">Installation neuve</a>
+        <a href="#climatisation" class="anchor-btn">Climatisation</a>
       </div>
     </div>
   </div>
@@ -412,7 +459,7 @@ ul { list-style: none; }
           <!-- Slide 1 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80&auto=format&fit=crop" alt="Dépannage disjoncteur">
+              <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80&auto=format&fit=crop" alt="Dépannage disjoncteur" loading="lazy">
               <span class="slide-tag">Dépannage</span>
             </div>
             <div class="slide-body">
@@ -435,7 +482,7 @@ ul { list-style: none; }
           <!-- Slide 2 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Panne tableau électrique">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Panne tableau électrique" loading="lazy">
               <span class="slide-tag">Dépannage</span>
             </div>
             <div class="slide-body">
@@ -458,7 +505,7 @@ ul { list-style: none; }
           <!-- Slide 3 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="troy-bridges-maXnRLszYY0-unsplash.jpg" alt="Court-circuit dans un local commercial">
+              <img src="troy-bridges-maXnRLszYY0-unsplash.jpg" alt="Court-circuit dans un local commercial" loading="lazy" width="1400" height="1050">
               <span class="slide-tag">Dépannage</span>
             </div>
             <div class="slide-body">
@@ -517,7 +564,7 @@ ul { list-style: none; }
           <!-- Slide 1 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="man-electrical-technician-working-switchboard-with-fuses.jpg" alt="Remplacement complet du tableau électrique">
+              <img src="man-electrical-technician-working-switchboard-with-fuses.jpg" alt="Remplacement complet du tableau électrique" loading="lazy" width="1400" height="933">
               <span class="slide-tag">Rénovation</span>
             </div>
             <div class="slide-body">
@@ -540,7 +587,7 @@ ul { list-style: none; }
           <!-- Slide 2 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80&auto=format&fit=crop" alt="Rénovation électrique complète appartement T4">
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80&auto=format&fit=crop" alt="Rénovation électrique complète appartement T4" loading="lazy">
               <span class="slide-tag">Rénovation</span>
             </div>
             <div class="slide-body">
@@ -563,7 +610,7 @@ ul { list-style: none; }
           <!-- Slide 3 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="close-up-hand-engineer-electrician-man-working-check-electrical-system-with-tablet-factory.jpg" alt="Mise aux normes NF C 15-100 avant vente">
+              <img src="close-up-hand-engineer-electrician-man-working-check-electrical-system-with-tablet-factory.jpg" alt="Mise aux normes NF C 15-100 avant vente" loading="lazy" width="1400" height="933">
               <span class="slide-tag">Rénovation</span>
             </div>
             <div class="slide-body">
@@ -575,7 +622,7 @@ ul { list-style: none; }
               <h3 class="slide-title">Mise aux normes NF C 15-100 avant vente</h3>
               <p class="slide-desc">Dans le cadre d'une vente immobilière, le diagnostic électrique avait révélé 14 anomalies. Le notaire exigeait une mise en conformité avant signature. Nous avons établi un plan d'intervention précis pour régulariser l'ensemble des points identifiés.</p>
               <div class="slide-details">
-                <div class="slide-detail-item">Reprise de 14 anomalies identifiées au diagnostic DPE</div>
+                <div class="slide-detail-item">Reprise de 14 anomalies identifiées au diagnostic électrique</div>
                 <div class="slide-detail-item">Ajout des protections différentielles manquantes</div>
                 <div class="slide-detail-item">Sécurisation des installations salle de bain (zone 1 et 2)</div>
                 <div class="slide-detail-item">Attestation délivrée — Vente réalisée dans les délais</div>
@@ -622,7 +669,7 @@ ul { list-style: none; }
           <!-- Slide 1 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80&auto=format&fit=crop" alt="Installation wallbox maison">
+              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80&auto=format&fit=crop" alt="Installation wallbox maison" loading="lazy">
               <span class="slide-tag">IRVE</span>
             </div>
             <div class="slide-body">
@@ -637,7 +684,7 @@ ul { list-style: none; }
                 <div class="slide-detail-item">Étude préalable du tableau et de la puissance souscrite</div>
                 <div class="slide-detail-item">Création d'un circuit dédié 32A depuis le tableau</div>
                 <div class="slide-detail-item">Pose de la wallbox Schneider 7,4 kW avec câble T2</div>
-                <div class="slide-detail-item">Éligible au crédit d'impôt — Dossier ADVENIR constitué</div>
+                <div class="slide-detail-item">Mise en service et test de charge réalisés le jour même</div>
               </div>
             </div>
           </div>
@@ -645,7 +692,7 @@ ul { list-style: none; }
           <!-- Slide 2 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="charging-station-electric-cars.jpg" alt="2 bornes de recharge sur parking d'entreprise">
+              <img src="charging-station-electric-cars.jpg" alt="2 bornes de recharge sur parking d'entreprise" loading="lazy" width="1400" height="2100">
               <span class="slide-tag">IRVE</span>
             </div>
             <div class="slide-body">
@@ -660,7 +707,7 @@ ul { list-style: none; }
                 <div class="slide-detail-item">Étude de charge et dimensionnement du circuit alimentation</div>
                 <div class="slide-detail-item">Création d'un tableau divisionnaire IRVE dédié</div>
                 <div class="slide-detail-item">Installation de 2 bornes 22 kW triphasées avec gestion de charge</div>
-                <div class="slide-detail-item">Éligible aux aides ADVENIR entreprises — TVA 20% récupérable</div>
+                <div class="slide-detail-item">Mise en service et tests de charge réalisés sur les deux bornes</div>
               </div>
             </div>
           </div>
@@ -668,7 +715,7 @@ ul { list-style: none; }
           <!-- Slide 3 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="ev-charging-station-clean-energy-filling-technology-electric-car-charging.jpg" alt="Pré-équipement IRVE sur maison en construction">
+              <img src="ev-charging-station-clean-energy-filling-technology-electric-car-charging.jpg" alt="Pré-équipement IRVE sur maison en construction" loading="lazy" width="1400" height="891">
               <span class="slide-tag">IRVE</span>
             </div>
             <div class="slide-body">
@@ -688,6 +735,30 @@ ul { list-style: none; }
             </div>
           </div>
 
+          <!-- Slide 4 -->
+          <div class="carousel-slide">
+            <div class="slide-photo">
+              <img src="installation-prise-renforcee-recharge-vehicule-electrique-jarnac-champagne.JPG" alt="Installation d'une prise renforcée étanche pour recharge de véhicule électrique à Jarnac-Champagne, Charente-Maritime" loading="lazy" width="1000" height="1778">
+              <span class="slide-tag">IRVE</span>
+            </div>
+            <div class="slide-body">
+              <div class="slide-meta">
+                <span class="slide-meta-item">Jarnac-Champagne (17)</span>
+                <span class="slide-meta-item">Particulier</span>
+                <span class="slide-meta-item">2026</span>
+              </div>
+              <h3 class="slide-title">Installation d'une prise renforcée pour recharge de véhicule électrique</h3>
+              <p class="slide-desc">Un client de Jarnac-Champagne, secteur Pons / Cognac, souhaitait pouvoir recharger son véhicule électrique en toute sécurité depuis son garage, sans les risques d'une prise classique. Nous avons étudié le point de raccordement le plus adapté et posé le dispositif en saillie sur mur en parpaing, avec un cheminement de câble propre et discret.</p>
+              <div class="slide-details">
+                <div class="slide-detail-item">Création d'un circuit dédié en gaine ICTA depuis le tableau électrique</div>
+                <div class="slide-detail-item">Pose d'une prise renforcée étanche IP66, 16A (3,2 kW)</div>
+                <div class="slide-detail-item">Protection différentielle dédiée pour une recharge sécurisée</div>
+                <div class="slide-detail-item">Solution économique, alternative à la wallbox pour une recharge occasionnelle</div>
+              </div>
+              <button class="btn btn-outline" data-gallery style="margin-top:24px;align-self:flex-start">Voir les photos du chantier</button>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="carousel-controls">
@@ -695,6 +766,7 @@ ul { list-style: none; }
           <button class="dot active" data-index="0"></button>
           <button class="dot" data-index="1"></button>
           <button class="dot" data-index="2"></button>
+          <button class="dot" data-index="3"></button>
         </div>
         <div class="carousel-arrows">
           <button class="arrow prev" aria-label="Précédent">
@@ -727,7 +799,7 @@ ul { list-style: none; }
           <!-- Slide 1 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="freepik_augmente-la-luminosite-de_2831037877.png" alt="Installation électrique devanture fleuriste">
+              <img src="freepik_augmente-la-luminosite-de_2831037877.jpg" alt="Installation électrique devanture fleuriste" loading="lazy" width="1200" height="896">
               <span class="slide-tag">Installation</span>
             </div>
             <div class="slide-body">
@@ -750,7 +822,7 @@ ul { list-style: none; }
           <!-- Slide 2 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="freepik_je-veux-que-tu-retire-le-_2831004737.png" alt="Installation électrique maison neuve — cuisine">
+              <img src="freepik_je-veux-que-tu-retire-le-_2831004737.jpg" alt="Installation électrique maison neuve — cuisine" loading="lazy" width="1200" height="896">
               <span class="slide-tag">Installation</span>
             </div>
             <div class="slide-body">
@@ -773,7 +845,7 @@ ul { list-style: none; }
           <!-- Slide 3 -->
           <div class="carousel-slide">
             <div class="slide-photo">
-              <img src="IMG_2628.JPG" alt="Éclairage décoratif salle de réception hangar">
+              <img src="IMG_2628.JPG" alt="Éclairage décoratif salle de réception hangar" loading="lazy" width="1600" height="900">
               <span class="slide-tag">Installation</span>
             </div>
             <div class="slide-body">
@@ -786,7 +858,7 @@ ul { list-style: none; }
               <p class="slide-desc">Aménagement d'un ancien hangar en espace événementiel : installation d'un réseau d'éclairage décoratif avec suspension de grandes lanternes sphériques en rotin tressé. La hauteur sous charpente et les murs en pierre ont guidé le dimensionnement du réseau et le choix des fixations.</p>
               <div class="slide-details">
                 <div class="slide-detail-item">Création d'un circuit dédié éclairage décoratif depuis le tableau général</div>
-                <div class="slide-detail-item">Pose des câbles en apparent sur structure métallique apparente</div>
+                <div class="slide-detail-item">Pose des câbles en apparent sur la charpente métallique</div>
                 <div class="slide-detail-item">Suspension et câblage de luminaires grande hauteur (6 m sous charpente)</div>
                 <div class="slide-detail-item">Mise en conformité ERP — Réception opérationnelle à l'ouverture</div>
               </div>
@@ -814,6 +886,43 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ══════════════════════════════════════
+     CAROUSEL 5 — CLIMATISATION
+════════════════════════════════════════ -->
+<section class="carousel-section bg-white" id="climatisation">
+  <div class="container">
+    <div class="carousel-header fi">
+      <div class="carousel-header-left">
+        <span class="lbl">Climatisation réversible</span>
+        <h2 class="ttl">Confort thermique &amp; installations Thermor</h2>
+      </div>
+    </div>
+    <div class="fi d1">
+      <div class="carousel-track-outer">
+        <div class="carousel-slide">
+          <div class="slide-photo slide-photo-placeholder">
+            <span class="ph-label">Photos de chantiers<br>bientôt disponibles</span>
+          </div>
+          <div class="slide-body">
+            <div class="slide-meta">
+              <span class="slide-meta-item">Pons &amp; Charente-Maritime</span>
+              <span class="slide-meta-item">Partenaire Thermor</span>
+            </div>
+            <h3 class="slide-title">Nos installations climatisation arrivent bientôt ici</h3>
+            <p class="slide-desc">Aurora Solutions installe des systèmes de climatisation réversible mono-split et multi-split (PAC air/air), en partenariat avec la marque Thermor. Les premières réalisations seront présentées dans cette section prochainement.</p>
+            <div class="slide-details">
+              <div class="slide-detail-item">Mono-split et multi-split (bi / tri / quadri / penta)</div>
+              <div class="slide-detail-item">Partenaires de la marque Thermor</div>
+              <div class="slide-detail-item">Pose et raccordement électrique inclus</div>
+            </div>
+            <a href="climatisation.html" class="btn btn-outline" style="margin-top:24px;align-self:flex-start">Voir la page climatisation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DEVIS -->
 <section class="devis-section" id="devis">
   <div class="container">
@@ -828,6 +937,8 @@ ul { list-style: none; }
       <form class="dform fi d2" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.aurora-solutions-electricite.fr/merci.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="frow">
           <div class="fg">
             <label for="d-nom">Nom</label>
@@ -851,6 +962,7 @@ ul { list-style: none; }
               <option>Installation borne IRVE</option>
               <option>Rénovation électrique</option>
               <option>Installation neuve</option>
+              <option>Climatisation</option>
               <option>Autre</option>
             </select>
           </div>
@@ -878,6 +990,8 @@ ul { list-style: none; }
     <form class="mform" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.aurora-solutions-electricite.fr/merci.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="frow">
         <div class="fg">
           <label for="m-nom">Nom</label>
@@ -901,6 +1015,7 @@ ul { list-style: none; }
             <option>Installation borne IRVE</option>
             <option>Rénovation électrique</option>
             <option>Installation neuve</option>
+            <option>Climatisation</option>
             <option>Autre</option>
           </select>
         </div>
@@ -917,13 +1032,35 @@ ul { list-style: none; }
   </div>
 </div>
 
+<!-- MODAL GALERIE CHANTIER -->
+<div class="modal-overlay" id="galleryModal">
+  <div class="modal-box gallery-box">
+    <button class="modal-close" id="galleryClose" aria-label="Fermer">&times;</button>
+    <span class="lbl">Prise renforcée &mdash; Jarnac-Champagne</span>
+    <h2 class="ttl" style="margin-bottom:20px">Photos du chantier</h2>
+    <div class="gallery-photo">
+      <img id="galleryImg" src="installation-prise-renforcee-recharge-vehicule-electrique-jarnac-champagne.JPG" alt="Photo du chantier prise renforcée à Jarnac-Champagne" loading="lazy" width="1000" height="1778">
+    </div>
+    <p class="gallery-caption" id="galleryCaption"></p>
+    <div class="gallery-controls">
+      <button class="arrow prev" id="galleryPrev" aria-label="Photo précédente">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <span class="gallery-counter" id="galleryCounter">1 / 4</span>
+      <button class="arrow next" id="galleryNext" aria-label="Photo suivante">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div class="foot-brand">
         <span class="foot-brand-name">Aurora Solutions</span>
-        <span class="foot-brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+        <span class="foot-brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
         <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
       </div>
       <div class="foot-col">
@@ -933,12 +1070,26 @@ ul { list-style: none; }
           <li><a href="services.html#renovation">Rénovation électrique</a></li>
           <li><a href="services.html#irve">Installation borne IRVE</a></li>
           <li><a href="services.html#installation">Installation neuve</a></li>
+          <li><a href="climatisation.html">Climatisation réversible</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Zones</h4>
+        <ul>
+          <li><a href="index.html#contact">Pons</a></li>
+          <li><a href="index.html#contact">Saintes</a></li>
+          <li><a href="index.html#contact">Royan</a></li>
+          <li><a href="index.html#contact">Cognac</a></li>
+          <li><a href="index.html#contact">Jonzac</a></li>
+          <li><a href="index.html#contact">Gémozac</a></li>
+          <li><a href="index.html#contact">Île d'Oléron</a></li>
+          <li><a href="index.html#contact">Saujon</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h4>Entreprise</h4>
         <ul>
-          <li><a href="about.html">A propos</a></li>
+          <li><a href="about.html">À propos</a></li>
           <li><a href="realisations.html">Réalisations</a></li>
           <li><a href="index.html#avis">Avis clients</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
@@ -949,13 +1100,13 @@ ul { list-style: none; }
         <ul>
           <li><a href="tel:+33763094824">07 63 09 48 24</a></li>
           <li><a href="mailto:aurora.solutions.17800@gmail.com">aurora.solutions.17800@gmail.com</a></li>
-          <li><a href="#">Pons (17800)</a></li>
+          <li><a href="https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA" target="_blank" rel="noopener">Pons (17800)</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
-      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow">Payment Flow</a></span>
+      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow" loading="lazy" width="500" height="500">Payment Flow</a></span>
       <span><a href="mentions-legales.html">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="politique-confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
@@ -996,7 +1147,43 @@ ul { list-style: none; }
   modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
+  /* ── Galerie chantier (prise renforcée) ── */
+  var galleryPhotos = [
+    { src: 'installation-prise-renforcee-recharge-vehicule-electrique-jarnac-champagne.JPG', alt: 'Prise renforcée étanche installée à Jarnac-Champagne', caption: 'Prise renforcée étanche installée pour la recharge du véhicule électrique, posée en saillie sur mur en parpaing.' },
+    { src: 'prise-renforcee-irve-garage-jarnac-champagne.JPG', alt: 'Vue d\'ensemble du garage avec la prise renforcée et la gaine électrique', caption: 'Vue d\'ensemble du garage : cheminement de la gaine ICTA et alimentation existante à proximité.' },
+    { src: 'recharge-vehicule-electrique-prise-renforcee-jarnac-champagne.JPG', alt: 'Véhicule électrique en recharge sur la prise renforcée installée par Aurora Solutions', caption: 'Le véhicule électrique du client en charge sur la nouvelle prise renforcée.' },
+    { src: 'cheminement-gaine-boitier-derivation-jarnac-champagne.JPG', alt: 'Cheminement de gaine électrique et boîtier de dérivation avant pose de la prise renforcée', caption: 'Cheminement de la gaine électrique et boîtier de dérivation, avant la pose finale de la prise.' }
+  ];
+  var galleryIndex = 0;
+  var galleryModal = document.getElementById('galleryModal');
+  var galleryImg = document.getElementById('galleryImg');
+  var galleryCaption = document.getElementById('galleryCaption');
+  var galleryCounter = document.getElementById('galleryCounter');
+  function renderGallery() {
+    var p = galleryPhotos[galleryIndex];
+    galleryImg.src = p.src;
+    galleryImg.alt = p.alt;
+    galleryCaption.textContent = p.caption;
+    galleryCounter.textContent = (galleryIndex + 1) + ' / ' + galleryPhotos.length;
+  }
+  function openGallery() { galleryIndex = 0; renderGallery(); galleryModal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeGallery() { galleryModal.classList.remove('open'); document.body.style.overflow = ''; }
+  document.querySelectorAll('[data-gallery]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); openGallery(); });
+  });
+  document.getElementById('galleryClose').addEventListener('click', closeGallery);
+  galleryModal.addEventListener('click', function (e) { if (e.target === galleryModal) closeGallery(); });
+  document.getElementById('galleryPrev').addEventListener('click', function () { galleryIndex = (galleryIndex - 1 + galleryPhotos.length) % galleryPhotos.length; renderGallery(); });
+  document.getElementById('galleryNext').addEventListener('click', function () { galleryIndex = (galleryIndex + 1) % galleryPhotos.length; renderGallery(); });
+  document.addEventListener('keydown', function (e) {
+    if (!galleryModal.classList.contains('open')) return;
+    if (e.key === 'Escape') closeGallery();
+    if (e.key === 'ArrowRight') document.getElementById('galleryNext').click();
+    if (e.key === 'ArrowLeft') document.getElementById('galleryPrev').click();
+  });
+
   /* ── Carousels ── */
+  var targetHash = window.location.hash;
   document.querySelectorAll('.carousel-wrap').forEach(function (wrap) {
     var track   = wrap.querySelector('.carousel-track');
     var slides  = wrap.querySelectorAll('.carousel-slide');
@@ -1026,9 +1213,48 @@ ul { list-style: none; }
       var diff = startX - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
     });
+
+    /* Deep-link straight to the "prise renforcée" slide (IRVE section) */
+    var section = wrap.closest('section');
+    if (section && section.id === 'irve' && targetHash === '#irve-prise-renforcee') {
+      goTo(total - 1);
+      var irveSection = document.getElementById('irve');
+      window.addEventListener('load', function () {
+        var y = irveSection.getBoundingClientRect().top + window.pageYOffset - 86;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    }
   });
 })();
 </script>
 <script src="forms.js"></script>
+<!-- BANDEAU CONSENTEMENT COOKIES -->
+<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">En savoir plus</a></p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button id="cookieRefuse" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;font-family:inherit;">Refuser</button>
+      <button id="cookieAccept" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:#e09a10;color:#0b1827;border:none;border-radius:2px;cursor:pointer;font-family:inherit;">Accepter</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var consent = localStorage.getItem('auroraCookieConsent');
+  var banner = document.getElementById('cookieBanner');
+  if (!consent && banner) { banner.style.display = 'block'; }
+  var acceptBtn = document.getElementById('cookieAccept');
+  var refuseBtn = document.getElementById('cookieRefuse');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'accepted');
+    banner.style.display = 'none';
+    if (window.auroraLoadGA) window.auroraLoadGA();
+  });
+  if (refuseBtn) refuseBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'refused');
+    banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

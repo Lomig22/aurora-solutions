@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY"></script>
+<!-- Google tag (gtag.js) — chargé uniquement après consentement cookies -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5WL3YGM6LY');
+  window.auroraLoadGA = function () {
+    if (window.auroraGALoaded) return;
+    window.auroraGALoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-5WL3YGM6LY');
+  };
+  if (localStorage.getItem('auroraCookieConsent') === 'accepted') { window.auroraLoadGA(); }
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>Mentions légales – Aurora Solutions</title>
+<link rel="canonical" href="https://www.aurora-solutions-electricite.fr/mentions-legales.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -62,7 +74,9 @@ ul { list-style: none; }
   display: flex; align-items: center; justify-content: space-between;
   width: 100%; max-width: 100%; padding: 0 48px;
 }
-.brand { display: flex; flex-direction: column; gap: 1px; line-height: 1; flex-shrink: 0; }
+.brand { display: flex; flex-direction: row; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand-icon { height: 40px; width: 40px; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; gap: 1px; line-height: 1; }
 .brand-name { font-size: 0.95rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
 .brand-sub { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
 .nav-links { display: flex; align-items: center; gap: 52px; flex: 1; justify-content: center; }
@@ -72,7 +86,7 @@ ul { list-style: none; }
 .nav-tel { font-size: 0.88rem; font-weight: 600; color: var(--navy); letter-spacing: 0.01em; transition: color var(--ease); }
 .nav-tel:hover { color: var(--gold); }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 22px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 2px; transition: all var(--ease); font-family: inherit; }
-.btn-gold { background: var(--gold-btn); color: var(--white); }
+.btn-gold { background: var(--gold-btn); color: var(--dark); }
 .btn-gold:hover { background: var(--gold); transform: translateY(-1px); }
 .ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
 .ham span { display: block; width: 20px; height: 1.5px; background: var(--navy); }
@@ -150,8 +164,11 @@ ul { list-style: none; }
 <nav class="nav" id="nav">
   <div class="container">
     <a href="index.html" class="brand">
-      <span class="brand-name">Aurora Solutions</span>
-      <span class="brand-sub">Électricien &middot; Pons</span>
+      <img src="aurora-solutions-logo-icon.png" alt="Aurora Solutions" class="brand-icon" width="40" height="40" loading="eager">
+      <span class="brand-text">
+        <span class="brand-name">Aurora Solutions</span>
+        <span class="brand-sub">Électricien &middot; Pons</span>
+      </span>
     </a>
     <div class="nav-links">
       <a href="services.html">Services</a>
@@ -171,7 +188,7 @@ ul { list-style: none; }
 <div class="mob-menu" id="mobmenu">
   <a href="services.html">Services</a>
   <a href="realisations.html">Réalisations</a>
-  <a href="about.html">A propos</a>
+  <a href="about.html">À propos</a>
   <a href="index.html#avis">Avis clients</a>
   <a href="index.html#contact">Contact</a>
   <div class="mob-cta">
@@ -189,7 +206,7 @@ ul { list-style: none; }
         <span style="color:rgba(255,255,255,0.5)">Mentions légales</span>
       </div>
       <h1>Mentions légales</h1>
-      <p>Informations légales obligatoires relatives au site aurora-solutions.fr</p>
+      <p>Informations légales obligatoires relatives au site aurora-solutions-electricite.fr</p>
     </div>
   </div>
 </div>
@@ -265,7 +282,7 @@ ul { list-style: none; }
     <div class="footer-top">
       <div class="foot-brand">
         <span class="foot-brand-name">Aurora Solutions</span>
-        <span class="foot-brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+        <span class="foot-brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
         <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
       </div>
       <div class="foot-col">
@@ -275,6 +292,7 @@ ul { list-style: none; }
           <li><a href="index.html#services">Rénovation électrique</a></li>
           <li><a href="index.html#services">Installation borne IRVE</a></li>
           <li><a href="index.html#services">Installation neuve</a></li>
+          <li><a href="climatisation.html">Climatisation réversible</a></li>
           <li><a href="services.html">Tous les services</a></li>
         </ul>
       </div>
@@ -286,6 +304,9 @@ ul { list-style: none; }
           <li><a href="index.html#contact">Royan</a></li>
           <li><a href="index.html#contact">Cognac</a></li>
           <li><a href="index.html#contact">Jonzac</a></li>
+          <li><a href="index.html#contact">Gémozac</a></li>
+          <li><a href="index.html#contact">Île d'Oléron</a></li>
+          <li><a href="index.html#contact">Saujon</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -310,7 +331,7 @@ ul { list-style: none; }
     <div class="foot-credit">
       <span>Site réalisé par</span>
       <a href="https://www.payment-flow.fr" target="_blank" rel="noopener">
-        <img src="Design sans titre (54).png" alt="Payment Flow">
+        <img src="Design sans titre (54).png" alt="Payment Flow" loading="lazy" width="500" height="500">
         Payment Flow
       </a>
     </div>
@@ -333,5 +354,33 @@ ul { list-style: none; }
 })();
 </script>
 
+<!-- BANDEAU CONSENTEMENT COOKIES -->
+<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">En savoir plus</a></p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button id="cookieRefuse" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;font-family:inherit;">Refuser</button>
+      <button id="cookieAccept" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:#e09a10;color:#0b1827;border:none;border-radius:2px;cursor:pointer;font-family:inherit;">Accepter</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var consent = localStorage.getItem('auroraCookieConsent');
+  var banner = document.getElementById('cookieBanner');
+  if (!consent && banner) { banner.style.display = 'block'; }
+  var acceptBtn = document.getElementById('cookieAccept');
+  var refuseBtn = document.getElementById('cookieRefuse');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'accepted');
+    banner.style.display = 'none';
+    if (window.auroraLoadGA) window.auroraLoadGA();
+  });
+  if (refuseBtn) refuseBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'refused');
+    banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

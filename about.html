@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY"></script>
+<!-- Google tag (gtag.js) — chargé uniquement après consentement cookies -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5WL3YGM6LY');
+  window.auroraLoadGA = function () {
+    if (window.auroraGALoaded) return;
+    window.auroraGALoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-5WL3YGM6LY');
+  };
+  if (localStorage.getItem('auroraCookieConsent') === 'accepted') { window.auroraLoadGA(); }
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Aurora Solutions – Qui sommes-nous ? Électricien SAS à Pons, Charente-Maritime. Formation, valeurs, certifications IRVE, décennale et RC Pro.">
 <title>À propos – Aurora Solutions | Électricien à Pons</title>
+<link rel="canonical" href="https://www.aurora-solutions-electricite.fr/about.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0d1f35">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Aurora Solutions">
+<meta property="og:title" content="À propos – Aurora Solutions | Électricien à Pons">
+<meta property="og:description" content="Qui sommes-nous ? Électricien SAS à Pons, Charente-Maritime. Formation, valeurs, certifications IRVE, décennale et RC Pro.">
+<meta property="og:url" content="https://www.aurora-solutions-electricite.fr/about.html">
+<meta property="og:image" content="https://www.aurora-solutions-electricite.fr/male-builder-electrical-engineer-overalls-helmet-light-background-construction-concept.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="À propos – Aurora Solutions | Électricien à Pons">
+<meta name="twitter:description" content="Qui sommes-nous ? Électricien SAS à Pons, Charente-Maritime. Formation, valeurs, certifications IRVE, décennale et RC Pro.">
+<meta name="twitter:image" content="https://www.aurora-solutions-electricite.fr/male-builder-electrical-engineer-overalls-helmet-light-background-construction-concept.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -74,7 +98,9 @@ ul { list-style: none; }
   max-width: 100%;
   padding: 0 48px;
 }
-.brand { display: flex; flex-direction: column; gap: 1px; line-height: 1; flex-shrink: 0; }
+.brand { display: flex; flex-direction: row; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand-icon { height: 40px; width: 40px; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; gap: 1px; line-height: 1; }
 .brand-name {
   font-size: 0.95rem; font-weight: 800;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy);
@@ -105,7 +131,7 @@ ul { list-style: none; }
   letter-spacing: 0.1em; text-transform: uppercase; border: none;
   cursor: pointer; border-radius: 2px; transition: all var(--ease); font-family: inherit;
 }
-.btn-gold { background: var(--gold-btn); color: var(--white); }
+.btn-gold { background: var(--gold-btn); color: var(--dark); }
 .btn-gold:hover { background: var(--gold); transform: translateY(-1px); }
 .btn-outline {
   background: transparent; color: var(--navy); border: 1.5px solid var(--navy);
@@ -501,8 +527,8 @@ ul { list-style: none; }
 .footer { background: #080f1a; padding: 60px 0 28px; }
 .footer-top {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
   padding-bottom: 52px;
   border-bottom: 1px solid rgba(255,255,255,0.06);
   margin-bottom: 26px;
@@ -685,8 +711,8 @@ ul { list-style: none; }
   .page-hero-inner { padding: 44px 0 52px; }
   .hero-anchors { gap: 8px; }
   .anchor-btn { padding: 8px 14px; font-size: 0.68rem; }
-  .values-card { padding: 36px 26px; }
-  .cta-bottom { padding: 52px 0; }
+  .value-cell { padding: 36px 26px; }
+  .cta-strip { padding: 52px 0; }
   .tl-item { padding-left: 16px; padding-bottom: 32px; }
 }
 @media (max-width: 480px) {
@@ -705,14 +731,16 @@ ul { list-style: none; }
 <nav class="nav" id="nav">
   <div class="container" style="max-width:100%;padding:0 48px;display:flex;align-items:center;justify-content:space-between;width:100%">
     <a href="index.html" class="brand">
-      <span class="brand-name">Aurora Solutions</span>
-      <span class="brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+      <img src="aurora-solutions-logo-icon.png" alt="Aurora Solutions" class="brand-icon" width="40" height="40" loading="eager">
+      <span class="brand-text">
+        <span class="brand-name">Aurora Solutions</span>
+        <span class="brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
+      </span>
     </a>
     <ul class="nav-links">
-      <li><a href="services.html">Services</a>
-  <a href="realisations.html">Réalisations</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="realisations.html">Réalisations</a></li>
-      <li><a href="about.html" class="active">A propos</a></li>
+      <li><a href="about.html" class="active">À propos</a></li>
       <li><a href="index.html#avis">Avis</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
@@ -730,7 +758,7 @@ ul { list-style: none; }
 <div class="mob-menu" id="mobmenu">
   <a href="services.html">Services</a>
   <a href="realisations.html">Réalisations</a>
-  <a href="about.html">A propos</a>
+  <a href="about.html">À propos</a>
   <a href="index.html#avis">Avis clients</a>
   <a href="index.html#contact">Contact</a>
   <div class="mob-cta">
@@ -746,10 +774,10 @@ ul { list-style: none; }
       <div class="breadcrumb">
         <a href="index.html">Accueil</a>
         <span>/</span>
-        <span style="color:rgba(255,255,255,0.5)">A propos</span>
+        <span style="color:rgba(255,255,255,0.5)">À propos</span>
       </div>
-      <h1>Une entreprise sérieuse,<br>un engagement personnel</h1>
-      <p>Derrière Aurora Solutions, un électricien formé, certifié et animé par une seule conviction : bien faire, jusqu'au bout.</p>
+      <h1>Aurora Solutions, électricien à Pons :<br>une entreprise sérieuse, un engagement personnel</h1>
+      <p>Derrière Aurora Solutions, un électricien formé, certifié et animé par une seule conviction : bien faire, jusqu'au bout — à Pons et dans toute la Charente-Maritime (Saintes, Royan, Cognac, Jonzac, Gémozac, Saujon, Île d'Oléron).</p>
     </div>
   </div>
 </div>
@@ -762,7 +790,7 @@ ul { list-style: none; }
       <!-- VISUEL + FICHE -->
       <div class="founder-visual fi">
         <div class="founder-photo">
-          <img src="male-builder-electrical-engineer-overalls-helmet-light-background-construction-concept.jpg" alt="Thomas Tesson – Aurora Solutions">
+          <img src="male-builder-electrical-engineer-overalls-helmet-light-background-construction-concept.jpg" alt="Thomas Tesson – Aurora Solutions" loading="lazy" width="1400" height="2100">
         </div>
         <div class="founder-card">
           <div class="fc-item">
@@ -848,7 +876,7 @@ ul { list-style: none; }
       <div class="value-cell fi d1">
         <span class="value-n">01</span>
         <h3>Consciencieux</h3>
-        <p>Chaque détail compte. Un câble mal fixé, une connexion insuffisamment serrée, une gaine mal posée — ce sont des défauts invisibles à l'oeil nu qui peuvent avoir des conséquences sérieuses. Nous refusons les raccourcis.</p>
+        <p>Chaque détail compte. Un câble mal fixé, une connexion insuffisamment serrée, une gaine mal posée — ce sont des défauts invisibles à l'œil nu qui peuvent avoir des conséquences sérieuses. Nous refusons les raccourcis.</p>
       </div>
       <div class="value-cell fi d2">
         <span class="value-n">02</span>
@@ -916,14 +944,14 @@ ul { list-style: none; }
       <span class="lbl lbl-light">Garanties &amp; certifications</span>
       <h2 class="ttl ttl-light">Des bases solides<br>pour travailler en confiance</h2>
       <div class="rule rule-center"></div>
-      <p style="font-size:0.95rem;color:rgba(255,255,255,0.45);line-height:1.85;font-weight:300">Ces certifications ne sont pas des formalités. Elles sont la preuve que nous exercons dans les règles et que vous êtes protégés.</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.45);line-height:1.85;font-weight:300">Ces certifications ne sont pas des formalités. Elles sont la preuve que nous exerçons dans les règles et que vous êtes protégés.</p>
     </div>
     <div class="certs-grid">
       <div class="cert-cell fi d1">
         <div class="cert-badge">IRVE</div>
         <h3>Qualification borne de recharge</h3>
-        <p>Certification obligatoire pour l'installation de bornes de recharge pour véhicules électriques. Indispensable pour accéder aux aides de l'État (crédit d'impôt, programme Advenir).</p>
-        <p class="cert-detail">Infrastructure de Recharge pour Véhicules Electriques</p>
+        <p>Certification obligatoire pour l'installation de bornes de recharge pour véhicules électriques, garantissant une installation conforme et sécurisée.</p>
+        <p class="cert-detail">Infrastructure de Recharge pour Véhicules Électriques</p>
       </div>
       <div class="cert-cell fi d2">
         <div class="cert-badge">Décennale</div>
@@ -936,6 +964,12 @@ ul { list-style: none; }
         <h3>Responsabilité civile professionnelle</h3>
         <p>Protège contre les dommages causés à des tiers dans le cadre de notre activité professionnelle. Une couverture indispensable pour intervenir chez vous en toute sécurité.</p>
         <p class="cert-detail">Responsabilité Civile Professionnelle &mdash; Couverture en cours d'activité</p>
+      </div>
+      <div class="cert-cell fi d1">
+        <div class="cert-badge">Thermor</div>
+        <h3>Partenaires climatisation Thermor</h3>
+        <p>Formés aux outils de dimensionnement de la marque Thermor pour proposer des installations de climatisation réversible mono et multi-split adaptées à chaque logement.</p>
+        <p class="cert-detail">Partenariat de marque &mdash; Dimensionnement professionnel</p>
       </div>
     </div>
   </div>
@@ -955,6 +989,8 @@ ul { list-style: none; }
       <form class="dform fi d2" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.aurora-solutions-electricite.fr/merci.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="frow">
           <div class="fg">
             <label for="d-nom">Nom</label>
@@ -978,6 +1014,7 @@ ul { list-style: none; }
               <option>Installation borne IRVE</option>
               <option>Rénovation électrique</option>
               <option>Installation neuve</option>
+              <option>Climatisation</option>
               <option>Autre</option>
             </select>
           </div>
@@ -1005,6 +1042,8 @@ ul { list-style: none; }
     <form class="mform" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.aurora-solutions-electricite.fr/merci.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="frow">
         <div class="fg">
           <label for="m-nom">Nom</label>
@@ -1028,6 +1067,7 @@ ul { list-style: none; }
             <option>Installation borne IRVE</option>
             <option>Rénovation électrique</option>
             <option>Installation neuve</option>
+            <option>Climatisation</option>
             <option>Autre</option>
           </select>
         </div>
@@ -1050,7 +1090,7 @@ ul { list-style: none; }
     <div class="footer-top">
       <div class="foot-brand">
         <span class="foot-brand-name">Aurora Solutions</span>
-        <span class="foot-brand-sub">Electricien &middot; Pons, Charente-Maritime</span>
+        <span class="foot-brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
         <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
       </div>
       <div class="foot-col">
@@ -1060,12 +1100,26 @@ ul { list-style: none; }
           <li><a href="services.html#renovation">Rénovation électrique</a></li>
           <li><a href="services.html#irve">Installation borne IRVE</a></li>
           <li><a href="services.html#installation">Installation neuve</a></li>
+          <li><a href="climatisation.html">Climatisation réversible</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Zones</h4>
+        <ul>
+          <li><a href="index.html#contact">Pons</a></li>
+          <li><a href="index.html#contact">Saintes</a></li>
+          <li><a href="index.html#contact">Royan</a></li>
+          <li><a href="index.html#contact">Cognac</a></li>
+          <li><a href="index.html#contact">Jonzac</a></li>
+          <li><a href="index.html#contact">Gémozac</a></li>
+          <li><a href="index.html#contact">Île d'Oléron</a></li>
+          <li><a href="index.html#contact">Saujon</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h4>Entreprise</h4>
         <ul>
-          <li><a href="about.html">A propos</a></li>
+          <li><a href="about.html">À propos</a></li>
           <li><a href="index.html#avis">Avis clients</a></li>
           <li><a href="index.html#contact">Devis gratuit</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
@@ -1076,13 +1130,13 @@ ul { list-style: none; }
         <ul>
           <li><a href="tel:+33763094824">07 63 09 48 24</a></li>
           <li><a href="mailto:aurora.solutions.17800@gmail.com">aurora.solutions.17800@gmail.com</a></li>
-          <li><a href="#">Pons (17800)</a></li>
+          <li><a href="https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA" target="_blank" rel="noopener">Pons (17800)</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
-      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow">Payment Flow</a></span>
+      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow" loading="lazy" width="500" height="500">Payment Flow</a></span>
       <span><a href="mentions-legales.html">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="politique-confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
@@ -1127,5 +1181,33 @@ ul { list-style: none; }
 </script>
 
 <script src="forms.js"></script>
+<!-- BANDEAU CONSENTEMENT COOKIES -->
+<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">En savoir plus</a></p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button id="cookieRefuse" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;font-family:inherit;">Refuser</button>
+      <button id="cookieAccept" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:#e09a10;color:#0b1827;border:none;border-radius:2px;cursor:pointer;font-family:inherit;">Accepter</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var consent = localStorage.getItem('auroraCookieConsent');
+  var banner = document.getElementById('cookieBanner');
+  if (!consent && banner) { banner.style.display = 'block'; }
+  var acceptBtn = document.getElementById('cookieAccept');
+  var refuseBtn = document.getElementById('cookieRefuse');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'accepted');
+    banner.style.display = 'none';
+    if (window.auroraLoadGA) window.auroraLoadGA();
+  });
+  if (refuseBtn) refuseBtn.addEventListener('click', function () {
+    localStorage.setItem('auroraCookieConsent', 'refused');
+    banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>
