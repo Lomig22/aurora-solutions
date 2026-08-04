@@ -69,7 +69,7 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "16"
+    "reviewCount": "17"
   }
 }
 </script>
@@ -473,6 +473,16 @@ ul { list-style: none; }
   font-style: italic;
   line-height: 1.5;
 }
+.hr-src {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: opacity var(--ease);
+}
+.hr-src:hover { opacity: 0.75; }
+.hr-star-off { color: rgba(255,255,255,0.22); }
+.hr-sep-quote { display: none; }
+.hr-quote { flex-basis: 100%; margin-top: 2px; }
 
 /* ── HERO ANIMATION ── */
 .hero-anim {
@@ -1515,12 +1525,22 @@ ul { list-style: none; }
           <a href="tel:+33763094824" class="hero-phone-link">07 63 09 48 24</a>
         </div>
         <div class="hero-reviews">
-          <div class="hr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="hr-text">
-            <span class="hr-score">5,0 / 5</span>
-            <span class="hr-count">16 avis Google</span>
-          </div>
+          <a class="hr-src" href="#avis">
+            <div class="hr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="hr-text">
+              <span class="hr-score">5,0 / 5</span>
+              <span class="hr-count">17 avis Google</span>
+            </div>
+          </a>
           <div class="hr-sep"></div>
+          <a class="hr-src" href="#avis-pagesjaunes">
+            <div class="hr-stars">&#9733;&#9733;&#9733;&#9733;<span class="hr-star-off">&#9733;</span></div>
+            <div class="hr-text">
+              <span class="hr-score">4,7 / 5</span>
+              <span class="hr-count">3 avis PagesJaunes</span>
+            </div>
+          </a>
+          <div class="hr-sep hr-sep-quote"></div>
           <div class="hr-quote">"Intervention rapide, travail soigné. Je recommande."</div>
         </div>
       </div>
@@ -1756,7 +1776,7 @@ ul { list-style: none; }
     <div class="avis-intro fi">
       <span class="lbl">Témoignages</span>
       <h2 class="ttl">Ce que disent nos clients</h2>
-      <p>19 avis vérifiés publiés sur Google et PagesJaunes par des particuliers et professionnels de Charente-Maritime.</p>
+      <p>20 avis vérifiés publiés sur Google et PagesJaunes par des particuliers et professionnels de Charente-Maritime.</p>
     </div>
 
     <!-- Bloc 1 : avis Google -->
@@ -1770,13 +1790,24 @@ ul { list-style: none; }
           <div class="rating-score">5.0 <em>/ 5</em></div>
           <div class="avis-rating-txt">
             <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <div class="rating-note">Basé sur 16 avis Google</div>
+            <div class="rating-note">Basé sur 17 avis Google</div>
           </div>
         </div>
       </div>
       <div class="testi-carousel-wrap">
         <div class="testi-carousel" id="testiCarousel">
           <div class="testi-track" id="testiTrack">
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">DD</div>
+              <div>
+                <div class="testi-name">Daniel Dubois</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Très satisfait de l&rsquo;intervention de Thomas. Ponctuel, serviable, efficace, à l&rsquo;écoute. Je le recommande vivement, il trouvera toujours une solution à vos problèmes.</p>
+          </div>
           <div class="testi">
             <div class="testi-head-row">
               <div class="testi-avatar" aria-hidden="true">EG</div>
