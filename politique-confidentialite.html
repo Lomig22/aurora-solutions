@@ -79,7 +79,8 @@ ul { list-style: none; }
 .brand-text { display: flex; flex-direction: column; gap: 1px; line-height: 1; }
 .brand-name { font-size: 0.95rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
 .brand-sub { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
-.nav-links { display: flex; align-items: center; gap: 52px; flex: 1; justify-content: center; }
+.nav-links { display: flex; align-items: center; gap: 52px; flex: 1; justify-content: center;   padding-right: 26px;
+}
 .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color var(--ease); white-space: nowrap; }
 .nav-links a:hover { color: var(--navy); }
 .nav-right { display: flex; align-items: center; gap: 28px; flex-shrink: 0; }
@@ -90,6 +91,8 @@ ul { list-style: none; }
 .btn-gold:hover { background: var(--gold); transform: translateY(-1px); }
 .ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
 .ham span { display: block; width: 20px; height: 1.5px; background: var(--navy); }
+@media (max-width: 1240px) { .nav-links { gap: 30px; padding-right: 26px; } .nav-right { gap: 18px; } }
+@media (max-width: 1080px) { .nav-links { gap: 20px; } .nav-links a { letter-spacing: 0.06em; } }
 @media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
 .ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
 .ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
@@ -178,6 +181,7 @@ ul { list-style: none; }
       <a href="about.html">À propos</a>
       <a href="index.html#avis">Avis clients</a>
       <a href="index.html#contact">Contact</a>
+  <a href="faq.html">FAQ</a>
     </div>
     <div class="nav-right" style="padding:0 48px">
       <a href="tel:+33763094824" class="nav-tel">07 63 09 48 24</a>
@@ -193,6 +197,7 @@ ul { list-style: none; }
   <a href="about.html">À propos</a>
   <a href="index.html#avis">Avis clients</a>
   <a href="index.html#contact">Contact</a>
+  <a href="faq.html">FAQ</a>
   <div class="mob-cta">
     <a href="tel:+33763094824" class="mob-phone">07 63 09 48 24</a>
     <button class="btn btn-gold" onclick="window.location.href='index.html#contact'" style="min-height:48px;width:100%;font-size:0.82rem">Devis gratuit</button>
@@ -321,10 +326,10 @@ ul { list-style: none; }
         <h4>Zones</h4>
         <ul>
           <li><a href="index.html#contact">Pons</a></li>
-          <li><a href="index.html#contact">Saintes</a></li>
-          <li><a href="index.html#contact">Royan</a></li>
-          <li><a href="index.html#contact">Cognac</a></li>
-          <li><a href="index.html#contact">Jonzac</a></li>
+          <li><a href="electricien-saintes.html">Saintes</a></li>
+          <li><a href="electricien-royan.html">Royan</a></li>
+          <li><a href="electricien-cognac.html">Cognac</a></li>
+          <li><a href="electricien-jonzac.html">Jonzac</a></li>
           <li><a href="index.html#contact">Gémozac</a></li>
           <li><a href="index.html#contact">Île d'Oléron</a></li>
           <li><a href="index.html#contact">Saujon</a></li>
@@ -342,7 +347,7 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
+      <span>&copy; 2026 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
       <span>
         <a href="mentions-legales.html">Mentions légales</a>
         &nbsp;&middot;&nbsp;

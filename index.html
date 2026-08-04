@@ -40,37 +40,177 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["Electrician", "HVACBusiness"],
-  "name": "Aurora Solutions",
-  "image": "https://www.aurora-solutions-electricite.fr/IMG_2628.JPG",
-  "url": "https://www.aurora-solutions-electricite.fr/",
-  "hasMap": "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
-  "telephone": "+33763094824",
-  "email": "aurora.solutions.17800@gmail.com",
-  "description": "Électricien artisan à Pons (17800) : installation, dépannage, rénovation électrique, climatisation réversible (PAC air/air, partenaire Thermor) et bornes de recharge IRVE en Charente-Maritime.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "7 B Impasse des Géraniums",
-    "postalCode": "17800",
-    "addressLocality": "Pons",
-    "addressRegion": "Charente-Maritime",
-    "addressCountry": "FR"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Pons" },
-    { "@type": "City", "name": "Saintes" },
-    { "@type": "City", "name": "Royan" },
-    { "@type": "City", "name": "Cognac" },
-    { "@type": "City", "name": "Jonzac" },
-    { "@type": "City", "name": "Gémozac" },
-    { "@type": "City", "name": "Île d'Oléron" },
-    { "@type": "City", "name": "Saujon" }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "17"
-  }
+  "@graph": [
+    {
+      "@id": "https://www.aurora-solutions-electricite.fr/#business",
+      "@type": ["Electrician", "HVACBusiness"],
+      "name": "Aurora Solutions",
+      "image": "https://www.aurora-solutions-electricite.fr/IMG_2628.JPG",
+      "url": "https://www.aurora-solutions-electricite.fr/",
+      "hasMap": "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
+      "telephone": "+33763094824",
+      "email": "aurora.solutions.17800@gmail.com",
+      "description": "Électricien artisan à Pons (17800) : installation, dépannage, rénovation électrique, climatisation réversible (PAC air/air, partenaire Thermor) et bornes de recharge IRVE en Charente-Maritime.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7 B Impasse des Géraniums",
+        "postalCode": "17800",
+        "addressLocality": "Pons",
+        "addressRegion": "Charente-Maritime",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Pons" },
+        { "@type": "City", "name": "Saintes" },
+        { "@type": "City", "name": "Royan" },
+        { "@type": "City", "name": "Cognac" },
+        { "@type": "City", "name": "Jonzac" },
+        { "@type": "City", "name": "Gémozac" },
+        { "@type": "City", "name": "Île d'Oléron" },
+        { "@type": "City", "name": "Saujon" }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.5786,
+        "longitude": -0.5486
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Espèces, Virement, Chèque",
+      "sameAs": [
+        "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
+        "https://www.pagesjaunes.fr/pros/64066800"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Thomas"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Qualification IRVE"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Norme NF C 15-100"
+        }
+      ],
+      "knowsAbout": [
+        "Qualification IRVE",
+        "Norme NF C 15-100",
+        "Pompe à chaleur air/air",
+        "Climatisation réversible",
+        "Installation électrique",
+        "Dépannage électrique"
+      ],
+      "makesOffer": {
+        "@type": "OfferCatalog",
+        "name": "Prestations Aurora Solutions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Dépannage électrique" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Rénovation électrique" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Installation neuve" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Installation borne de recharge IRVE" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Climatisation réversible" }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://www.aurora-solutions-electricite.fr/#website",
+      "@type": "WebSite",
+      "name": "Aurora Solutions",
+      "url": "https://www.aurora-solutions-electricite.fr/",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://www.aurora-solutions-electricite.fr/#business" }
+    },
+    {
+      "@id": "https://www.aurora-solutions-electricite.fr/#webpage",
+      "@type": "WebPage",
+      "url": "https://www.aurora-solutions-electricite.fr/",
+      "name": "Aurora Solutions – Électricien à Pons | Charente-Maritime",
+      "isPartOf": { "@id": "https://www.aurora-solutions-electricite.fr/#website" },
+      "about": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
+      "dateModified": "2026-08-04"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Intervenez-vous en urgence, 7 jours sur 7 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, Aurora Solutions est disponible 7 jours sur 7 pour les urgences électriques : panne, disjoncteur qui saute, coupure inexpliquée. Contactez-nous par téléphone au 07 63 09 48 24 et nous organisons une intervention dans les meilleurs délais selon la situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dans quelle zone intervenez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Cognac, Jonzac, Gémozac, Île d'Oléron et Saujon. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le devis est-il vraiment gratuit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, chaque devis est gratuit et sans engagement. Décrivez-nous votre besoin via le formulaire de contact ou par téléphone, nous étudions votre projet et vous répondons avec une proposition détaillée adaptée à votre installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous mettre mon installation aux normes NF C 15-100 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, la mise aux normes NF C 15-100 fait partie de nos prestations de rénovation électrique : remplacement de tableau, remise en état complète d'une installation ancienne, avec attestation de conformité à la clé. Nous intervenons dans les règles de l'art."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Installez-vous des bornes de recharge pour véhicules électriques ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous sommes certifiés IRVE et installons des bornes de recharge pour véhicules électriques adaptées à vos usages, à domicile comme en entreprise. Nous vous conseillons sur le choix de la borne et prenons en charge l'installation complète."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous la climatisation réversible ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous installons des climatisations réversibles mono-split et multi-split (PAC air/air), en partenariat avec la marque Thermor et formés à leurs outils de dimensionnement. Elles assurent le confort en été et un chauffage d'appoint en hiver."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -172,6 +312,7 @@ ul { list-style: none; }
   gap: 52px;
   flex: 1;
   justify-content: center;
+  padding-right: 26px;
 }
 .nav-links a {
   font-size: 0.72rem;
@@ -256,6 +397,8 @@ ul { list-style: none; }
   background: var(--navy);
   transition: all var(--ease);
 }
+@media (max-width: 1240px) { .nav-links { gap: 30px; padding-right: 26px; } .nav-right { gap: 18px; } }
+@media (max-width: 1080px) { .nav-links { gap: 20px; } .nav-links a { letter-spacing: 0.06em; } }
 @media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
 .ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
 .ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
@@ -326,7 +469,7 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1800&q=82&auto=format&fit=crop&crop=center');
+  background-image: url('man-electrical-technician-working-switchboard-with-fuses.jpg');
   background-size: cover;
   background-position: center 35%;
 }
@@ -1322,6 +1465,49 @@ ul { list-style: none; }
 .foot-credit { display: flex; align-items: center; gap: 6px; font-size: 0.7rem; color: rgba(255,255,255,0.18); }
 .foot-credit a { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.28); transition: color var(--ease); }
 .foot-credit a:hover { color: rgba(255,255,255,0.6); }
+.foot-updated {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.16);
+}
+
+/* ── FAQ ── */
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--gold);
+  transition: transform var(--ease);
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
 .foot-credit img { height: 16px; width: auto; opacity: 0.45; transition: opacity var(--ease); }
 .foot-credit a:hover img { opacity: 0.75; }
 
@@ -1480,6 +1666,7 @@ ul { list-style: none; }
       <li><a href="about.html">À propos</a></li>
       <li><a href="#avis">Avis</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:+33763094824" class="nav-tel">07 63 09 48 24</a>
@@ -1498,6 +1685,7 @@ ul { list-style: none; }
   <a href="about.html">À propos</a>
   <a href="#avis">Avis clients</a>
   <a href="#contact">Contact</a>
+  <a href="faq.html">FAQ</a>
   <div class="mob-cta">
     <a href="tel:+33763094824" class="mob-phone">07 63 09 48 24</a>
     <button class="btn btn-gold" data-devis style="min-height:48px;width:100%;font-size:0.82rem">Devis gratuit</button>
@@ -1514,7 +1702,7 @@ ul { list-style: none; }
       <!-- TEXTE -->
       <div class="hero-inner">
         <span class="hero-label">Électricien à Pons &nbsp;&middot;&nbsp; Charente-Maritime (17)</span>
-        <h1>Votre électricien à Pons<br>pour l'installation, le dépannage et la rénovation électrique</h1>
+        <h1>Votre électricien à Pons <br>pour l'installation, le dépannage et la rénovation électrique</h1>
         <ul class="hero-promises">
           <li>Intervention le jour même, 7 jours sur 7</li>
           <li>Devis gratuit, prix ferme sans surprise</li>
@@ -1616,7 +1804,7 @@ ul { list-style: none; }
     <div class="intro-split">
       <div class="fi">
         <span class="lbl">À propos</span>
-        <h2 class="ttl">Un électricien de confiance,<br>ancré dans son territoire</h2>
+        <h2 class="ttl">Un électricien de confiance, <br>ancré dans son territoire</h2>
         <div class="rule"></div>
         <p class="body-text">Forts de plus de 6 ans d'expérience et basés à Pons, nous accompagnons particuliers et professionnels dans tous leurs travaux d'électricité. De la rénovation complète au dépannage d'urgence, chaque intervention est réalisée avec le même niveau d'exigence.</p>
         <p class="body-text" style="margin-top:13px">Notre approche est simple : écouter, proposer la solution la plus adaptée, et réaliser un travail durable. Nous ne sous-traitons jamais. Chaque chantier est suivi par notre équipe, du début à la fin.</p>
@@ -1690,7 +1878,7 @@ ul { list-style: none; }
 
 <!-- INTERLUDE IMAGE -->
 <div class="interlude">
-  <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1600&q=80&auto=format&fit=crop&crop=center" alt="Chantier électrique" loading="lazy">
+  <img src="close-up-hand-engineer-electrician-man-working-check-electrical-system-with-tablet-factory.jpg" alt="Chantier électrique" loading="lazy" width="1600" height="1067">
   <div class="interlude-over">
     <div class="container">
       <div class="interlude-copy">
@@ -1707,7 +1895,7 @@ ul { list-style: none; }
     <div class="dom-split">
       <div class="fi">
         <span class="lbl">Champs d'expertise</span>
-        <h2 class="ttl">Nos domaines<br>d'intervention</h2>
+        <h2 class="ttl">Nos domaines <br>d'intervention</h2>
         <div class="rule"></div>
         <p class="body-text">Au fil des années, nous avons développé une expertise complète en électricité résidentielle et tertiaire. Voici les principaux domaines dans lesquels nous intervenons.</p>
         <button class="btn btn-outline" style="margin-top:36px" data-devis>Prendre contact</button>
@@ -2115,6 +2303,42 @@ ul { list-style: none; }
 })();
 </script>
 
+<!-- FAQ -->
+<section class="section bg-off" id="faq-accueil">
+  <div class="container">
+    <div class="services-head fi">
+      <span class="lbl">Questions fréquentes</span>
+      <h2 class="ttl">Ce que nos clients nous demandent</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item fi">
+        <summary>Intervenez-vous en urgence, 7 jours sur 7 ?</summary>
+        <p>Oui, Aurora Solutions est disponible 7 jours sur 7 pour les urgences électriques : panne, disjoncteur qui saute, coupure inexpliquée. Contactez-nous par téléphone au 07 63 09 48 24 et nous organisons une intervention dans les meilleurs délais selon la situation.</p>
+      </details>
+      <details class="faq-item fi">
+        <summary>Dans quelle zone intervenez-vous ?</summary>
+        <p>Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Cognac, Jonzac, Gémozac, Île d'Oléron et Saujon. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune.</p>
+      </details>
+      <details class="faq-item fi">
+        <summary>Le devis est-il vraiment gratuit ?</summary>
+        <p>Oui, chaque devis est gratuit et sans engagement. Décrivez-nous votre besoin via le formulaire de contact ou par téléphone, nous étudions votre projet et vous répondons avec une proposition détaillée adaptée à votre installation.</p>
+      </details>
+      <details class="faq-item fi">
+        <summary>Pouvez-vous mettre mon installation aux normes NF C 15-100 ?</summary>
+        <p>Oui, la mise aux normes NF C 15-100 fait partie de nos prestations de rénovation électrique : remplacement de tableau, remise en état complète d'une installation ancienne, avec attestation de conformité à la clé. Nous intervenons dans les règles de l'art.</p>
+      </details>
+      <details class="faq-item fi">
+        <summary>Installez-vous des bornes de recharge pour véhicules électriques ?</summary>
+        <p>Oui, nous sommes certifiés IRVE et installons des bornes de recharge pour véhicules électriques adaptées à vos usages, à domicile comme en entreprise. Nous vous conseillons sur le choix de la borne et prenons en charge l'installation complète.</p>
+      </details>
+      <details class="faq-item fi">
+        <summary>Proposez-vous la climatisation réversible ?</summary>
+        <p>Oui, nous installons des climatisations réversibles mono-split et multi-split (PAC air/air), en partenariat avec la marque Thermor et formés à leurs outils de dimensionnement. Elles assurent le confort en été et un chauffage d'appoint en hiver.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="section bg-dark" id="contact">
   <div class="container">
@@ -2280,10 +2504,10 @@ ul { list-style: none; }
         <h4>Zones</h4>
         <ul>
           <li><a href="#contact">Pons</a></li>
-          <li><a href="#contact">Saintes</a></li>
-          <li><a href="#contact">Royan</a></li>
-          <li><a href="#contact">Cognac</a></li>
-          <li><a href="#contact">Jonzac</a></li>
+          <li><a href="electricien-saintes.html">Saintes</a></li>
+          <li><a href="electricien-royan.html">Royan</a></li>
+          <li><a href="electricien-cognac.html">Cognac</a></li>
+          <li><a href="electricien-jonzac.html">Jonzac</a></li>
           <li><a href="#contact">Gémozac</a></li>
           <li><a href="#contact">Île d'Oléron</a></li>
           <li><a href="#contact">Saujon</a></li>
@@ -2301,7 +2525,7 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
+      <span>&copy; 2026 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
       <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow" loading="lazy" width="500" height="500">Payment Flow</a></span>
       <span>
         <a href="mentions-legales.html">Mentions légales</a>
@@ -2309,6 +2533,7 @@ ul { list-style: none; }
         <a href="politique-confidentialite.html">Politique de confidentialité</a>
       </span>
     </div>
+    <div class="foot-updated">Page mise à jour le 4 août 2026</div>
   </div>
 </footer>
 

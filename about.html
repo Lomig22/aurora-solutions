@@ -39,6 +39,75 @@
 <meta name="twitter:image" content="https://www.aurora-solutions-electricite.fr/male-builder-electrical-engineer-overalls-helmet-light-background-construction-concept.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.aurora-solutions-electricite.fr/about.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://www.aurora-solutions-electricite.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "À propos",
+          "item": "https://www.aurora-solutions-electricite.fr/about.html"
+        }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.aurora-solutions-electricite.fr/about.html#webpage",
+      "url": "https://www.aurora-solutions-electricite.fr/about.html",
+      "name": "À propos – Aurora Solutions | Électricien à Pons",
+      "description": "Aurora Solutions – Qui sommes-nous ? Électricien SAS à Pons, Charente-Maritime. Formation, valeurs, certifications IRVE, décennale et RC Pro.",
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-08-04",
+      "isPartOf": { "@id": "https://www.aurora-solutions-electricite.fr/#website" },
+      "breadcrumb": { "@id": "https://www.aurora-solutions-electricite.fr/about.html#breadcrumb" },
+      "mainEntity": { "@id": "https://www.aurora-solutions-electricite.fr/#business" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.aurora-solutions-electricite.fr/about.html#person-thomas",
+      "name": "Thomas",
+      "jobTitle": "Électricien",
+      "worksFor": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
+      "knowsAbout": [
+        "Installation électrique",
+        "Rénovation électrique",
+        "Norme NF C 15-100",
+        "Bornes de recharge IRVE",
+        "Climatisation réversible"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Qualification IRVE",
+          "about": "Infrastructure de Recharge pour Véhicules Électriques"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "insurance",
+          "name": "Garantie décennale"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "insurance",
+          "name": "Assurance responsabilité civile professionnelle (RC Pro)"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -112,6 +181,7 @@ ul { list-style: none; }
 .nav-links {
   display: flex; align-items: center; gap: 52px;
   flex: 1; justify-content: center;
+  padding-right: 26px;
 }
 .nav-links a {
   font-size: 0.72rem; font-weight: 500;
@@ -142,6 +212,8 @@ ul { list-style: none; }
   cursor: pointer; padding: 4px; background: none; border: none;
 }
 .ham span { display: block; width: 20px; height: 1.5px; background: var(--navy); }
+@media (max-width: 1240px) { .nav-links { gap: 30px; padding-right: 26px; } .nav-right { gap: 18px; } }
+@media (max-width: 1080px) { .nav-links { gap: 20px; } .nav-links a { letter-spacing: 0.06em; } }
 @media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
 .ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
 .ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
@@ -173,7 +245,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=70&auto=format&fit=crop&crop=center');
+  background-image: url('male-builder-electrical-engineer-overalls-helmet-light-background-construction-concept.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.08;
@@ -743,6 +815,7 @@ ul { list-style: none; }
       <li><a href="about.html" class="active">À propos</a></li>
       <li><a href="index.html#avis">Avis</a></li>
       <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:+33763094824" class="nav-tel">07 63 09 48 24</a>
@@ -761,6 +834,7 @@ ul { list-style: none; }
   <a href="about.html">À propos</a>
   <a href="index.html#avis">Avis clients</a>
   <a href="index.html#contact">Contact</a>
+  <a href="faq.html">FAQ</a>
   <div class="mob-cta">
     <a href="tel:+33763094824" class="mob-phone">07 63 09 48 24</a>
     <button class="btn btn-gold" data-devis style="min-height:48px;width:100%;font-size:0.82rem">Devis gratuit</button>
@@ -776,7 +850,7 @@ ul { list-style: none; }
         <span>/</span>
         <span style="color:rgba(255,255,255,0.5)">À propos</span>
       </div>
-      <h1>Aurora Solutions, électricien à Pons :<br>une entreprise sérieuse, un engagement personnel</h1>
+      <h1>Aurora Solutions, électricien à Pons : <br>une entreprise sérieuse, un engagement personnel</h1>
       <p>Derrière Aurora Solutions, un électricien formé, certifié et animé par une seule conviction : bien faire, jusqu'au bout — à Pons et dans toute la Charente-Maritime (Saintes, Royan, Cognac, Jonzac, Gémozac, Saujon, Île d'Oléron).</p>
     </div>
   </div>
@@ -815,8 +889,9 @@ ul { list-style: none; }
       <!-- CONTENU -->
       <div class="founder-content fi d2">
         <span class="lbl">Le fondateur</span>
-        <h2 class="ttl">Une passion devenue<br>une exigence quotidienne</h2>
+        <h2 class="ttl">Une passion devenue <br>une exigence quotidienne</h2>
         <div class="rule"></div>
+        <p class="body-text" style="margin-bottom:20px">Thomas, fondateur d'Aurora Solutions, intervient personnellement sur chaque chantier en Charente-Maritime. Formé au Bac Pro Électricité et au BTS Électrotechnique, il est titulaire de la qualification IRVE et couvert par une garantie décennale et une assurance RC Pro, pour des installations sûres, conformes et durables.</p>
 
         <blockquote class="founder-quote">
           "J'aime accompagner mes clients et les conseiller pour qu'ils obtiennent exactement le résultat qu'ils souhaitent. Je prends le temps d'aller jusqu'au bout et cherche toujours le meilleur compromis."
@@ -898,7 +973,7 @@ ul { list-style: none; }
     <div class="engagements-grid">
       <div class="fi">
         <span class="lbl">Notre promesse</span>
-        <h2 class="ttl">Un accompagnement<br>de bout en bout</h2>
+        <h2 class="ttl">Un accompagnement <br>de bout en bout</h2>
         <div class="rule"></div>
         <p class="body-text">Trop souvent, l'artisan disparaît une fois les travaux terminés. Chez Aurora Solutions, notre engagement ne s'arrête pas à la facturation. Nous sommes disponibles pour répondre à vos questions, vérifier que tout fonctionne comme prévu, et intervenir si nécessaire.</p>
         <p class="body-text" style="margin-top:14px">C'est ça, le vrai sens du service : pas seulement bien travailler, mais être là après.</p>
@@ -942,9 +1017,9 @@ ul { list-style: none; }
   <div class="container">
     <div class="fi" style="text-align:center;max-width:520px;margin:0 auto 64px">
       <span class="lbl lbl-light">Garanties &amp; certifications</span>
-      <h2 class="ttl ttl-light">Des bases solides<br>pour travailler en confiance</h2>
+      <h2 class="ttl ttl-light">Des bases solides <br>pour travailler en confiance</h2>
       <div class="rule rule-center"></div>
-      <p style="font-size:0.95rem;color:rgba(255,255,255,0.45);line-height:1.85;font-weight:300">Ces certifications ne sont pas des formalités. Elles sont la preuve que nous exerçons dans les règles et que vous êtes protégés.</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.45);line-height:1.85;font-weight:300">Confier ses travaux à un artisan certifié IRVE garantit une installation électrique conforme à la norme NF C 15-100, couverte par une garantie décennale et une RC Pro. Aurora Solutions réunit ces trois garanties pour sécuriser vos travaux, qu'il s'agisse d'une rénovation, d'une installation neuve ou d'une borne de recharge.</p>
     </div>
     <div class="certs-grid">
       <div class="cert-cell fi d1">
@@ -981,7 +1056,7 @@ ul { list-style: none; }
     <div class="devis-split">
       <div class="fi">
         <span class="lbl lbl-light">Demande de devis</span>
-        <h2 class="ttl ttl-light">Un projet ?<br>Parlons-en.</h2>
+        <h2 class="ttl ttl-light">Un projet ? <br>Parlons-en.</h2>
         <div class="rule"></div>
         <a href="tel:+33763094824" class="devis-phone">07 63 09 48 24</a>
         <p class="devis-avail">Disponible 7j/7 &nbsp;&middot;&nbsp; Devis gratuit sous 24h</p>
@@ -1107,10 +1182,10 @@ ul { list-style: none; }
         <h4>Zones</h4>
         <ul>
           <li><a href="index.html#contact">Pons</a></li>
-          <li><a href="index.html#contact">Saintes</a></li>
-          <li><a href="index.html#contact">Royan</a></li>
-          <li><a href="index.html#contact">Cognac</a></li>
-          <li><a href="index.html#contact">Jonzac</a></li>
+          <li><a href="electricien-saintes.html">Saintes</a></li>
+          <li><a href="electricien-royan.html">Royan</a></li>
+          <li><a href="electricien-cognac.html">Cognac</a></li>
+          <li><a href="electricien-jonzac.html">Jonzac</a></li>
           <li><a href="index.html#contact">Gémozac</a></li>
           <li><a href="index.html#contact">Île d'Oléron</a></li>
           <li><a href="index.html#contact">Saujon</a></li>
@@ -1135,10 +1210,11 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2025 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
+      <span>&copy; 2026 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
       <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="Design sans titre (54).png" alt="Payment Flow" loading="lazy" width="500" height="500">Payment Flow</a></span>
       <span><a href="mentions-legales.html">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="politique-confidentialite.html">Confidentialité</a></span>
     </div>
+    <p style="text-align:center;font-size:0.65rem;color:rgba(255,255,255,0.15);margin-top:14px">Page mise à jour le 4 août 2026</p>
   </div>
 </footer>
 
