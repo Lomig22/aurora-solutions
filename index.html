@@ -1001,7 +1001,7 @@ ul { list-style: none; }
   line-height: 1.85;
   font-style: italic;
   flex: 1;
-  margin-bottom: 26px;
+  margin-bottom: 0;
 }
 .testi-foot {
   border-top: 1px solid var(--border);
@@ -1033,9 +1033,15 @@ ul { list-style: none; }
 .testi-dots {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 240px;
 }
 .testi-dot {
   width: 8px; height: 8px;
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
   border-radius: 50%;
   background: var(--border);
   cursor: pointer;
@@ -1051,6 +1057,89 @@ ul { list-style: none; }
 }
 @media (max-width: 860px) { .pj-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 540px) { .pj-grid { grid-template-columns: 1fr; } }
+
+/* ── AVIS : SECTION UNIFIÉE ── */
+.avis-intro {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 54px;
+}
+.avis-intro p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-top: 14px;
+}
+.avis-block + .avis-block {
+  margin-top: 72px;
+  padding-top: 64px;
+  border-top: 1px solid var(--border);
+}
+.avis-block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 34px;
+}
+.src-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.src-badge svg { flex-shrink: 0; display: block; }
+.src-badge .src-sub {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.avis-rating {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.avis-rating .rating-score { font-size: 1.7rem; }
+.avis-rating .rating-note { line-height: 1.4; }
+.avis-rating-txt { text-align: left; }
+
+/* carte enrichie */
+.testi-head-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.testi-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.testi-head-row .testi-stars { margin-top: 3px; }
+.testi-src {
+  margin-left: auto;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+.testi-src svg { display: block; }
+.src-ico { width: 16px; height: 16px; }
+.star-off { color: var(--border); }
 
 /* ── CONTACT ── */
 .contact-top {
@@ -1657,157 +1746,272 @@ ul { list-style: none; }
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- AVIS CLIENTS -->
 <section class="section bg-off" id="avis">
   <div class="container">
-    <div class="testi-head fi">
-      <div>
-        <span class="lbl">Témoignages</span>
-        <h2 class="ttl">Ce que disent nos clients</h2>
-      </div>
-      <div class="rating-blk">
-        <div class="rating-score">5.0 <em>/ 5</em></div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="rating-note">Basé sur 16 avis Google</div>
-      </div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="ico-google" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></symbol>
+      <symbol id="ico-pj" viewBox="0 0 16 16"><rect width="16" height="16" rx="3" fill="#ffd400"/><text x="8" y="11.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#1b1b1b">PJ</text></symbol>
+    </svg>
+    <div class="avis-intro fi">
+      <span class="lbl">Témoignages</span>
+      <h2 class="ttl">Ce que disent nos clients</h2>
+      <p>19 avis vérifiés publiés sur Google et PagesJaunes par des particuliers et professionnels de Charente-Maritime.</p>
     </div>
-    <div class="testi-carousel-wrap">
-      <div class="testi-carousel" id="testiCarousel">
-        <div class="testi-track" id="testiTrack">
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Thomas est intervenu pour mon tableau électrique et tout s'est passé à merveille. Un chantier laissé ultra propre et un contact très humain. Il a le souci du détail et l'envie de bien faire, ça fait vraiment plaisir. Je suis ravi de lui avoir fait confiance pour ma rénovation et je le recommande autour de moi sans hésiter.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Esteban Gernon</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Super électricien ! Jeune, réactif et vraiment sympa. Il est intervenu rapidement et le travail est propre, soigné, rien à redire. Ça fait plaisir de tomber sur quelqu'un de sérieux et efficace. Je recommande sans hésiter.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Maurel</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Prestation de grande qualité : ponctualité, sérieux et travail impeccable. L'intervention a été réalisée rapidement, avec des explications précises et transparentes. Rapport qualité-prix excellent. Je recommande sans hésitation pour tout chantier électrique.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Benoit Lazrak</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Excellent travail. De l'attention, des idées et une vraie efficacité. Je suis très content de la prestation de Thomas le 25/02/26 et serais très heureux de bénéficier de nouveau de ses services.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Miles</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">J'avais un problème, il m'a téléphoné, je lui ai parlé de mes problèmes de ma maison et que de la gentillesse et très efficace. Vous pouvez compter sur cet électricien.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Élisabeth Bondon</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Un service professionnel et convivial. Thomas est arrivé à l'heure et a terminé le travail au prix convenu. Je le recommande sans hésiter.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Jonno London</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Très arrangeant sur les horaires et la disponibilité (ce qui change de beaucoup d'artisans du secteur).</p>
-            <div class="testi-foot">
-              <div class="testi-name">Thomas</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Professionnel aimable et attentif. Travail propre et rapide.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Laurence Bernard</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Merci à Thomas et Kais pour cette prestation très à l'écoute. Je recommande !</p>
-            <div class="testi-foot">
-              <div class="testi-name">Nolan Busom</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Très gentil et professionnel.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Sulyvane Borde</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Travail sérieux, propre et très professionnel. Thomas est à l'écoute et respecte les délais. Je recommande vivement !</p>
-            <div class="testi-foot">
-              <div class="testi-name">Gabrielle Stephan</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Merci pour le sourire et la bonne humeur. Je vous souhaite des clients tout aussi gentils que vous l'êtes lorsque vous êtes vous même client.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Anne Taviani</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Je recommande. Thomas est venu chez moi pour un dépannage. Minutieux, il a trouvé ma panne alors que 2 électriciens sont passés avant lui sans résoudre le problème. Jeune mais très compétent.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Lillian Raze</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Super intervention de Thomas (Aurora Solutions) pour une rénovation électrique complète chez moi, avec en plus l'installation d'une clim et d'une borne de recharge électrique. Travail propre, sérieux, et bien expliqué. Je recommande sans hésiter pour toute électricité à Saint-Palais-sur-Mer !</p>
-            <div class="testi-foot">
-              <div class="testi-name">Timothé Marthe-Rose</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Personnes très aimables !!</p>
-            <div class="testi-foot">
-              <div class="testi-name">RED SKAA</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-          </div>
-          <div class="testi">
-            <div class="testi-q">&ldquo;</div>
-            <p class="testi-body">Je recommande à 100% pour vos futurs travaux électriques. Chantier laissé propre.</p>
-            <div class="testi-foot">
-              <div class="testi-name">Matteo Beck</div>
-              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
+
+    <!-- Bloc 1 : avis Google -->
+    <div class="avis-block fi">
+      <div class="avis-block-head">
+        <div class="src-badge">
+          <svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
+          <span>Avis Google<span class="src-sub">Fiche établissement</span></span>
+        </div>
+        <div class="avis-rating">
+          <div class="rating-score">5.0 <em>/ 5</em></div>
+          <div class="avis-rating-txt">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="rating-note">Basé sur 16 avis Google</div>
           </div>
         </div>
       </div>
-      <div class="testi-nav">
-        <button class="testi-btn" id="testiPrev" aria-label="Avis précédent">&#8592;</button>
-        <div class="testi-dots" id="testiDots"></div>
-        <button class="testi-btn" id="testiNext" aria-label="Avis suivant">&#8594;</button>
+      <div class="testi-carousel-wrap">
+        <div class="testi-carousel" id="testiCarousel">
+          <div class="testi-track" id="testiTrack">
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">EG</div>
+              <div>
+                <div class="testi-name">Esteban Gernon</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Thomas est intervenu pour mon tableau électrique et tout s'est passé à merveille. Un chantier laissé ultra propre et un contact très humain. Il a le souci du détail et l'envie de bien faire, ça fait vraiment plaisir. Je suis ravi de lui avoir fait confiance pour ma rénovation et je le recommande autour de moi sans hésiter.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">MA</div>
+              <div>
+                <div class="testi-name">Maurel</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Super électricien ! Jeune, réactif et vraiment sympa. Il est intervenu rapidement et le travail est propre, soigné, rien à redire. Ça fait plaisir de tomber sur quelqu'un de sérieux et efficace. Je recommande sans hésiter.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">BL</div>
+              <div>
+                <div class="testi-name">Benoit Lazrak</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Prestation de grande qualité : ponctualité, sérieux et travail impeccable. L'intervention a été réalisée rapidement, avec des explications précises et transparentes. Rapport qualité-prix excellent. Je recommande sans hésitation pour tout chantier électrique.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">MI</div>
+              <div>
+                <div class="testi-name">Miles</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Excellent travail. De l'attention, des idées et une vraie efficacité. Je suis très content de la prestation de Thomas le 25/02/26 et serais très heureux de bénéficier de nouveau de ses services.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">ÉB</div>
+              <div>
+                <div class="testi-name">Élisabeth Bondon</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">J'avais un problème, il m'a téléphoné, je lui ai parlé de mes problèmes de ma maison et que de la gentillesse et très efficace. Vous pouvez compter sur cet électricien.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">JL</div>
+              <div>
+                <div class="testi-name">Jonno London</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Un service professionnel et convivial. Thomas est arrivé à l'heure et a terminé le travail au prix convenu. Je le recommande sans hésiter.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">TH</div>
+              <div>
+                <div class="testi-name">Thomas</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Très arrangeant sur les horaires et la disponibilité (ce qui change de beaucoup d'artisans du secteur).</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">LB</div>
+              <div>
+                <div class="testi-name">Laurence Bernard</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Professionnel aimable et attentif. Travail propre et rapide.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">NB</div>
+              <div>
+                <div class="testi-name">Nolan Busom</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Merci à Thomas et Kais pour cette prestation très à l'écoute. Je recommande !</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">SB</div>
+              <div>
+                <div class="testi-name">Sulyvane Borde</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Très gentil et professionnel.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">GS</div>
+              <div>
+                <div class="testi-name">Gabrielle Stephan</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Travail sérieux, propre et très professionnel. Thomas est à l'écoute et respecte les délais. Je recommande vivement !</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">AT</div>
+              <div>
+                <div class="testi-name">Anne Taviani</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Merci pour le sourire et la bonne humeur. Je vous souhaite des clients tout aussi gentils que vous l'êtes lorsque vous êtes vous même client.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">LR</div>
+              <div>
+                <div class="testi-name">Lillian Raze</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Je recommande. Thomas est venu chez moi pour un dépannage. Minutieux, il a trouvé ma panne alors que 2 électriciens sont passés avant lui sans résoudre le problème. Jeune mais très compétent.</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">TM</div>
+              <div>
+                <div class="testi-name">Timothé Marthe-Rose</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Super intervention de Thomas (Aurora Solutions) pour une rénovation électrique complète chez moi, avec en plus l'installation d'une clim et d'une borne de recharge électrique. Travail propre, sérieux, et bien expliqué. Je recommande sans hésiter pour toute électricité à Saint-Palais-sur-Mer !</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">RS</div>
+              <div>
+                <div class="testi-name">RED SKAA</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Personnes très aimables !!</p>
+          </div>
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">MB</div>
+              <div>
+                <div class="testi-name">Matteo Beck</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Je recommande à 100% pour vos futurs travaux électriques. Chantier laissé propre.</p>
+          </div>
+          </div>
+        </div>
+        <div class="testi-nav">
+          <button class="testi-btn" id="testiPrev" aria-label="Avis précédent">&#8592;</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext" aria-label="Avis suivant">&#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloc 2 : avis PagesJaunes -->
+    <div class="avis-block fi" id="avis-pagesjaunes">
+      <div class="avis-block-head">
+        <div class="src-badge">
+          <svg class="src-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#ico-pj"/></svg>
+          <span>Avis PagesJaunes<span class="src-sub">Autre plateforme</span></span>
+        </div>
+        <div class="avis-rating">
+          <div class="rating-score">4.7 <em>/ 5</em></div>
+          <div class="avis-rating-txt">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;<span class="star-off">&#9733;</span></div>
+            <div class="rating-note">Basé sur 3 avis PagesJaunes</div>
+          </div>
+        </div>
+      </div>
+      <div class="pj-grid">
+        <div class="testi">
+          <div class="testi-head-row">
+            <div class="testi-avatar" aria-hidden="true">PI</div>
+            <div>
+              <div class="testi-name">pierreloth</div>
+              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="testi-src"><svg class="src-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#ico-pj"/></svg></div>
+          </div>
+          <p class="testi-body">Merci à Thomas et Kaïs pour leur professionnalisme et leur ponctualité. Rien à redire.</p>
+        </div>
+        <div class="testi">
+          <div class="testi-head-row">
+            <div class="testi-avatar" aria-hidden="true">FR</div>
+            <div>
+              <div class="testi-name">FrédéricLeger</div>
+              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;<span class="star-off">&#9733;</span></div>
+            </div>
+            <div class="testi-src"><svg class="src-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#ico-pj"/></svg></div>
+          </div>
+          <p class="testi-body">Entreprise professionnelle, je recommande.</p>
+        </div>
+        <div class="testi">
+          <div class="testi-head-row">
+            <div class="testi-avatar" aria-hidden="true">V5</div>
+            <div>
+              <div class="testi-name">v57r278g6k</div>
+              <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="testi-src"><svg class="src-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#ico-pj"/></svg></div>
+          </div>
+          <p class="testi-body">J'aimerais remercier Thomas qui est intervenu très vite, très professionnel et à l'écoute. Je recommande.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1879,49 +2083,6 @@ ul { list-style: none; }
   init();
 })();
 </script>
-
-<!-- AVIS PAGESJAUNES -->
-<section class="section bg-white" id="avis-pagesjaunes">
-  <div class="container">
-    <div class="testi-head fi">
-      <div>
-        <span class="lbl">Autre plateforme</span>
-        <h2 class="ttl">Nos avis PagesJaunes</h2>
-      </div>
-      <div class="rating-blk">
-        <div class="rating-score">4.7 <em>/ 5</em></div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="rating-note">Basé sur 3 avis PagesJaunes</div>
-      </div>
-    </div>
-    <div class="pj-grid">
-      <div class="testi">
-        <div class="testi-q">&ldquo;</div>
-        <p class="testi-body">Merci à Thomas et Kaïs pour leur professionnalisme et leur ponctualité. Rien à redire.</p>
-        <div class="testi-foot">
-          <div class="testi-name">pierreloth</div>
-          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        </div>
-      </div>
-      <div class="testi">
-        <div class="testi-q">&ldquo;</div>
-        <p class="testi-body">Entreprise professionnelle, je recommande.</p>
-        <div class="testi-foot">
-          <div class="testi-name">FrédéricLeger</div>
-          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;</div>
-        </div>
-      </div>
-      <div class="testi">
-        <div class="testi-q">&ldquo;</div>
-        <p class="testi-body">J'aimerais remercier Thomas qui est intervenu très vite, très professionnel et à l'écoute. Je recommande.</p>
-        <div class="testi-foot">
-          <div class="testi-name">v57r278g6k</div>
-          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section class="section bg-dark" id="contact">
