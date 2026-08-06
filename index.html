@@ -18,6 +18,7 @@
   if (localStorage.getItem('auroraCookieConsent') === 'accepted') { window.auroraLoadGA(); }
 </script>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Aurora Solutions – Électricien à Pons. Installation, dépannage, rénovation électrique, climatisation et bornes IRVE en Charente-Maritime. Devis gratuit.">
 <title>Aurora Solutions – Électricien à Pons | Charente-Maritime</title>
@@ -25,6 +26,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preload" href="inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="theme-color" content="#0d1f35">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -213,9 +215,40 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Focus clavier visible partout — l'anneau du navigateur disparaissait sur le marine et sur l'or */
+:focus-visible {
+  outline: 2px solid var(--gold-btn);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+.bg-dark :focus-visible, .footer :focus-visible, .hero :focus-visible, .mob-menu :focus-visible {
+  outline-color: #ffffff;
+}
+/* Les blocs animés restent lisibles si le script ne s'exécute pas */
+.fi { opacity: 1; }
+html.js .fi:not(.on) { opacity: 0; }
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 4000;
+  background: var(--gold-btn); color: var(--dark);
+  padding: 12px 20px; font-size: 0.82rem; font-weight: 700;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important; scroll-behavior: auto !important;
+  }
+}
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -309,7 +342,7 @@ ul { list-style: none; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 52px;
+  gap: 34px;
   flex: 1;
   justify-content: center;
   padding-right: 26px;
@@ -399,7 +432,7 @@ ul { list-style: none; }
 }
 @media (max-width: 1240px) { .nav-links { gap: 30px; padding-right: 26px; } .nav-right { gap: 18px; } }
 @media (max-width: 1080px) { .nav-links { gap: 20px; } .nav-links a { letter-spacing: 0.06em; } }
-@media (max-width: 900px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
+@media (max-width: 1120px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
 .ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
 .ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
 .ham.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
@@ -513,25 +546,27 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.42);
+  color: rgba(255,255,255,0.52);
   margin-bottom: 22px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .hero h1 {
-  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  font-size: clamp(2.1rem, 4.2vw, 3.1rem);
   font-weight: 700;
   color: var(--white);
-  line-height: 1.17;
-  letter-spacing: -0.025em;
-  margin-bottom: 18px;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  text-wrap: balance;
 }
 .hero-sub {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.58);
-  line-height: 1.85;
-  margin-bottom: 44px;
-  font-weight: 300;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  font-weight: 400;
+  max-width: 34em;
 }
 .hero-actions {
   display: flex;
@@ -573,65 +608,76 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
+/* Badge de preuve sociale — remonté juste sous les promesses, au-dessus de la ligne de flottaison */
 .hero-reviews {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  align-items: stretch;
   flex-wrap: wrap;
-  margin-top: 28px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 30px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.045);
 }
 .hr-stars {
   color: #e09a10;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   letter-spacing: 2px;
   flex-shrink: 0;
 }
 .hr-text {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
 }
 .hr-score {
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
   color: var(--white);
-  line-height: 1;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 .hr-count {
-  font-size: 0.68rem;
-  color: rgba(255,255,255,0.35);
-  letter-spacing: 0.06em;
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
 }
 .hr-sep {
   width: 1px;
-  height: 28px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.16);
   flex-shrink: 0;
-}
-.hr-quote {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.42);
-  font-style: italic;
-  line-height: 1.5;
 }
 .hr-src {
   display: flex;
   align-items: center;
-  gap: 14px;
-  transition: opacity var(--ease);
+  gap: 12px;
+  min-height: 44px;
+  padding: 12px 18px;
+  flex: 1 1 auto;
+  transition: background var(--ease);
 }
-.hr-src:hover { opacity: 0.75; }
-.hr-star-off { color: rgba(255,255,255,0.22); }
-.hr-sep-quote { display: none; }
-.hr-quote { flex-basis: 100%; margin-top: 2px; }
+.hr-src:hover { background: rgba(255,255,255,0.07); }
+.hr-star-off { color: rgba(255,255,255,0.28); }
+@media (max-width: 400px) {
+  .hr-src { flex: 1 1 100%; }
+  .hr-sep { width: 100%; height: 1px; }
+}
 
 /* ── HERO ANIMATION ── */
 .hero-anim {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/* Décor purement illustratif : inutile sous 900px, où il coûtait un écran entier de défilement.
+   Cette règle doit rester APRÈS la déclaration ci-dessus, sinon elle est écrasée. */
+@media (max-width: 900px) {
+  .hero-anim { display: none; }
+}
+/* Rotations permanentes : coupées si l'utilisateur préfère les mouvements réduits */
+@media (prefers-reduced-motion: reduce) {
+  .elec-ring, .elec-core, .elec-bolt, .circuit-path, .circuit-node, .elec-stat {
+    animation: none !important;
+  }
 }
 .elec-canvas {
   width: 100%;
@@ -672,7 +718,7 @@ ul { list-style: none; }
   height: 6px;
   border-radius: 50%;
   background: var(--gold-btn);
-  box-shadow: 0 0 10px 2px rgba(224,154,16,0.6);
+  box-shadow: 0 0 6px rgba(224,154,16,0.35);
 }
 .elec-ring:nth-child(2)::before {
   width: 4px; height: 4px;
@@ -775,7 +821,7 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.52);
   margin-top: 4px;
 }
 .es-tl { top: 6%; left: -2%; animation: floatCard 5s ease-in-out infinite; }
@@ -825,7 +871,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #96660a;
   margin-bottom: 14px;
 }
 .lbl-light { color: rgba(200,137,10,0.85); }
@@ -878,13 +924,15 @@ ul { list-style: none; }
 .intro-link::after {
   content: '';
   display: block;
-  width: 24px;
+  width: 36px;
   height: 1px;
   background: currentColor;
-  transition: width var(--ease);
+  transform: scaleX(0.667);
+  transform-origin: left center;
+  transition: transform var(--ease);
 }
 .intro-link:hover { gap: 14px; color: var(--gold); }
-.intro-link:hover::after { width: 36px; }
+.intro-link:hover::after { transform: scaleX(1); }
 
 .kpi-grid {
   display: grid;
@@ -922,19 +970,52 @@ ul { list-style: none; }
 .services-head {
   margin-bottom: 60px;
 }
+/* Grille 3 + 2 : 6 colonnes, 2 unités par carte sur la 1re ligne, 3 sur la 2de.
+   Évite la carte pleine largeur qui produisait une ligne de texte de 1000px. */
 .svc-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1px;
   background: var(--border);
 }
+.svc { grid-column: span 2; }
+.svc:nth-child(4), .svc:nth-child(5) { grid-column: span 3; }
+@media (max-width: 900px) {
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .svc, .svc:nth-child(4), .svc:nth-child(5) { grid-column: auto; }
+}
 @media (max-width: 580px) { .svc-grid { grid-template-columns: 1fr; } }
 .svc {
+  display: flex;
+  flex-direction: column;
   background: var(--off);
-  padding: 52px 44px;
+  padding: 0 0 34px;
   transition: background var(--ease);
 }
 .svc:hover { background: var(--white); }
+.svc-media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--gray);
+  margin-bottom: 30px;
+}
+.svc-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.svc:hover .svc-media img { transform: scale(1.03); }
+.svc-body {
+  padding: 0 36px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+@media (max-width: 640px) { .svc-body { padding: 0 24px; } }
+.svc p { max-width: 46em; }
+.svc .arrow-link { margin-top: auto; }
 .svc-n {
   display: block;
   font-size: 0.65rem;
@@ -960,6 +1041,7 @@ ul { list-style: none; }
 .arrow-link {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: 8px;
   font-size: 0.7rem;
   font-weight: 600;
@@ -973,13 +1055,15 @@ ul { list-style: none; }
 .arrow-link::after {
   content: '';
   display: block;
-  width: 18px;
+  width: 28px;
   height: 1px;
   background: currentColor;
-  transition: width var(--ease);
+  transform: scaleX(0.643);
+  transform-origin: left center;
+  transition: transform var(--ease);
 }
 .svc:hover .arrow-link { gap: 12px; color: var(--gold); }
-.svc:hover .arrow-link::after { width: 28px; }
+.svc:hover .arrow-link::after { transform: scaleX(1); }
 
 /* ── INTERLUDE IMAGE ── */
 .interlude {
@@ -1009,7 +1093,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 12px;
 }
 .interlude-copy p {
@@ -1066,14 +1150,16 @@ ul { list-style: none; }
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: rgba(255,255,255,0.07);
+  list-style: none;
 }
 @media (max-width: 880px) { .why-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 460px) { .why-grid { grid-template-columns: 1fr; } }
 .why-cell {
   background: rgba(255,255,255,0.02);
-  padding: 50px 38px;
+  padding: 44px 34px;
   transition: background var(--ease);
 }
+@media (max-width: 767px) { .why-cell { padding: 28px 24px; } .why-n { margin-bottom: 14px; } }
 .why-cell:hover { background: rgba(255,255,255,0.05); }
 .why-n {
   font-size: 0.62rem;
@@ -1092,7 +1178,7 @@ ul { list-style: none; }
 }
 .why-cell p {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.52);
   line-height: 1.85;
 }
 
@@ -1114,7 +1200,7 @@ ul { list-style: none; }
   letter-spacing: -0.04em;
 }
 .rating-score em { font-size: 0.9rem; font-weight: 400; color: var(--muted); font-style: normal; }
-.stars { color: #c8890a; font-size: 0.78rem; letter-spacing: 3px; margin: 5px 0; }
+.stars { color: #c6880a; font-size: 0.78rem; letter-spacing: 3px; margin: 5px 0; }
 .rating-note { font-size: 0.74rem; color: var(--muted); }
 /* ── TESTIMONIALS CAROUSEL ── */
 .testi-carousel-wrap {
@@ -1127,7 +1213,7 @@ ul { list-style: none; }
   display: flex;
   transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
   will-change: transform;
-  align-items: stretch;
+  align-items: flex-start;
 }
 .testi {
   background: var(--white);
@@ -1148,12 +1234,12 @@ ul { list-style: none; }
   margin-bottom: 14px;
   font-family: Georgia, 'Times New Roman', serif;
 }
+/* Citation en romain, marine, ~1rem : l'italique gris clair était le point le plus dur à lire */
 .testi-body {
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.85;
-  font-style: italic;
-  flex: 1;
+  font-size: 1rem;
+  color: var(--navy);
+  line-height: 1.65;
+  font-style: normal;
   margin-bottom: 0;
 }
 .testi-foot {
@@ -1162,7 +1248,7 @@ ul { list-style: none; }
 }
 .testi-name { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
 .testi-loc  { font-size: 0.74rem; color: var(--muted); margin-top: 2px; }
-.testi-stars { color: #c8890a; font-size: 0.7rem; letter-spacing: 2px; margin-top: 6px; }
+.testi-stars { color: #c6880a; font-size: 0.7rem; letter-spacing: 2px; margin-top: 6px; }
 .testi-nav {
   display: flex;
   justify-content: center;
@@ -1207,6 +1293,7 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  align-items: start;
 }
 @media (max-width: 860px) { .pj-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 540px) { .pj-grid { grid-template-columns: 1fr; } }
@@ -1316,7 +1403,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.36);
+  color: rgba(255,255,255,0.52);
 }
 .contact-split {
   display: grid;
@@ -1332,7 +1419,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.52);
   margin-bottom: 7px;
 }
 .cinfo-item dd {
@@ -1366,7 +1453,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.6);
 }
 .fg input,
 .fg select,
@@ -1395,7 +1482,7 @@ ul { list-style: none; }
 .fg textarea { resize: vertical; min-height: 110px; }
 .fnote {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.52);
   margin-top: 2px;
 }
 
@@ -1428,26 +1515,26 @@ ul { list-style: none; }
   font-size: 0.6rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.52);
   margin-bottom: 18px;
 }
 .foot-brand p {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.52);
   line-height: 1.8;
 }
-.foot-col h4 {
+.foot-col h3 {
   font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 20px;
 }
 .foot-col ul { display: flex; flex-direction: column; gap: 11px; }
 .foot-col ul li a {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.48);
+  color: rgba(255,255,255,0.55);
   transition: color var(--ease);
 }
 .foot-col ul li a:hover { color: rgba(255,255,255,0.85); }
@@ -1457,19 +1544,19 @@ ul { list-style: none; }
   align-items: center;
   gap: 10px;
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.52);
 }
 .foot-bottom > span:last-child { justify-self: end; }
-.foot-bottom a { color: rgba(255,255,255,0.26); transition: color var(--ease); }
+.foot-bottom a { color: rgba(255,255,255,0.6); transition: color var(--ease); }
 .foot-bottom a:hover { color: rgba(255,255,255,0.6); }
-.foot-credit { display: flex; align-items: center; gap: 6px; font-size: 0.7rem; color: rgba(255,255,255,0.18); }
-.foot-credit a { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.28); transition: color var(--ease); }
+.foot-credit { display: flex; align-items: center; gap: 6px; font-size: 0.7rem; color: rgba(255,255,255,0.52); }
+.foot-credit a { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.6); transition: color var(--ease); }
 .foot-credit a:hover { color: rgba(255,255,255,0.6); }
 .foot-updated {
   text-align: center;
   margin-top: 18px;
   font-size: 0.68rem;
-  color: rgba(255,255,255,0.16);
+  color: rgba(255,255,255,0.52);
 }
 
 /* ── FAQ ── */
@@ -1646,11 +1733,70 @@ ul { list-style: none; }
   input, select, textarea { font-size: 1rem !important; }
 }
 
+/* ── BARRE D'ACTION MOBILE ── */
+.callbar {
+  display: none;
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 2900;
+  background: rgba(13,31,53,0.97);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  gap: 10px;
+}
+.callbar a {
+  flex: 1; min-height: 52px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-size: 0.86rem; font-weight: 700; letter-spacing: 0.04em;
+  border-radius: 2px; text-align: center;
+}
+.callbar .cb-tel { background: var(--gold-btn); color: var(--dark); flex: 1.4; }
+.callbar .cb-devis { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+.callbar svg { flex-shrink: 0; }
+@media (max-width: 1120px) {
+  .callbar { display: flex; }
+  body { padding-bottom: 76px; }
+}
+@media print { .callbar { display: none; } }
+/* ── ZONES TACTILES 44px ──
+   Rembourrage seulement : la taille du texte, la couleur et le soulignement ne changent pas. */
+.nav-links a,
+.foot-col ul li a,
+.foot-bottom a,
+.hero-phone-link,
+.intro-link,
+.hr-src,
+.svc .arrow-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.nav-links a { padding: 12px 0; }
+/* L'espacement vertical passe du gap au rembourrage du lien : rendu quasi identique, cible doublée */
+.foot-col ul { gap: 0; }
+.foot-col ul li a { padding: 11px 0; }
+.foot-bottom a { padding: 11px 0; }
+.foot-credit a { min-height: 44px; padding: 11px 0; }
+.mob-menu-tel {
+  display: block; background: var(--gold-btn); color: var(--dark) !important;
+  font-size: 1.05rem !important; font-weight: 800 !important; letter-spacing: 0.02em !important;
+  text-align: center; padding: 16px !important; margin-bottom: 8px; border-bottom: none !important;
+}
+
+/* ── ACCORDÉONS : survol et focus lisibles ── */
+details summary { cursor: pointer; transition: color var(--ease), background var(--ease); }
+details summary:hover { color: var(--gold); }
+details[open] summary { color: var(--navy); }
+.bg-dark details summary:hover, .footer details summary:hover { color: var(--gold-btn); }
+/* Boutons d'ancre : contraste relevé, cible tactile suffisante */
+.anchor-btn { color: rgba(255,255,255,0.75) !important; padding: 12px 18px !important; }
+.anchor-btn:hover, .anchor-btn:focus-visible { border-color: var(--gold-btn) !important; color: #fff !important; }
+
 </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 <nav class="nav" id="nav">
   <div class="container">
     <a href="#" class="brand">
@@ -1680,6 +1826,7 @@ ul { list-style: none; }
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobmenu">
+  <a href="tel:+33763094824" class="mob-menu-tel">07 63 09 48 24</a>
   <a href="services.html">Services</a>
   <a href="realisations.html">Réalisations</a>
   <a href="about.html">À propos</a>
@@ -1692,6 +1839,8 @@ ul { list-style: none; }
   </div>
 </div>
 
+<main id="contenu">
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -1702,16 +1851,13 @@ ul { list-style: none; }
       <!-- TEXTE -->
       <div class="hero-inner">
         <span class="hero-label">Électricien à Pons &nbsp;&middot;&nbsp; Charente-Maritime (17)</span>
-        <h1>Votre électricien à Pons <br>pour l'installation, le dépannage et la rénovation électrique</h1>
+        <h1>Votre électricien à Pons, 7 jours sur 7</h1>
+        <p class="hero-sub">Installation, dépannage et rénovation électrique pour les particuliers et les professionnels de Charente-Maritime.</p>
         <ul class="hero-promises">
           <li>Intervention le jour même, 7 jours sur 7</li>
           <li>Devis gratuit, prix ferme sans surprise</li>
           <li>Travaux garantis, conformes aux normes en vigueur</li>
         </ul>
-        <div class="hero-actions">
-          <button class="btn btn-gold btn-gold-lg" data-devis>Demander un devis</button>
-          <a href="tel:+33763094824" class="hero-phone-link">07 63 09 48 24</a>
-        </div>
         <div class="hero-reviews">
           <a class="hr-src" href="#avis">
             <div class="hr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -1728,8 +1874,10 @@ ul { list-style: none; }
               <span class="hr-count">3 avis PagesJaunes</span>
             </div>
           </a>
-          <div class="hr-sep hr-sep-quote"></div>
-          <div class="hr-quote">"Intervention rapide, travail soigné. Je recommande."</div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-gold btn-gold-lg" data-devis>Demander un devis</button>
+          <a href="tel:+33763094824" class="hero-phone-link">07 63 09 48 24</a>
         </div>
       </div>
 
@@ -1842,36 +1990,61 @@ ul { list-style: none; }
       <h2 class="ttl">Ce que nous faisons</h2>
     </div>
     <div class="svc-grid">
-      <div class="svc fi d1">
-        <span class="svc-n">01</span>
-        <h3>Dépannage électrique</h3>
-        <p>Panne, disjoncteur qui saute, coupure inexpliquée — nous intervenons rapidement pour diagnostiquer et résoudre le problème. Disponibles 7 jours sur 7 pour les urgences.</p>
-        <a href="realisations.html#depannage" class="arrow-link">En savoir plus</a>
-      </div>
-      <div class="svc fi d2">
-        <span class="svc-n">02</span>
-        <h3>Rénovation électrique</h3>
-        <p>Mise aux normes NF C 15-100, remplacement de tableau, remise en état complète d'une installation ancienne. Travaux réalisés dans les règles de l'art, avec attestation de conformité.</p>
-        <a href="realisations.html#renovation" class="arrow-link">En savoir plus</a>
-      </div>
-      <div class="svc fi d1">
-        <span class="svc-n">03</span>
-        <h3>Installation borne IRVE</h3>
-        <p>Qualifiés IRVE, nous installons des bornes de recharge pour véhicules électriques adaptées à vos usages, à domicile comme en entreprise.</p>
-        <a href="realisations.html#irve" class="arrow-link">En savoir plus</a>
-      </div>
-      <div class="svc fi d2">
-        <span class="svc-n">04</span>
-        <h3>Installation neuve</h3>
-        <p>Construction, extension, aménagement : nous prenons en charge l'intégralité de vos installations électriques, du tableau aux prises en passant par l'éclairage et la domotique.</p>
-        <a href="realisations.html#installation" class="arrow-link">En savoir plus</a>
-      </div>
-      <div class="svc fi d1" style="grid-column: 1 / -1">
-        <span class="svc-n">05</span>
-        <h3>Climatisation réversible</h3>
-        <p>Installation de climatisation réversible mono-split et multi-split (PAC air/air), matériel Thermor, avec formation à leurs outils de dimensionnement. Confort en été, chauffage d'appoint en hiver.</p>
-        <a href="climatisation.html" class="arrow-link">En savoir plus</a>
-      </div>
+      <a class="svc fi d1" href="realisations.html#depannage">
+        <div class="svc-media">
+          <img src="man-electrical-technician-working-switchboard-with-fuses.jpg" alt="Électricien intervenant sur un tableau électrique à fusibles lors d'un dépannage" loading="lazy" width="1400" height="933">
+        </div>
+        <div class="svc-body">
+          <span class="svc-n">01</span>
+          <h3>Dépannage électrique</h3>
+          <p>Panne, disjoncteur qui saute, coupure inexpliquée — nous intervenons rapidement pour diagnostiquer et résoudre le problème. Disponibles 7 jours sur 7 pour les urgences.</p>
+          <span class="arrow-link">En savoir plus</span>
+        </div>
+      </a>
+      <a class="svc fi d2" href="realisations.html#renovation">
+        <div class="svc-media">
+          <img src="freepik_je-veux-que-tu-retire-le-_2831004737.jpg" alt="Cuisine rénovée avec éclairage LED intégré et sèche-serviettes après rénovation électrique" loading="lazy" width="1200" height="896">
+        </div>
+        <div class="svc-body">
+          <span class="svc-n">02</span>
+          <h3>Rénovation électrique</h3>
+          <p>Mise aux normes NF C 15-100, remplacement de tableau, remise en état complète d'une installation ancienne. Travaux réalisés dans les règles de l'art, avec attestation de conformité.</p>
+          <span class="arrow-link">En savoir plus</span>
+        </div>
+      </a>
+      <a class="svc fi d1" href="realisations.html#irve">
+        <div class="svc-media">
+          <img src="installation-prise-renforcee-recharge-vehicule-electrique-jarnac-champagne.JPG" alt="Prise renforcée de recharge pour véhicule électrique installée dans un garage" loading="lazy" width="787" height="1400">
+        </div>
+        <div class="svc-body">
+          <span class="svc-n">03</span>
+          <h3>Installation borne IRVE</h3>
+          <p>Qualifiés IRVE, nous installons des bornes de recharge pour véhicules électriques adaptées à vos usages, à domicile comme en entreprise.</p>
+          <span class="arrow-link">En savoir plus</span>
+        </div>
+      </a>
+      <a class="svc fi d2" href="realisations.html#installation">
+        <div class="svc-media">
+          <img src="close-up-hand-engineer-electrician-man-working-check-electrical-system-with-tablet-factory.jpg" alt="Électricien contrôlant une installation électrique neuve à l'aide d'une tablette" loading="lazy" width="1400" height="933">
+        </div>
+        <div class="svc-body">
+          <span class="svc-n">04</span>
+          <h3>Installation neuve</h3>
+          <p>Construction, extension, aménagement : nous prenons en charge l'intégralité de vos installations électriques, du tableau aux prises en passant par l'éclairage et la domotique.</p>
+          <span class="arrow-link">En savoir plus</span>
+        </div>
+      </a>
+      <a class="svc fi d1" href="climatisation.html">
+        <div class="svc-media">
+          <img src="beautiful-shot-modern-house-kitchen-dining-room.jpg" alt="Séjour et cuisine ouverte d'une maison équipée en climatisation réversible" loading="lazy" width="1200" height="801">
+        </div>
+        <div class="svc-body">
+          <span class="svc-n">05</span>
+          <h3>Climatisation réversible</h3>
+          <p>Installation de climatisation réversible mono-split et multi-split (PAC air/air), matériel Thermor, avec formation à leurs outils de dimensionnement. Confort en été, chauffage d'appoint en hiver.</p>
+          <span class="arrow-link">En savoir plus</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1925,32 +2098,32 @@ ul { list-style: none; }
 <section class="section bg-dark" id="pourquoi">
   <div class="container">
     <div class="why-head fi">
-      <span class="lbl lbl-light">Pourquoi nous choisir</span>
-      <h2 class="ttl ttl-light">Ce qui nous distingue</h2>
+      <span class="lbl lbl-light">Notre méthode</span>
+      <h2 class="ttl ttl-light">Comment se déroule une intervention</h2>
       <div class="rule rule-center"></div>
     </div>
-    <div class="why-grid">
-      <div class="why-cell fi d1">
+    <ol class="why-grid">
+      <li class="why-cell fi d1">
         <span class="why-n">01</span>
-        <h3>Expertise confirmée</h3>
-        <p>Plus de six ans d'expérience, plus de 150 chantiers réalisés, des qualifications à jour. Vous faites appel à un professionnel reconnu dans son domaine.</p>
-      </div>
-      <div class="why-cell fi d2">
+        <h3>Votre appel</h3>
+        <p>Vous nous exposez votre besoin par téléphone ou via le formulaire. Nous vous répondons directement, sans intermédiaire. Pour une urgence, nous cherchons à intervenir le jour même, 7 jours sur 7.</p>
+      </li>
+      <li class="why-cell fi d2">
         <span class="why-n">02</span>
-        <h3>Réactivité</h3>
-        <p>Une panne ne prévient pas. Notre organisation nous permet d'intervenir rapidement, y compris en situation d'urgence, sept jours sur sept.</p>
-      </div>
-      <div class="why-cell fi d3">
+        <h3>Diagnostic sur place</h3>
+        <p>Nous venons voir l'installation, relevons l'existant et identifions les contraintes réelles du chantier. Rien n'est chiffré à l'aveugle.</p>
+      </li>
+      <li class="why-cell fi d3">
         <span class="why-n">03</span>
-        <h3>Qualité du travail</h3>
-        <p>Chaque installation est réalisée selon les normes en vigueur. Nous apportons le même soin à chaque détail, quel que soit l'ampleur du chantier.</p>
-      </div>
-      <div class="why-cell fi d4">
+        <h3>Devis gratuit et ferme</h3>
+        <p>Vous recevez un devis gratuit, détaillé poste par poste. Le prix annoncé est ferme : il ne bouge pas en cours de chantier.</p>
+      </li>
+      <li class="why-cell fi d4">
         <span class="why-n">04</span>
-        <h3>Proximité humaine</h3>
-        <p>Artisan local, nous connaissons notre territoire. Vous parlez directement à celui qui réalise vos travaux. Pas d'intermédiaire, pas de mauvaise surprise.</p>
-      </div>
-    </div>
+        <h3>Chantier et mise en service</h3>
+        <p>Nous réalisons les travaux selon les normes en vigueur, testons l'installation, laissons le chantier propre et vous expliquons ce qui a été fait.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -2389,22 +2562,22 @@ ul { list-style: none; }
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="frow">
           <div class="fg">
-            <label>Nom</label>
-            <input type="text" name="nom" placeholder="Votre nom" required>
+            <label for="ch-index-1">Nom</label>
+            <input id="ch-index-1" type="text" name="nom" placeholder="Votre nom" required>
           </div>
           <div class="fg">
-            <label>Téléphone</label>
-            <input type="tel" name="tel" placeholder="06 XX XX XX XX" required>
+            <label for="ch-index-2">Téléphone</label>
+            <input id="ch-index-2" type="tel" name="tel" placeholder="06 XX XX XX XX" required>
           </div>
         </div>
         <div class="frow">
           <div class="fg">
-            <label>Ville</label>
-            <input type="text" name="ville" placeholder="Votre commune">
+            <label for="ch-index-3">Ville</label>
+            <input id="ch-index-3" type="text" name="ville" placeholder="Votre commune">
           </div>
           <div class="fg">
-            <label>Prestation</label>
-            <select name="prestation">
+            <label for="ch-index-4">Prestation</label>
+            <select id="ch-index-4" name="prestation">
               <option value="">Sélectionner</option>
               <option>Dépannage urgent</option>
               <option>Installation borne IRVE</option>
@@ -2416,8 +2589,8 @@ ul { list-style: none; }
           </div>
         </div>
         <div class="fg">
-          <label>Message</label>
-          <textarea name="message" placeholder="Décrivez brièvement votre besoin..."></textarea>
+          <label for="ch-index-5">Message</label>
+            <textarea id="ch-index-5" name="message" placeholder="Décrivez brièvement votre besoin..."></textarea>
         </div>
         <div>
           <button type="submit" class="btn btn-gold" style="padding:14px 30px">Envoyer la demande</button>
@@ -2481,6 +2654,8 @@ ul { list-style: none; }
 </div>
 
 <!-- FOOTER -->
+</main>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
@@ -2490,7 +2665,7 @@ ul { list-style: none; }
         <p>SAS créée en 2025. Artisan électricien intervenant chez les particuliers et professionnels de la Charente-Maritime avec rigueur et engagement.</p>
       </div>
       <div class="foot-col">
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
           <li><a href="services.html#depannage">Dépannage électrique</a></li>
           <li><a href="services.html#renovation">Rénovation électrique</a></li>
@@ -2501,7 +2676,7 @@ ul { list-style: none; }
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Zones</h4>
+        <h3>Zones</h3>
         <ul>
           <li><a href="#contact">Pons</a></li>
           <li><a href="electricien-saintes.html">Saintes</a></li>
@@ -2514,7 +2689,7 @@ ul { list-style: none; }
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+33763094824">07 63 09 48 24</a></li>
           <li><a href="mailto:aurora.solutions.17800@gmail.com">aurora.solutions.17800@gmail.com</a></li>
@@ -2646,5 +2821,15 @@ ul { list-style: none; }
   });
 })();
 </script>
+
+<!-- BARRE D'ACTION MOBILE -->
+<div class="callbar">
+  <a href="tel:+33763094824" class="cb-tel">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="#contact" class="cb-devis" data-devis>Devis gratuit</a>
+</div>
+
 </body>
 </html>
