@@ -465,11 +465,6 @@ ul { list-style: none; }
   body { padding-bottom: 76px; }
 }
 @media print { .callbar { display: none; } }
-.mob-menu-tel {
-  display: block; background: var(--gold-btn); color: var(--dark) !important;
-  font-size: 1.05rem !important; font-weight: 800 !important; letter-spacing: 0.02em !important;
-  text-align: center; padding: 16px !important; margin-bottom: 8px; border-bottom: none !important;
-}
 
 /* ── ZONES TACTILES : 44px minimum sans changer l'apparence ── */
 .nav-links a, .mob-menu a, .foot-col ul li a, .foot-bottom a, .anchor-btn,
@@ -529,7 +524,6 @@ details[open] summary { color: var(--navy); }
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobmenu">
-  <a href="tel:+33763094824" class="mob-menu-tel">07 63 09 48 24</a>
   <a href="services.html">Services</a>
   <a href="realisations.html">Réalisations</a>
   <a href="about.html">À propos</a>
@@ -540,6 +534,15 @@ details[open] summary { color: var(--navy); }
     <a href="tel:+33763094824" class="mob-phone">07 63 09 48 24</a>
     <button class="btn btn-gold" data-devis style="min-height:48px;width:100%;font-size:0.82rem">Devis gratuit</button>
   </div>
+</div>
+
+<!-- BARRE D'ACTION MOBILE -->
+<div class="callbar">
+  <a href="tel:+33763094824" class="cb-tel">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="#contact" class="cb-devis" data-devis>Devis gratuit</a>
 </div>
 
 <main id="contenu">
@@ -991,15 +994,6 @@ details[open] summary { color: var(--navy); }
   });
 })();
 </script>
-
-<!-- BARRE D'ACTION MOBILE -->
-<div class="callbar">
-  <a href="tel:+33763094824" class="cb-tel">
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Appeler
-  </a>
-  <a href="#contact" class="cb-devis" data-devis>Devis gratuit</a>
-</div>
 
 </body>
 </html>
