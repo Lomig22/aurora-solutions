@@ -671,6 +671,8 @@ ul { list-style: none; }
 .callbar svg { flex-shrink: 0; }
 @media (max-width: 1120px) {
   .callbar { display: flex; }
+  /* Menu ouvert : la barre du bas s'efface pour ne pas doubler ses actions */
+  .mob-menu.open ~ .callbar { display: none; }
   body { padding-bottom: 76px; }
 }
 @media print { .callbar { display: none; } }

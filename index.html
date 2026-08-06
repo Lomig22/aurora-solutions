@@ -1747,6 +1747,8 @@ ul { list-style: none; }
 .callbar svg { flex-shrink: 0; }
 @media (max-width: 1120px) {
   .callbar { display: flex; }
+  /* Menu ouvert : la barre du bas s'efface pour ne pas doubler ses actions */
+  .mob-menu.open ~ .callbar { display: none; }
   body { padding-bottom: 76px; }
 }
 @media print { .callbar { display: none; } }
@@ -1778,6 +1780,30 @@ details[open] summary { color: var(--navy); }
 /* Boutons d'ancre : contraste relevé, cible tactile suffisante */
 .anchor-btn { color: rgba(255,255,255,0.75) !important; padding: 12px 18px !important; }
 .anchor-btn:hover, .anchor-btn:focus-visible { border-color: var(--gold-btn) !important; color: #fff !important; }
+
+/* ── MENU MOBILE : numéro en or, devis en marine (contour) ── */
+.mob-cta { gap: 8px; }
+.mob-phone {
+  background: var(--gold-btn) !important;
+  color: var(--dark) !important;
+  border: 1.5px solid var(--gold-btn) !important;
+  border-bottom: 1.5px solid var(--gold-btn) !important;
+  padding: 13px 20px !important;
+}
+.mob-phone:hover, .mob-phone:focus-visible {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+}
+.mob-cta .btn-gold {
+  background: transparent !important;
+  color: var(--navy) !important;
+  border: 1.5px solid var(--navy) !important;
+  padding: 13px 20px !important;
+}
+.mob-cta .btn-gold:hover, .mob-cta .btn-gold:focus-visible {
+  background: var(--navy) !important;
+  color: #fff !important;
+}
 
 </style>
 </head>
