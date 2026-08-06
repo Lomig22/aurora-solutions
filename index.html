@@ -20,7 +20,7 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Aurora Solutions – Électricien à Pons. Installation, dépannage, rénovation électrique, climatisation et bornes IRVE en Charente-Maritime. Devis gratuit.">
+<meta name="description" content="Électricien à Pons (17800) : dépannage, rénovation électrique, climatisation et bornes IRVE en Charente-Maritime. Devis gratuit, 7j/7.">
 <title>Aurora Solutions – Électricien à Pons | Charente-Maritime</title>
 <link rel="canonical" href="https://www.aurora-solutions-electricite.fr/">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -55,7 +55,6 @@
       "description": "Électricien artisan à Pons (17800) : installation, dépannage, rénovation électrique, climatisation réversible (PAC air/air, matériel Thermor) et bornes de recharge IRVE en Charente-Maritime.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "7 B Impasse des Géraniums",
         "postalCode": "17800",
         "addressLocality": "Pons",
         "addressRegion": "Charente-Maritime",
@@ -100,11 +99,6 @@
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "certification",
           "name": "Qualification IRVE"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "certification",
-          "name": "Norme NF C 15-100"
         }
       ],
       "knowsAbout": [
@@ -157,7 +151,7 @@
       "name": "Aurora Solutions – Électricien à Pons | Charente-Maritime",
       "isPartOf": { "@id": "https://www.aurora-solutions-electricite.fr/#website" },
       "about": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-      "dateModified": "2026-08-04"
+      "dateModified": "2026-08-06"
     },
     {
       "@type": "FAQPage",
@@ -175,7 +169,7 @@
           "name": "Dans quelle zone intervenez-vous ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Cognac, Jonzac, Gémozac, Île d'Oléron et Saujon. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune."
+            "text": "Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Jonzac, Gémozac, Île d'Oléron et Saujon, ainsi qu'à Cognac, en Charente. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune."
           }
         },
         {
@@ -236,7 +230,7 @@
 }
 /* Les blocs animés restent lisibles si le script ne s'exécute pas */
 .fi { opacity: 1; }
-html.js .fi:not(.on) { opacity: 0; }
+html.js .fi:not(.on) { opacity: 0; transform: translateY(18px); }
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 4000;
   background: var(--gold-btn); color: var(--dark);
@@ -1594,8 +1588,6 @@ ul { list-style: none; }
 
 /* ── FADE IN ── */
 .fi {
-  opacity: 0;
-  transform: translateY(18px);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .fi.d1 { transition-delay: 0.08s; }
@@ -1805,6 +1797,10 @@ details[open] summary { color: var(--navy); }
   color: #fff !important;
 }
 
+a.src-badge { transition: opacity var(--ease); }
+a.src-badge:hover { opacity: 0.75; }
+a.ztag { transition: border-color var(--ease), color var(--ease); }
+a.ztag:hover, a.ztag:focus-visible { border-color: var(--gold-btn); color: var(--navy); }
 </style>
 </head>
 <body>
@@ -1909,8 +1905,8 @@ details[open] summary { color: var(--navy); }
 
           <!-- Stat cards -->
           <div class="elec-stat es-tl">
-            <span class="s-num">150+</span>
-            <span class="s-lbl">Chantiers</span>
+            <span class="s-num">50+</span>
+            <span class="s-lbl">Chantiers terminés</span>
           </div>
           <div class="elec-stat es-tr">
             <span class="s-num">6+</span>
@@ -1987,8 +1983,8 @@ details[open] summary { color: var(--navy); }
             <div class="kpi-lbl">Années d'expérience</div>
           </div>
           <div class="kpi">
-            <div class="kpi-num">150<sup>+</sup></div>
-            <div class="kpi-lbl">Chantiers réalisés</div>
+            <div class="kpi-num">50<sup>+</sup></div>
+            <div class="kpi-lbl">Chantiers terminés</div>
           </div>
           <div class="kpi">
             <div class="kpi-num">5<sup>/5</sup></div>
@@ -2165,10 +2161,10 @@ details[open] summary { color: var(--navy); }
     <!-- Bloc 1 : avis Google -->
     <div class="avis-block fi">
       <div class="avis-block-head">
-        <div class="src-badge">
+        <a class="src-badge" href="https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA" target="_blank" rel="noopener">
           <svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
-          <span>Avis Google<span class="src-sub">Fiche établissement</span></span>
-        </div>
+          <span>Avis Google<span class="src-sub">Voir la fiche établissement</span></span>
+        </a>
         <div class="avis-rating">
           <div class="rating-score">5.0 <em>/ 5</em></div>
           <div class="avis-rating-txt">
@@ -2380,10 +2376,10 @@ details[open] summary { color: var(--navy); }
     <!-- Bloc 2 : avis PagesJaunes -->
     <div class="avis-block fi" id="avis-pagesjaunes">
       <div class="avis-block-head">
-        <div class="src-badge">
+        <a class="src-badge" href="https://www.pagesjaunes.fr/pros/64066800" target="_blank" rel="noopener">
           <svg class="src-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#ico-pj"/></svg>
-          <span>Avis PagesJaunes<span class="src-sub">Autre plateforme</span></span>
-        </div>
+          <span>Avis PagesJaunes<span class="src-sub">Voir la fiche PagesJaunes</span></span>
+        </a>
         <div class="avis-rating">
           <div class="rating-score">4.7 <em>/ 5</em></div>
           <div class="avis-rating-txt">
@@ -2512,7 +2508,7 @@ details[open] summary { color: var(--navy); }
       </details>
       <details class="faq-item fi">
         <summary>Dans quelle zone intervenez-vous ?</summary>
-        <p>Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Cognac, Jonzac, Gémozac, Île d'Oléron et Saujon. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune.</p>
+        <p>Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Jonzac, Gémozac, Île d'Oléron et Saujon, ainsi qu'à Cognac, en Charente. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune.</p>
       </details>
       <details class="faq-item fi">
         <summary>Le devis est-il vraiment gratuit ?</summary>
@@ -2562,10 +2558,10 @@ details[open] summary { color: var(--navy); }
           <dd>
             <div class="zone-tags">
               <span class="ztag">Pons</span>
-              <span class="ztag">Saintes</span>
-              <span class="ztag">Royan</span>
-              <span class="ztag">Cognac</span>
-              <span class="ztag">Jonzac</span>
+              <a class="ztag" href="electricien-saintes.html">Saintes</a>
+              <a class="ztag" href="electricien-royan.html">Royan</a>
+              <a class="ztag" href="electricien-cognac.html">Cognac</a>
+              <a class="ztag" href="electricien-jonzac.html">Jonzac</a>
               <span class="ztag">Gémozac</span>
               <span class="ztag">Île d'Oléron</span>
               <span class="ztag">Saujon</span>

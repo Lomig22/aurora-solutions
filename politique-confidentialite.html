@@ -47,7 +47,7 @@
 }
 /* Les blocs animés restent lisibles si le script ne s'exécute pas */
 .fi { opacity: 1; }
-html.js .fi:not(.on) { opacity: 0; }
+html.js .fi:not(.on) { opacity: 0; transform: translateY(18px); }
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 4000;
   background: var(--gold-btn); color: var(--dark);

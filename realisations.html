@@ -26,6 +26,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="man-electrical-technician-working-switchboard-with-fuses.jpg" fetchpriority="high">
 <link rel="preload" href="inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="theme-color" content="#0d1f35">
 <meta property="og:type" content="website">
@@ -43,6 +44,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@id": "https://www.aurora-solutions-electricite.fr/#business",
+      "@type": [
+        "Electrician",
+        "HVACBusiness"
+      ],
+      "name": "Aurora Solutions",
+      "image": "https://www.aurora-solutions-electricite.fr/IMG_2628.JPG",
+      "url": "https://www.aurora-solutions-electricite.fr/",
+      "hasMap": "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
+      "telephone": "+33763094824",
+      "email": "aurora.solutions.17800@gmail.com",
+      "description": "Électricien artisan à Pons (17800) : installation, dépannage, rénovation électrique, climatisation réversible (PAC air/air, matériel Thermor) et bornes de recharge IRVE en Charente-Maritime.",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "17800",
+        "addressLocality": "Pons",
+        "addressRegion": "Charente-Maritime",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pons"
+        },
+        {
+          "@type": "City",
+          "name": "Saintes"
+        },
+        {
+          "@type": "City",
+          "name": "Royan"
+        },
+        {
+          "@type": "City",
+          "name": "Cognac"
+        },
+        {
+          "@type": "City",
+          "name": "Jonzac"
+        },
+        {
+          "@type": "City",
+          "name": "Gémozac"
+        },
+        {
+          "@type": "City",
+          "name": "Île d'Oléron"
+        },
+        {
+          "@type": "City",
+          "name": "Saujon"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.5786,
+        "longitude": -0.5486
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Espèces, Virement, Chèque",
+      "sameAs": [
+        "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
+        "https://www.pagesjaunes.fr/pros/64066800"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Thomas"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Qualification IRVE"
+        }
+      ],
+      "knowsAbout": [
+        "Qualification IRVE",
+        "Norme NF C 15-100",
+        "Pompe à chaleur air/air",
+        "Climatisation réversible",
+        "Installation électrique",
+        "Dépannage électrique"
+      ],
+      "makesOffer": {
+        "@type": "OfferCatalog",
+        "name": "Prestations Aurora Solutions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dépannage électrique"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rénovation électrique"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Installation neuve"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Installation borne de recharge IRVE"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Climatisation réversible"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://www.aurora-solutions-electricite.fr/#website",
+      "@type": "WebSite",
+      "name": "Aurora Solutions",
+      "url": "https://www.aurora-solutions-electricite.fr/",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://www.aurora-solutions-electricite.fr/#business"
+      }
+    },
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.aurora-solutions-electricite.fr/realisations.html#breadcrumb",
@@ -68,10 +222,16 @@
       "name": "Réalisations – Aurora Solutions | Électricien à Pons",
       "description": "Aurora Solutions – Nos réalisations en électricité : dépannage, rénovation, bornes IRVE et installations neuves en Charente-Maritime.",
       "inLanguage": "fr-FR",
-      "dateModified": "2026-08-04",
-      "isPartOf": { "@id": "https://www.aurora-solutions-electricite.fr/#website" },
-      "breadcrumb": { "@id": "https://www.aurora-solutions-electricite.fr/realisations.html#breadcrumb" },
-      "mainEntity": { "@id": "https://www.aurora-solutions-electricite.fr/realisations.html#chantiers" }
+      "dateModified": "2026-08-06",
+      "isPartOf": {
+        "@id": "https://www.aurora-solutions-electricite.fr/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.aurora-solutions-electricite.fr/realisations.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.aurora-solutions-electricite.fr/realisations.html#chantiers"
+      }
     },
     {
       "@type": "ItemList",
@@ -85,8 +245,13 @@
             "@type": "CreativeWork",
             "name": "Disjoncteur général qui sautait de façon répétée",
             "description": "Un client nous contacte un samedi matin : son disjoncteur général disjoncte toutes les heures sans raison apparente. Après diagnostic, nous identifions un défaut d'isolement sur le circuit cuisine, provoqué par une prise endommagée par l'humidité.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Saintes" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Saintes"
+            }
           }
         },
         {
@@ -96,8 +261,13 @@
             "@type": "CreativeWork",
             "name": "Perte totale d'alimentation sur un circuit éclairage",
             "description": "Coupure soudaine de l'éclairage dans toute la partie nuit d'une maison. La disjonction n'était pas visible au tableau. Après investigation, nous découvrons une connexion oxydée dans une boîte de dérivation mal protégée, accessible uniquement en comble.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Jonzac" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Jonzac"
+            }
           }
         },
         {
@@ -107,8 +277,13 @@
             "@type": "CreativeWork",
             "name": "Court-circuit dans un local commercial",
             "description": "Un commerce contacte Aurora Solutions en urgence : un court-circuit a provoqué la mise hors tension de toute la partie caisse et vitrine réfrigérée. Chaque heure d'arrêt représente une perte directe pour le client. Intervention prioritaire déclenchée.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Pons" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Pons"
+            }
           }
         },
         {
@@ -118,8 +293,13 @@
             "@type": "CreativeWork",
             "name": "Remplacement complet du tableau électrique",
             "description": "Maison de 1972 avec un tableau à fusibles en céramique, sans protection différentielle. L'installation présentait des risques sérieux : câbles vieillissants, absence de liaison équipotentielle en salle de bain. Rénovation complète réalisée en une journée.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Royan" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Royan"
+            }
           }
         },
         {
@@ -129,8 +309,13 @@
             "@type": "CreativeWork",
             "name": "Rénovation électrique totale d'un appartement T4",
             "description": "Dans le cadre d'une rénovation globale, refonte intégrale de l'électricité d'un appartement de 95 m². Travail en coordination avec le plaquiste et le peintre pour optimiser les passages de câbles. Résultat : installation neuve, propre et conforme.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Saintes" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Saintes"
+            }
           }
         },
         {
@@ -139,9 +324,14 @@
           "item": {
             "@type": "CreativeWork",
             "name": "Mise aux normes NF C 15-100 avant vente",
-            "description": "Dans le cadre d'une vente immobilière, le diagnostic électrique avait révélé 14 anomalies. Le notaire exigeait une mise en conformité avant signature. Nous avons établi un plan d'intervention précis pour régulariser l'ensemble des points identifiés.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Gémozac" }
+            "description": "Dans le cadre d'une vente immobilière, le diagnostic électrique avait révélé 14 anomalies. L'acquéreur souhaitait une mise en conformité avant la signature. Nous avons établi un plan d'intervention précis pour régulariser l'ensemble des points identifiés.",
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Gémozac"
+            }
           }
         },
         {
@@ -151,8 +341,13 @@
             "@type": "CreativeWork",
             "name": "Installation d'une borne de recharge 7,4 kW en garage",
             "description": "Un particulier venait d'acquérir une Renault Mégane E-Tech. Après étude de l'installation existante, nous avons installé une borne de recharge murale 7,4 kW monophasée, avec création d'un circuit dédié depuis le tableau général et pose d'un disjoncteur différentiel adapté.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Pons" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Pons"
+            }
           }
         },
         {
@@ -162,8 +357,13 @@
             "@type": "CreativeWork",
             "name": "2 bornes de recharge sur parking d'entreprise",
             "description": "Une PME souhaitait équiper son parking de 2 bornes pour sa flotte de véhicules électriques. Dimensionnement du circuit principal, création d'un tableau secondaire dédié IRVE, pose de deux bornes 22 kW triphasées avec système de supervision à distance.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Saintes" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Saintes"
+            }
           }
         },
         {
@@ -173,8 +373,13 @@
             "@type": "CreativeWork",
             "name": "Pré-équipement IRVE sur maison en construction",
             "description": "Dans le cadre d'une construction neuve, le client souhaitait anticiper l'installation d'une borne de recharge sans encore posséder de VE. Pose du pré-équipement réglementaire (fourreau, câblage, protection) pour une installation ultérieure simplifiée.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Cognac" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Cognac"
+            }
           }
         },
         {
@@ -184,8 +389,13 @@
             "@type": "CreativeWork",
             "name": "Installation d'une prise renforcée pour recharge de véhicule électrique",
             "description": "Un client de Jarnac-Champagne, secteur Pons / Cognac, souhaitait pouvoir recharger son véhicule électrique en toute sécurité depuis son garage, sans les risques d'une prise classique. Nous avons étudié le point de raccordement le plus adapté et posé le dispositif en saillie sur mur en parpaing, avec un cheminement de câble propre et discret.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Jarnac-Champagne" },
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Jarnac-Champagne"
+            },
             "image": [
               "https://www.aurora-solutions-electricite.fr/installation-prise-renforcee-recharge-vehicule-electrique-jarnac-champagne.JPG",
               "https://www.aurora-solutions-electricite.fr/prise-renforcee-irve-garage-jarnac-champagne.JPG",
@@ -201,8 +411,13 @@
             "@type": "CreativeWork",
             "name": "Éclairage et installation électrique d'une boutique",
             "description": "Un fleuriste nous confie l'installation électrique complète de sa boutique : éclairage de devanture, enseigne lumineuse, circuits intérieurs et prises spécialisées pour les équipements réfrigérés. Travaux réalisés avant ouverture, dans les délais convenus.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Pons" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Pons"
+            }
           }
         },
         {
@@ -212,8 +427,13 @@
             "@type": "CreativeWork",
             "name": "Installation électrique complète d'une maison neuve",
             "description": "Construction d'une maison de 130 m² de plain-pied. Prise en charge de l'intégralité de l'installation électrique depuis le branchement EDF jusqu'aux finitions : tableau, câblage, prises, éclairages, circuits spécialisés, domotique et contrôle d'accès.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Pons" }
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Pons"
+            }
           }
         },
         {
@@ -223,8 +443,13 @@
             "@type": "CreativeWork",
             "name": "Éclairage d'ambiance dans une salle de réception",
             "description": "Aménagement d'un ancien hangar en espace événementiel : installation d'un réseau d'éclairage décoratif avec suspension de grandes lanternes sphériques en rotin tressé. La hauteur sous charpente et les murs en pierre ont guidé le dimensionnement du réseau et le choix des fixations.",
-            "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
-            "contentLocation": { "@type": "Place", "name": "Pons" },
+            "provider": {
+              "@id": "https://www.aurora-solutions-electricite.fr/#business"
+            },
+            "contentLocation": {
+              "@type": "Place",
+              "name": "Pons"
+            },
             "image": "https://www.aurora-solutions-electricite.fr/IMG_2628.JPG"
           }
         }
@@ -279,7 +504,7 @@
 }
 /* Les blocs animés restent lisibles si le script ne s'exécute pas */
 .fi { opacity: 1; }
-html.js .fi:not(.on) { opacity: 0; }
+html.js .fi:not(.on) { opacity: 0; transform: translateY(18px); }
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 4000;
   background: var(--gold-btn); color: var(--dark);
@@ -592,7 +817,7 @@ ul { list-style: none; }
 .foot-credit img { height: 16px; width: auto; opacity: 0.45; transition: opacity var(--ease); }
 .foot-credit a:hover img { opacity: 0.75; }
 
-.fi { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fi { transition: opacity 0.55s ease, transform 0.55s ease; }
 .fi.d1 { transition-delay: 0.08s; }
 .fi.d2 { transition-delay: 0.18s; }
 .fi.on { opacity: 1; transform: none; }
@@ -768,7 +993,7 @@ details[open] summary { color: var(--navy); }
         <span style="color:rgba(255,255,255,0.5)">Réalisations</span>
       </div>
       <h1>Nos réalisations <br>en Charente-Maritime</h1>
-      <p class="body-text" style="color:rgba(255,255,255,0.6);max-width:620px;margin-bottom:0">Aurora Solutions réalise des chantiers de dépannage électrique, de rénovation et mise aux normes NF C 15-100, d'installation de bornes de recharge IRVE, d'installations neuves et de climatisation réversible, chez les particuliers, commerces et entreprises de Pons, Saintes, Royan, Cognac, Jonzac, Gémozac et Île d'Oléron.</p>
+      <p class="body-text" style="color:rgba(255,255,255,0.6);max-width:620px;margin-bottom:0">Aurora Solutions réalise des chantiers de dépannage électrique, de rénovation et mise aux normes NF C 15-100, d'installation de bornes de recharge IRVE, d'installations neuves et de climatisation réversible, chez les particuliers, commerces et entreprises de Pons, Saintes, Royan, Jonzac, Gémozac et Île d'Oléron, ainsi qu'à Cognac, en Charente.</p>
       <p>Chaque chantier est une histoire. Voici quelques-unes des interventions réalisées chez nos clients particuliers et professionnels.</p>
       <div class="hero-anchors">
         <a href="#depannage" class="anchor-btn">Dépannage</a>
@@ -917,7 +1142,7 @@ details[open] summary { color: var(--navy); }
               <p class="slide-desc">Maison de 1972 avec un tableau à fusibles en céramique, sans protection différentielle. L'installation présentait des risques sérieux : câbles vieillissants, absence de liaison équipotentielle en salle de bain. Rénovation complète réalisée en une journée.</p>
               <div class="slide-details">
                 <div class="slide-detail-item">Dépose de l'ancien tableau fusibles et remplacement par un tableau modulaire</div>
-                <div class="slide-detail-item">Installation de 3 interrupteurs différentiels 30mA de type A et AC</div>
+                <div class="slide-detail-item">Installation de 3 interrupteurs différentiels 30 mA de type A et AC</div>
                 <div class="slide-detail-item">Création de la liaison équipotentielle salle de bain et cuisine</div>
                 <div class="slide-detail-item">Attestation de conformité CONSUEL délivrée</div>
               </div>
@@ -960,7 +1185,7 @@ details[open] summary { color: var(--navy); }
                 <span class="slide-meta-item">2025</span>
               </div>
               <h3 class="slide-title">Mise aux normes NF C 15-100 avant vente</h3>
-              <p class="slide-desc">Dans le cadre d'une vente immobilière, le diagnostic électrique avait révélé 14 anomalies. Le notaire exigeait une mise en conformité avant signature. Nous avons établi un plan d'intervention précis pour régulariser l'ensemble des points identifiés.</p>
+              <p class="slide-desc">Dans le cadre d'une vente immobilière, le diagnostic électrique avait révélé 14 anomalies. L'acquéreur souhaitait une mise en conformité avant la signature. Nous avons établi un plan d'intervention précis pour régulariser l'ensemble des points identifiés.</p>
               <div class="slide-details">
                 <div class="slide-detail-item">Reprise de 14 anomalies identifiées au diagnostic électrique</div>
                 <div class="slide-detail-item">Ajout des protections différentielles manquantes</div>

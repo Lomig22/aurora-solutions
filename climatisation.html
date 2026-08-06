@@ -44,10 +44,179 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://www.aurora-solutions-electricite.fr/#business",
+      "@type": [
+        "Electrician",
+        "HVACBusiness"
+      ],
+      "name": "Aurora Solutions",
+      "image": "https://www.aurora-solutions-electricite.fr/IMG_2628.JPG",
+      "url": "https://www.aurora-solutions-electricite.fr/",
+      "hasMap": "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
+      "telephone": "+33763094824",
+      "email": "aurora.solutions.17800@gmail.com",
+      "description": "Électricien artisan à Pons (17800) : installation, dépannage, rénovation électrique, climatisation réversible (PAC air/air, matériel Thermor) et bornes de recharge IRVE en Charente-Maritime.",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "17800",
+        "addressLocality": "Pons",
+        "addressRegion": "Charente-Maritime",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pons"
+        },
+        {
+          "@type": "City",
+          "name": "Saintes"
+        },
+        {
+          "@type": "City",
+          "name": "Royan"
+        },
+        {
+          "@type": "City",
+          "name": "Cognac"
+        },
+        {
+          "@type": "City",
+          "name": "Jonzac"
+        },
+        {
+          "@type": "City",
+          "name": "Gémozac"
+        },
+        {
+          "@type": "City",
+          "name": "Île d'Oléron"
+        },
+        {
+          "@type": "City",
+          "name": "Saujon"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.5786,
+        "longitude": -0.5486
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Espèces, Virement, Chèque",
+      "sameAs": [
+        "https://maps.app.goo.gl/TX4hg9SbmhAF9dEFA",
+        "https://www.pagesjaunes.fr/pros/64066800"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Thomas"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Qualification IRVE"
+        }
+      ],
+      "knowsAbout": [
+        "Qualification IRVE",
+        "Norme NF C 15-100",
+        "Pompe à chaleur air/air",
+        "Climatisation réversible",
+        "Installation électrique",
+        "Dépannage électrique"
+      ],
+      "makesOffer": {
+        "@type": "OfferCatalog",
+        "name": "Prestations Aurora Solutions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dépannage électrique"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rénovation électrique"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Installation neuve"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Installation borne de recharge IRVE"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Climatisation réversible"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://www.aurora-solutions-electricite.fr/#website",
+      "@type": "WebSite",
+      "name": "Aurora Solutions",
+      "url": "https://www.aurora-solutions-electricite.fr/",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://www.aurora-solutions-electricite.fr/#business"
+      }
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.aurora-solutions-electricite.fr/" },
-        { "@type": "ListItem", "position": 2, "name": "Climatisation", "item": "https://www.aurora-solutions-electricite.fr/climatisation.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://www.aurora-solutions-electricite.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.aurora-solutions-electricite.fr/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Climatisation",
+          "item": "https://www.aurora-solutions-electricite.fr/climatisation.html"
+        }
       ]
     },
     {
@@ -56,8 +225,10 @@
       "url": "https://www.aurora-solutions-electricite.fr/climatisation.html",
       "name": "Climatisation à Pons – Aurora Solutions | Charente-Maritime",
       "description": "Aurora Solutions – Climatisation réversible (mono/multi-split, PAC air/air) à Pons et en Charente-Maritime. Matériel Thermor. Devis gratuit.",
-      "dateModified": "2026-08-04",
-      "isPartOf": { "@id": "https://www.aurora-solutions-electricite.fr/#website" },
+      "dateModified": "2026-08-06",
+      "isPartOf": {
+        "@id": "https://www.aurora-solutions-electricite.fr/#website"
+      },
       "inLanguage": "fr-FR"
     },
     {
@@ -66,16 +237,42 @@
       "name": "Climatisation réversible – Aurora Solutions",
       "description": "Installation de climatisation réversible (pompe à chaleur air/air) en mono-split et multi-split, par un électricien qui installe le matériel Thermor, à Pons et en Charente-Maritime.",
       "url": "https://www.aurora-solutions-electricite.fr/climatisation.html",
-      "provider": { "@id": "https://www.aurora-solutions-electricite.fr/#business" },
+      "provider": {
+        "@id": "https://www.aurora-solutions-electricite.fr/#business"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Pons" },
-        { "@type": "City", "name": "Saintes" },
-        { "@type": "City", "name": "Royan" },
-        { "@type": "City", "name": "Cognac" },
-        { "@type": "City", "name": "Jonzac" },
-        { "@type": "City", "name": "Gémozac" },
-        { "@type": "City", "name": "Île d'Oléron" },
-        { "@type": "City", "name": "Saujon" }
+        {
+          "@type": "City",
+          "name": "Pons"
+        },
+        {
+          "@type": "City",
+          "name": "Saintes"
+        },
+        {
+          "@type": "City",
+          "name": "Royan"
+        },
+        {
+          "@type": "City",
+          "name": "Cognac"
+        },
+        {
+          "@type": "City",
+          "name": "Jonzac"
+        },
+        {
+          "@type": "City",
+          "name": "Gémozac"
+        },
+        {
+          "@type": "City",
+          "name": "Île d'Oléron"
+        },
+        {
+          "@type": "City",
+          "name": "Saujon"
+        }
       ]
     },
     {
@@ -102,7 +299,7 @@
           "name": "Quel entretien et quelles obligations pour une climatisation réversible ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Un entretien régulier (nettoyage des filtres, vérification du circuit frigorifique) permet de préserver le bon fonctionnement de l'appareil dans la durée. Au-delà d'une certaine quantité de fluide frigorigène, l'appareil est soumis à un contrôle d'étanchéité périodique ; nous vous indiquons si votre installation est concernée."
+            "text": "Un entretien régulier, à commencer par le nettoyage des filtres, préserve le bon fonctionnement de l'appareil dans la durée. Au-delà d'une certaine quantité de fluide frigorigène, l'appareil est soumis à un contrôle d'étanchéité périodique, réalisé par un intervenant titulaire de l'attestation de capacité ; nous vous indiquons si votre installation est concernée."
           }
         },
         {
@@ -118,7 +315,7 @@
           "name": "Quel est le délai et le déroulé d'une installation de climatisation ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Après le premier contact, Aurora Solutions réalise une étude et un dimensionnement avec les outils Thermor, puis intervient pour poser les unités intérieures et extérieures et effectuer le raccordement électrique et frigorifique. L'installation se termine par les réglages et la mise en service, avec un suivi après travaux."
+            "text": "Après le premier contact, Aurora Solutions réalise une étude et un dimensionnement avec les outils Thermor, puis intervient pour poser les unités intérieures et extérieures et réaliser le raccordement électrique. La mise en service, qui relève de la manipulation des fluides frigorigènes, est confiée à un intervenant titulaire de l'attestation de capacité."
           }
         }
       ]
@@ -147,7 +344,7 @@
 }
 /* Les blocs animés restent lisibles si le script ne s'exécute pas */
 .fi { opacity: 1; }
-html.js .fi:not(.on) { opacity: 0; }
+html.js .fi:not(.on) { opacity: 0; transform: translateY(18px); }
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 4000;
   background: var(--gold-btn); color: var(--dark);
@@ -376,7 +573,7 @@ ul { list-style: none; }
 .foot-credit a:hover img { opacity: 0.75; }
 
 /* ── FADE IN ── */
-.fi { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fi { transition: opacity 0.55s ease, transform 0.55s ease; }
 .fi.d1 { transition-delay: 0.08s; }
 .fi.d2 { transition-delay: 0.18s; }
 .fi.d3 { transition-delay: 0.28s; }
@@ -576,7 +773,7 @@ details[open] summary { color: var(--navy); }
 <div id="installations">
   <div class="svc-block fi">
     <div class="svc-photo">
-      <img src="freepik_je-veux-que-tu-retire-le-_2831004737.jpg" alt="Pièce de vie d'un logement rénové en Charente-Maritime, cuisine ouverte sur le séjour" loading="lazy" width="1200" height="896">
+      <img src="freepik_je-veux-que-tu-retire-le-_2831004737.jpg" alt="Pièce de vie d'un logement rénové en Charente-Maritime, cuisine ouverte sur le séjour" loading="eager" fetchpriority="high" width="1200" height="896">
       <div class="svc-photo-overlay"></div>
       <span class="svc-num-badge">Climatisation</span>
     </div>
@@ -697,7 +894,7 @@ details[open] summary { color: var(--navy); }
       <div class="process-cell fi d3">
         <span class="process-n">03</span>
         <h3>Installation</h3>
-        <p>Pose des unités intérieures et extérieures, raccordement électrique et frigorifique, mise en service.</p>
+        <p>Pose des unités intérieures et extérieures et raccordement électrique. La mise en service sous fluide est confiée à un intervenant attesté.</p>
       </div>
       <div class="process-cell fi d3">
         <span class="process-n">04</span>
@@ -727,7 +924,7 @@ details[open] summary { color: var(--navy); }
       </details>
       <details style="background:var(--off);border:1px solid var(--border);border-radius:2px;padding:18px 22px">
         <summary style="cursor:pointer;font-size:0.95rem;font-weight:700;color:var(--navy)">Quel entretien et quelles obligations pour une climatisation réversible ?</summary>
-        <p style="margin-top:12px;font-size:0.9rem;color:var(--muted);line-height:1.85">Un entretien régulier (nettoyage des filtres, vérification du circuit frigorifique) permet de préserver le bon fonctionnement de l'appareil dans la durée. Au-delà d'une certaine quantité de fluide frigorigène, l'appareil est soumis à un contrôle d'étanchéité périodique ; nous vous indiquons si votre installation est concernée.</p>
+        <p style="margin-top:12px;font-size:0.9rem;color:var(--muted);line-height:1.85">Un entretien régulier, à commencer par le nettoyage des filtres, préserve le bon fonctionnement de l'appareil dans la durée. Au-delà d'une certaine quantité de fluide frigorigène, l'appareil est soumis à un contrôle d'étanchéité périodique, réalisé par un intervenant titulaire de l'attestation de capacité ; nous vous indiquons si votre installation est concernée.</p>
       </details>
       <details style="background:var(--off);border:1px solid var(--border);border-radius:2px;padding:18px 22px">
         <summary style="cursor:pointer;font-size:0.95rem;font-weight:700;color:var(--navy)">Comment fonctionne une climatisation réversible en hiver ?</summary>
@@ -735,7 +932,7 @@ details[open] summary { color: var(--navy); }
       </details>
       <details style="background:var(--off);border:1px solid var(--border);border-radius:2px;padding:18px 22px">
         <summary style="cursor:pointer;font-size:0.95rem;font-weight:700;color:var(--navy)">Quel est le délai et le déroulé d'une installation de climatisation ?</summary>
-        <p style="margin-top:12px;font-size:0.9rem;color:var(--muted);line-height:1.85">Après le premier contact, Aurora Solutions réalise une étude et un dimensionnement avec les outils Thermor, puis intervient pour poser les unités intérieures et extérieures et effectuer le raccordement électrique et frigorifique. L'installation se termine par les réglages et la mise en service, avec un suivi après travaux.</p>
+        <p style="margin-top:12px;font-size:0.9rem;color:var(--muted);line-height:1.85">Après le premier contact, Aurora Solutions réalise une étude et un dimensionnement avec les outils Thermor, puis intervient pour poser les unités intérieures et extérieures et réaliser le raccordement électrique. La mise en service, qui relève de la manipulation des fluides frigorigènes, est confiée à un intervenant titulaire de l'attestation de capacité.</p>
       </details>
     </div>
   </div>
