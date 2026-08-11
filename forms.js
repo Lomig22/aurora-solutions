@@ -42,11 +42,21 @@
         '<input id="' + uid + '" type="text" inputmode="numeric" autocomplete="off" aria-describedby="' + uid + '-h">' +
         '<span class="hcheck-hint" id="' + uid + '-h">Une simple vérification pour écarter les robots.</span>' +
         '</div>' +
-        '<p class="hcheck-err" role="alert" hidden></p>';
+        '<p class="hcheck-err" role="alert" aria-live="assertive" hidden></p>';
 
       btn.parentNode.insertBefore(check, btn);
+
+      /* Le bloc doit être VU : sur mobile il s'insère au-dessus du bouton,
+         donc hors écran si l'on ne fait rien. */
+      if (check.scrollIntoView) {
+        check.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+      /* Le bouton annonce ce qu'il reste à faire */
+      btn.dataset.label = btn.textContent;
+      btn.textContent = 'Vérifier et envoyer';
+
       var field = check.querySelector('input');
-      field.focus();
+      try { field.focus({ preventScroll: true }); } catch (e) { field.focus(); }
       field.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') { e.preventDefault(); form.requestSubmit ? form.requestSubmit() : btn.click(); }
       });
@@ -86,14 +96,21 @@
         body: data,
         headers: { 'Accept': 'application/json' }
       })
-        .then(function (r) { return r.json(); })
-        .then(function () {
+        .then(function (r) {
+          if (!r.ok) { throw new Error('HTTP ' + r.status); }
+          return r.json();
+        })
+        .then(function (data) {
+          /* formsubmit.co répond {"success":"true"} — tout le reste est un échec,
+             et le visiteur ne doit surtout pas voir la page de remerciement. */
+          var ok = data && String(data.success).toLowerCase() === 'true';
+          if (!ok) { throw new Error(data && data.message ? data.message : 'refus du service'); }
           window.location.href = 'merci.html';
         })
         .catch(function () {
           btn.disabled = false;
           btn.textContent = label;
-          alert('Une erreur est survenue. Veuillez réessayer ou nous appeler directement.');
+          fail('Votre demande n\'a pas pu être envoyée. Réessayez, ou appelez-nous directement au 07 63 09 48 24.');
         });
     });
   });
