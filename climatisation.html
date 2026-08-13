@@ -697,6 +697,24 @@ details[open] summary { color: var(--navy); }
   border: 1px solid rgba(255,255,255,0.18); border-radius: 2px; color: rgba(255,255,255,0.55);
   transition: color var(--ease), border-color var(--ease); }
 .foot-social a:hover, .foot-social a:focus-visible { color: var(--gold-btn); border-color: var(--gold-btn); }
+
+/* ── EN-TÊTE SUR PETITS ÉCRANS ──
+   Sous 420px, la marque ne rétrécissait pas : elle poussait le bouton menu
+   hors de l'écran (bord gauche à 341px sur un écran de 320px), et la page
+   ne défilant pas horizontalement, le menu devenait inatteignable. */
+@media (max-width: 1120px) {
+  .ham { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; flex-shrink: 0; }
+}
+@media (max-width: 420px) {
+  .nav .container { padding: 0 16px; }
+  .brand { flex-shrink: 1; min-width: 0; }
+  .brand-text { min-width: 0; }
+  .brand-name, .brand-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+}
+@media (max-width: 360px) {
+  .brand-sub { display: none; }
+  .brand-icon { height: 28px; }
+}
 </style>
 </head>
 <body>

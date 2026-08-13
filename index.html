@@ -1865,6 +1865,24 @@ a.ztag:hover, a.ztag:focus-visible { border-color: var(--gold-btn); color: var(-
   border: 1px solid rgba(255,255,255,0.18); border-radius: 2px; color: rgba(255,255,255,0.55);
   transition: color var(--ease), border-color var(--ease); }
 .foot-social a:hover, .foot-social a:focus-visible { color: var(--gold-btn); border-color: var(--gold-btn); }
+
+/* ── EN-TÊTE SUR PETITS ÉCRANS ──
+   Sous 420px, la marque ne rétrécissait pas : elle poussait le bouton menu
+   hors de l'écran (bord gauche à 341px sur un écran de 320px), et la page
+   ne défilant pas horizontalement, le menu devenait inatteignable. */
+@media (max-width: 1120px) {
+  .ham { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; flex-shrink: 0; }
+}
+@media (max-width: 420px) {
+  .nav .container { padding: 0 16px; }
+  .brand { flex-shrink: 1; min-width: 0; }
+  .brand-text { min-width: 0; }
+  .brand-name, .brand-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+}
+@media (max-width: 360px) {
+  .brand-sub { display: none; }
+  .brand-icon { height: 28px; }
+}
 </style>
 </head>
 <body>
@@ -1945,7 +1963,7 @@ a.ztag:hover, a.ztag:focus-visible { border-color: var(--gold-btn); color: var(-
             <div class="hr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <div class="hr-text">
               <span class="hr-score">5,0 / 5</span>
-              <span class="hr-count">18 avis Google</span>
+              <span class="hr-count">19 avis Google</span>
             </div>
           </a>
           <div class="hr-sep"></div>
@@ -2219,7 +2237,7 @@ a.ztag:hover, a.ztag:focus-visible { border-color: var(--gold-btn); color: var(-
     <div class="avis-intro fi">
       <span class="lbl">Témoignages</span>
       <h2 class="ttl">Ce que disent nos clients</h2>
-      <p>21 avis vérifiés publiés sur Google et PagesJaunes par des particuliers et professionnels de Charente-Maritime.</p>
+      <p>22 avis vérifiés publiés sur Google et PagesJaunes par des particuliers et professionnels de Charente-Maritime.</p>
     </div>
 
     <!-- Bloc 1 : avis Google -->
@@ -2233,13 +2251,24 @@ a.ztag:hover, a.ztag:focus-visible { border-color: var(--gold-btn); color: var(-
           <div class="rating-score">5.0 <em>/ 5</em></div>
           <div class="avis-rating-txt">
             <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <div class="rating-note">Basé sur 18 avis Google</div>
+            <div class="rating-note">Basé sur 19 avis Google</div>
           </div>
         </div>
       </div>
       <div class="testi-carousel-wrap">
         <div class="testi-carousel" id="testiCarousel">
           <div class="testi-track" id="testiTrack">
+          <div class="testi">
+            <div class="testi-head-row">
+              <div class="testi-avatar" aria-hidden="true">MF</div>
+              <div>
+                <div class="testi-name">Margaux Fievet</div>
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <div class="testi-src"><svg class="src-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg></div>
+            </div>
+            <p class="testi-body">Nous sommes très satisfaits du travail de Thomas, qui a su être réactif et nous a aidé à réparer les pannes électriques dans notre nouvelle maison. Service impeccable et Thomas est à l&rsquo;écoute et très bon conseiller. Nous recommandons. Merci beaucoup Thomas</p>
+          </div>
           <div class="testi">
             <div class="testi-head-row">
               <div class="testi-avatar" aria-hidden="true">MB</div>
