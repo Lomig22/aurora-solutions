@@ -211,7 +211,7 @@
         "@id": "https://www.aurora-solutions-electricite.fr/#business"
       },
       "inLanguage": "fr-FR",
-      "dateModified": "2026-08-10"
+      "dateModified": "2026-08-25"
     },
     {
       "@id": "https://www.aurora-solutions-electricite.fr/borne-de-recharge-irve.html#breadcrumb",
@@ -700,6 +700,31 @@ details[open] summary { color: var(--navy); }
   .brand-sub { display: none; }
   .brand-icon { height: 28px; }
 }
+
+/* ── AVIS SUR LES PAGES D'ATTERRISSAGE ── */
+.pv-avis { border-top: 1px solid var(--border); padding-top: 34px; }
+.pv-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+.pv-note { font-size: 1.5rem; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
+.pv-note em { font-style: normal; font-size: 0.95rem; font-weight: 600; color: var(--muted); }
+.pv-stars { color: var(--gold-btn); letter-spacing: 2px; font-size: 0.85rem; }
+.pv-src { font-size: 0.8rem; color: var(--muted); }
+.pv-strip { display: flex; gap: 16px; overflow-x: auto; padding: 2px 2px 16px; scroll-snap-type: x mandatory;
+  scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.pv-strip::-webkit-scrollbar { height: 6px; }
+.pv-strip::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.pv-card { flex: 0 0 320px; scroll-snap-align: start; background: var(--white); border: 1px solid var(--border);
+  border-radius: 2px; padding: 20px 22px; margin: 0; display: flex; flex-direction: column; }
+.pv-top { display: flex; align-items: center; gap: 11px; margin-bottom: 13px; }
+.pv-ini { flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; }
+.pv-card blockquote { margin: 0; flex: 1; }
+.pv-card p { font-size: 0.86rem; line-height: 1.75; color: var(--navy); margin: 0; }
+.pv-who { font-size: 0.84rem; font-weight: 700; color: var(--navy); display: block; }
+.pv-from { font-size: 0.72rem; color: var(--muted); margin-top: 14px; }
+.pv-hint { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+.pv-hint a { color: var(--navy); border-bottom: 1px solid var(--gold-btn); padding-bottom: 1px; }
+.pv-strip:focus-visible { outline: 2px solid var(--gold-btn); outline-offset: 4px; }
+@media (max-width: 520px) { .pv-card { flex-basis: 84%; } }
 </style>
 </head>
 <body>
@@ -708,7 +733,7 @@ details[open] summary { color: var(--navy); }
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 <nav class="nav" id="nav">
   <div class="container" style="max-width:100%;padding:0 48px;display:flex;align-items:center;justify-content:space-between;width:100%">
-    <a href="index.html" class="brand">
+    <a href="/" class="brand">
       <img src="aurora-solutions-logo-icon.png" alt="Aurora Solutions" class="brand-icon" width="96" height="96" loading="eager">
       <span class="brand-text">
         <span class="brand-name">Aurora Solutions</span>
@@ -719,8 +744,8 @@ details[open] summary { color: var(--navy); }
       <li><a href="services.html">Services</a></li>
       <li><a href="realisations.html">Réalisations</a></li>
       <li><a href="about.html">À propos</a></li>
-      <li><a href="index.html#avis">Avis</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="/#avis">Avis</a></li>
+      <li><a href="/#contact">Contact</a></li>
       <li><a href="faq.html">FAQ</a></li>
     </ul>
     <div class="nav-right">
@@ -736,8 +761,8 @@ details[open] summary { color: var(--navy); }
   <a href="services.html">Services</a>
   <a href="realisations.html">Réalisations</a>
   <a href="about.html">À propos</a>
-  <a href="index.html#avis">Avis clients</a>
-  <a href="index.html#contact">Contact</a>
+  <a href="/#avis">Avis clients</a>
+  <a href="/#contact">Contact</a>
   <a href="faq.html">FAQ</a>
   <div class="mob-cta">
     <a href="tel:+33763094824" class="mob-phone">07 63 09 48 24</a>
@@ -760,7 +785,7 @@ details[open] summary { color: var(--navy); }
   <div class="container">
     <div class="page-hero-inner fi">
       <div class="breadcrumb">
-        <a href="index.html">Accueil</a>
+        <a href="/">Accueil</a>
         <span>/</span>
         <a href="services.html">Services</a>
         <span>/</span>
@@ -1043,11 +1068,270 @@ details[open] summary { color: var(--navy); }
       <p>Nous venons voir votre installation et vous remettons un devis gratuit et détaillé.</p>
       <div class="cta-row">
         <a href="#devis" class="btn btn-gold btn-lg" data-devis>Demander un devis</a>
-        <a href="index.html#contact" class="btn btn-outline btn-lg">Nous contacter</a>
+        <a href="/#contact" class="btn btn-outline btn-lg">Nous contacter</a>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- AVIS CLIENTS -->
+<section class="section bg-off" style="padding-top:0">
+  <div class="container">
+    <div class="pv-avis fi">
+      <div class="pv-head">
+        <span class="pv-note">5,0 <em>/ 5</em></span>
+        <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="pv-src">sur 19 avis Google &middot; et 4,7 / 5 sur 3 avis PagesJaunes</span>
+      </div>
+      <div class="pv-strip" role="region" aria-label="Avis clients" tabindex="0">
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">MF</span>
+            <div>
+              <figcaption class="pv-who">Margaux Fievet</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Nous sommes très satisfaits du travail de Thomas, qui a su être réactif et nous a aidé à réparer les pannes électriques dans notre nouvelle maison. Service impeccable et Thomas est à l&rsquo;écoute et très bon conseiller. Nous recommandons. Merci beaucoup Thomas</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">MB</span>
+            <div>
+              <figcaption class="pv-who">Madame Bonnefond</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Artisan très réactif, le devis m&rsquo;a été envoyé très peu de temps après mon appel. Son tarif était très correct. Sympathique et professionnel, je vous recommande les services de cet électricien les yeux fermés.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">DD</span>
+            <div>
+              <figcaption class="pv-who">Daniel Dubois</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Très satisfait de l&rsquo;intervention de Thomas. Ponctuel, serviable, efficace, à l&rsquo;écoute. Je le recommande vivement, il trouvera toujours une solution à vos problèmes.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">EG</span>
+            <div>
+              <figcaption class="pv-who">Esteban Gernon</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Thomas est intervenu pour mon tableau électrique et tout s'est passé à merveille. Un chantier laissé ultra propre et un contact très humain. Il a le souci du détail et l'envie de bien faire, ça fait vraiment plaisir. Je suis ravi de lui avoir fait confiance pour ma rénovation et je le recommande autour de moi sans hésiter.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">MA</span>
+            <div>
+              <figcaption class="pv-who">Maurel</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Super électricien ! Jeune, réactif et vraiment sympa. Il est intervenu rapidement et le travail est propre, soigné, rien à redire. Ça fait plaisir de tomber sur quelqu'un de sérieux et efficace. Je recommande sans hésiter.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">BL</span>
+            <div>
+              <figcaption class="pv-who">Benoit Lazrak</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Prestation de grande qualité : ponctualité, sérieux et travail impeccable. L'intervention a été réalisée rapidement, avec des explications précises et transparentes. Rapport qualité-prix excellent. Je recommande sans hésitation pour tout chantier électrique.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">MI</span>
+            <div>
+              <figcaption class="pv-who">Miles</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Excellent travail. De l'attention, des idées et une vraie efficacité. Je suis très content de la prestation de Thomas le 25/02/26 et serais très heureux de bénéficier de nouveau de ses services.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">ÉB</span>
+            <div>
+              <figcaption class="pv-who">Élisabeth Bondon</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>J'avais un problème, il m'a téléphoné, je lui ai parlé de mes problèmes de ma maison et que de la gentillesse et très efficace. Vous pouvez compter sur cet électricien.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">JL</span>
+            <div>
+              <figcaption class="pv-who">Jonno London</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Un service professionnel et convivial. Thomas est arrivé à l'heure et a terminé le travail au prix convenu. Je le recommande sans hésiter.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">TH</span>
+            <div>
+              <figcaption class="pv-who">Thomas</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Très arrangeant sur les horaires et la disponibilité (ce qui change de beaucoup d'artisans du secteur).</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">LB</span>
+            <div>
+              <figcaption class="pv-who">Laurence Bernard</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Professionnel aimable et attentif. Travail propre et rapide.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">NB</span>
+            <div>
+              <figcaption class="pv-who">Nolan Busom</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Merci à Thomas et Kais pour cette prestation très à l'écoute. Je recommande !</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">SB</span>
+            <div>
+              <figcaption class="pv-who">Sulyvane Borde</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Très gentil et professionnel.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">GS</span>
+            <div>
+              <figcaption class="pv-who">Gabrielle Stephan</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Travail sérieux, propre et très professionnel. Thomas est à l'écoute et respecte les délais. Je recommande vivement !</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">AT</span>
+            <div>
+              <figcaption class="pv-who">Anne Taviani</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Merci pour le sourire et la bonne humeur. Je vous souhaite des clients tout aussi gentils que vous l'êtes lorsque vous êtes vous même client.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">LR</span>
+            <div>
+              <figcaption class="pv-who">Lillian Raze</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Je recommande. Thomas est venu chez moi pour un dépannage. Minutieux, il a trouvé ma panne alors que 2 électriciens sont passés avant lui sans résoudre le problème. Jeune mais très compétent.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">TM</span>
+            <div>
+              <figcaption class="pv-who">Timothé Marthe-Rose</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Super intervention de Thomas (Aurora Solutions) pour une rénovation électrique complète chez moi, avec en plus l'installation d'une clim et d'une borne de recharge électrique. Travail propre, sérieux, et bien expliqué. Je recommande sans hésiter pour toute électricité à Saint-Palais-sur-Mer !</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">RS</span>
+            <div>
+              <figcaption class="pv-who">RED SKAA</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Personnes très aimables !!</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">MB</span>
+            <div>
+              <figcaption class="pv-who">Matteo Beck</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Je recommande à 100% pour vos futurs travaux électriques. Chantier laissé propre.</p></blockquote>
+          <span class="pv-from">Google</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">PI</span>
+            <div>
+              <figcaption class="pv-who">pierreloth</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Merci à Thomas et Kaïs pour leur professionnalisme et leur ponctualité. Rien à redire.</p></blockquote>
+          <span class="pv-from">PagesJaunes</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">FR</span>
+            <div>
+              <figcaption class="pv-who">FrédéricLeger</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>Entreprise professionnelle, je recommande.</p></blockquote>
+          <span class="pv-from">PagesJaunes</span>
+        </figure>
+        <figure class="pv-card">
+          <div class="pv-top">
+            <span class="pv-ini" aria-hidden="true">V5</span>
+            <div>
+              <figcaption class="pv-who">v57r278g6k</figcaption>
+              <span class="pv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <blockquote><p>J'aimerais remercier Thomas qui est intervenu très vite, très professionnel et à l'écoute. Je recommande.</p></blockquote>
+          <span class="pv-from">PagesJaunes</span>
+        </figure>
+      </div>
+      <p class="pv-hint">Faites défiler pour lire les 22 avis &middot; <a href="/#avis">voir la page complète</a></p>
+    </div>
+  </div>
+</section>
 
 <!-- DEVIS -->
 <section class="devis-section" id="devis">
@@ -1181,7 +1465,7 @@ details[open] summary { color: var(--navy); }
       <div class="foot-col">
         <h3>Services</h3>
         <ul>
-          <li><a href="services.html#depannage">Dépannage électrique</a></li>
+          <li><a href="depannage-electrique-urgence.html">Dépannage électrique</a></li>
           <li><a href="services.html#renovation">Rénovation électrique</a></li>
           <li><a href="borne-de-recharge-irve.html">Installation borne IRVE</a></li>
           <li><a href="services.html#installation">Installation neuve</a></li>
@@ -1191,14 +1475,14 @@ details[open] summary { color: var(--navy); }
       <div class="foot-col">
         <h3>Zones</h3>
         <ul>
-          <li><a href="index.html#contact">Pons</a></li>
+          <li><a href="/#contact">Pons</a></li>
           <li><a href="electricien-saintes.html">Saintes</a></li>
           <li><a href="electricien-royan.html">Royan</a></li>
           <li><a href="electricien-cognac.html">Cognac</a></li>
           <li><a href="electricien-jonzac.html">Jonzac</a></li>
-          <li><a href="index.html#contact">Gémozac</a></li>
-          <li><a href="index.html#contact">Île d'Oléron</a></li>
-          <li><a href="index.html#contact">Saujon</a></li>
+          <li><a href="/#contact">Gémozac</a></li>
+          <li><a href="/#contact">Île d'Oléron</a></li>
+          <li><a href="/#contact">Saujon</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -1206,7 +1490,7 @@ details[open] summary { color: var(--navy); }
         <ul>
           <li><a href="about.html">À propos</a></li>
           <li><a href="realisations.html">Réalisations</a></li>
-          <li><a href="index.html#avis">Avis clients</a></li>
+          <li><a href="/#avis">Avis clients</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>

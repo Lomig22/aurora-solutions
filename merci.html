@@ -20,7 +20,7 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="6;url=index.html?merci=1">
+<meta http-equiv="refresh" content="6;url=/?merci=1">
 <meta name="robots" content="noindex">
 <title>Demande envoyée – Aurora Solutions</title>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -181,7 +181,7 @@ p {
   <h1>Merci pour votre message</h1>
   <div class="rule"></div>
   <p>Votre demande de devis a bien été transmise à Aurora Solutions.<br>Nous vous recontacterons sous 24h pour faire le point sur votre projet.</p>
-  <a href="index.html?merci=1" class="btn">Retour à l'accueil</a>
+  <a href="/?merci=1" class="btn">Retour à l'accueil</a>
   <p class="tel">Besoin urgent ? Appelez le <a href="tel:+33763094824">07 63 09 48 24</a></p>
   <p class="redirect-note" id="countdown">Redirection automatique dans 6 secondes…</p>
 </div>
@@ -191,7 +191,7 @@ var n = 6;
 var el = document.getElementById('countdown');
 var t = setInterval(function() {
   n--;
-  if (n <= 0) { clearInterval(t); window.location.href = 'index.html?merci=1'; }
+  if (n <= 0) { clearInterval(t); window.location.href = '/?merci=1'; }
   else { el.textContent = 'Redirection automatique dans ' + n + ' seconde' + (n > 1 ? 's' : '') + '…'; }
 }, 1000);
 </script>
