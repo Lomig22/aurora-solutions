@@ -28,7 +28,7 @@
 - [Dépannage électrique en urgence](https://www.aurora-solutions-electricite.fr/depannage-electrique-urgence.html) : disjoncteur qui saute, coupure totale, prise qui chauffe, odeur de brûlé. Diagnostic, recherche du défaut, réparation et remise en service. Explique aussi comment distinguer une panne intérieure d'une coupure du réseau public.
 - [Tableau électrique et mise aux normes NF C 15-100](https://www.aurora-solutions-electricite.fr/tableau-electrique-mise-aux-normes.html) : remplacement de tableau, différentiels 30 mA, répartition des circuits. Distingue la mise en sécurité de la mise aux normes complète, et traite le cas de la vente et de la location.
 - [Borne de recharge pour véhicule électrique (IRVE)](https://www.aurora-solutions-electricite.fr/borne-de-recharge-irve.html) : prise renforcée ou borne murale, à domicile, en copropriété et en entreprise. La qualification IRVE est requise au-delà de 3,7 kW ; Aurora Solutions la détient.
-- [Climatisation réversible](https://www.aurora-solutions-electricite.fr/climatisation.html) : pompe à chaleur air/air, mono-split et multi-split. Aurora Solutions réalise la pose et le raccordement électrique ; la mise en service sous fluide frigorigène est confiée à un intervenant titulaire de l'attestation de capacité.
+- [Climatisation réversible](https://www.aurora-solutions-electricite.fr/climatisation.html) : pompe à chaleur air/air, mono-split et multi-split. Aurora Solutions réalise la pose et le raccordement électrique ; la mise en service sous fluide frigorigène est confiée à un intervenant titulaire de l'attestation de capacité. Traite aussi la protection contre l'air marin en bord de mer et le choix de l'emplacement de l'unité extérieure (mur, plots antivibratiles, terrasse, distance aux ouvertures voisines).
 - [Tous les services](https://www.aurora-solutions-electricite.fr/services.html) : vue d'ensemble des prestations, dont la rénovation électrique et l'installation neuve.
 
 ## Pages de référence
@@ -40,10 +40,10 @@
 
 ## Zone d'intervention
 
-- [Électricien à Saintes](https://www.aurora-solutions-electricite.fr/electricien-saintes.html) — bâti ancien, centre historique, mise aux normes.
-- [Électricien à Royan](https://www.aurora-solutions-electricite.fr/electricien-royan.html) — littoral, résidences secondaires, protection contre l'air marin.
-- [Électricien à Jonzac](https://www.aurora-solutions-electricite.fr/electricien-jonzac.html) — habitat pavillonnaire et rural, ville thermale.
-- [Électricien à Cognac](https://www.aurora-solutions-electricite.fr/electricien-cognac.html) — Charente (16), bâti viticole, résidentiel et tertiaire.
+- [Électricien à Saintes](https://www.aurora-solutions-electricite.fr/electricien-saintes.html) — bâti ancien en pierre du centre historique, cheminements de câbles sans saignée systématique, parties privatives en copropriété, locaux commerciaux. Traite aussi la remise en état d'une installation après une inondation de la Charente et le repositionnement du tableau hors d'eau.
+- [Électricien à Royan](https://www.aurora-solutions-electricite.fr/electricien-royan.html) — littoral et corrosion par l'air marin, bâti issu de la reconstruction d'après-guerre, résidences secondaires (remise en service avant saison, vérification après inoccupation, quels circuits couper en partant), location saisonnière, pose de climatisation et de borne de recharge en bord de mer.
+- [Électricien à Jonzac](https://www.aurora-solutions-electricite.fr/electricien-jonzac.html) — habitat pavillonnaire de 1970-2000 et tableaux saturés, habitat rural de Haute-Saintonge, logements loués aux curistes (sécurité de la salle de bains, étiquetage du tableau, éclairage adapté aux personnes âgées), local technique de piscine, portail motorisé, véranda.
+- [Électricien à Cognac](https://www.aurora-solutions-electricite.fr/electricien-cognac.html) — Charente (16), propriétés à plusieurs bâtiments, alimentation de dépendances éloignées (section, liaison enterrée, tableau divisionnaire), chute de tension sur longue distance, opportunité réelle du triphasé, éclairage de hangar et d'atelier.
 
 Autres communes desservies sans page dédiée : Pons, Gémozac, Saujon, Île d'Oléron.
 
@@ -60,4 +60,4 @@ Autres communes desservies sans page dédiée : Pons, Gémozac, Saujon, Île d'O
 - [Mentions légales](https://www.aurora-solutions-electricite.fr/mentions-legales.html)
 - [Politique de confidentialité](https://www.aurora-solutions-electricite.fr/politique-confidentialite.html)
 
-Dernière mise à jour : 25 août 2026
+Dernière mise à jour : 30 août 2026
