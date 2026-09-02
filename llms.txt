@@ -30,6 +30,7 @@
 - [Borne de recharge pour véhicule électrique (IRVE)](https://www.aurora-solutions-electricite.fr/borne-de-recharge-irve.html) : prise renforcée ou borne murale, à domicile, en copropriété et en entreprise. La qualification IRVE est requise au-delà de 3,7 kW ; Aurora Solutions la détient.
 - [Climatisation réversible](https://www.aurora-solutions-electricite.fr/climatisation.html) : pompe à chaleur air/air, mono-split et multi-split. Aurora Solutions réalise la pose et le raccordement électrique ; la mise en service sous fluide frigorigène est confiée à un intervenant titulaire de l'attestation de capacité. Traite aussi la protection contre l'air marin en bord de mer et le choix de l'emplacement de l'unité extérieure (mur, plots antivibratiles, terrasse, distance aux ouvertures voisines).
 - [Rénovation électrique d'une maison ancienne](https://www.aurora-solutions-electricite.fr/renovation-electrique-maison-ancienne.html) : reconnaître une installation à reprendre (fils sous isolant textile, prises sans terre, fusibles à porcelaine), choisir entre rénovation complète, partielle ou mise en sécurité, faire passer les câbles en encastré, en saillie ou en semi-encastré sans fragiliser un mur ancien, créer une prise de terre par piquet là où il n'y en a jamais eu, et organiser le chantier pour continuer à habiter le logement.
+- [Domotique et installation électrique connectée](https://www.aurora-solutions-electricite.fr/domotique.html) : choix entre pilotage filaire et radio, pré-câblage à prévoir avant de refermer les murs, pilotage de l'éclairage, des volets, du chauffage et de la climatisation, motorisation de portail et contrôle d'accès. Traite aussi ce qui doit continuer à fonctionner sans connexion internet et la reprise d'une installation connectée existante. Aurora Solutions n'a de partenariat commercial avec aucune marque de domotique.
 - [Tous les services](https://www.aurora-solutions-electricite.fr/services.html) : vue d'ensemble des prestations, dont la rénovation électrique et l'installation neuve.
 
 ## Pages de référence
@@ -61,4 +62,4 @@ Autres communes desservies sans page dédiée : Pons, Gémozac, Saujon, Île d'O
 - [Mentions légales](https://www.aurora-solutions-electricite.fr/mentions-legales.html)
 - [Politique de confidentialité](https://www.aurora-solutions-electricite.fr/politique-confidentialite.html)
 
-Dernière mise à jour : 30 août 2026
+Dernière mise à jour : 2 septembre 2026
