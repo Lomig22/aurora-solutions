@@ -1,10 +1,50 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/jonzac.html", "destination": "/electricien-jonzac.html", "permanent": true },
-    { "source": "/Cognac.html", "destination": "/electricien-cognac.html", "permanent": true },
-    { "source": "/a-propos.html", "destination": "/about.html", "permanent": true },
-    { "source": "/realisations", "destination": "/realisations.html", "permanent": true },
-    { "source": "/contact", "destination": "/#contact", "permanent": true }
+    {
+      "source": "/a-propos.html",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/Cognac.html",
+      "destination": "/electricien-cognac.html",
+      "permanent": true
+    },
+    {
+      "source": "/jonzac.html",
+      "destination": "/electricien-jonzac.html",
+      "permanent": true
+    },
+    {
+      "source": "/Royan.html",
+      "destination": "/electricien-royan.html",
+      "permanent": true
+    },
+    {
+      "source": "/royan.html",
+      "destination": "/electricien-royan.html",
+      "permanent": true
+    },
+    {
+      "source": "/Saintes.html",
+      "destination": "/electricien-saintes.html",
+      "permanent": true
+    },
+    {
+      "source": "/saintes.html",
+      "destination": "/electricien-saintes.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/realisations",
+      "destination": "/realisations.html",
+      "permanent": true
+    }
   ]
 }
