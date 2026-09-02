@@ -31,6 +31,7 @@
 - [Climatisation réversible](https://www.aurora-solutions-electricite.fr/climatisation.html) : pompe à chaleur air/air, mono-split et multi-split. Aurora Solutions réalise la pose et le raccordement électrique ; la mise en service sous fluide frigorigène est confiée à un intervenant titulaire de l'attestation de capacité. Traite aussi la protection contre l'air marin en bord de mer et le choix de l'emplacement de l'unité extérieure (mur, plots antivibratiles, terrasse, distance aux ouvertures voisines).
 - [Rénovation électrique d'une maison ancienne](https://www.aurora-solutions-electricite.fr/renovation-electrique-maison-ancienne.html) : reconnaître une installation à reprendre (fils sous isolant textile, prises sans terre, fusibles à porcelaine), choisir entre rénovation complète, partielle ou mise en sécurité, faire passer les câbles en encastré, en saillie ou en semi-encastré sans fragiliser un mur ancien, créer une prise de terre par piquet là où il n'y en a jamais eu, et organiser le chantier pour continuer à habiter le logement.
 - [Domotique et installation électrique connectée](https://www.aurora-solutions-electricite.fr/domotique.html) : choix entre pilotage filaire et radio, pré-câblage à prévoir avant de refermer les murs, pilotage de l'éclairage, des volets, du chauffage et de la climatisation, motorisation de portail et contrôle d'accès. Traite aussi ce qui doit continuer à fonctionner sans connexion internet et la reprise d'une installation connectée existante. Aurora Solutions n'a de partenariat commercial avec aucune marque de domotique.
+- [Dépannage de portail électrique](https://www.aurora-solutions-electricite.fr/depannage-portail-electrique.html) : portail bloqué, débrayage manuel pour ouvrir à la main en cas de coupure, vérifications à faire avant d'appeler (piles de télécommande, protection au tableau, cellules de sécurité, obstacle au sol), causes fréquentes de panne, alimentation enterrée et section du câble. Aurora Solutions ne supprime pas les cellules de sécurité d'un portail.
 - [Tous les services](https://www.aurora-solutions-electricite.fr/services.html) : vue d'ensemble des prestations, dont la rénovation électrique et l'installation neuve.
 
 ## Pages de référence
@@ -47,7 +48,9 @@
 - [Électricien à Jonzac](https://www.aurora-solutions-electricite.fr/electricien-jonzac.html) — habitat pavillonnaire de 1970-2000 et tableaux saturés, habitat rural de Haute-Saintonge, logements loués aux curistes (sécurité de la salle de bains, étiquetage du tableau, éclairage adapté aux personnes âgées), local technique de piscine, portail motorisé, véranda.
 - [Électricien à Cognac](https://www.aurora-solutions-electricite.fr/electricien-cognac.html) — Charente (16), propriétés à plusieurs bâtiments, alimentation de dépendances éloignées (section, liaison enterrée, tableau divisionnaire), chute de tension sur longue distance, opportunité réelle du triphasé, éclairage de hangar et d'atelier.
 
-Autres communes desservies sans page dédiée : Pons, Gémozac, Saujon, Île d'Oléron.
+- [Électricien à Gémozac](https://www.aurora-solutions-electricite.fr/electricien-gemozac.html) — commune la plus proche de la base de Pons, rénovation de longère saintongeaise, reprise de dépendances, alimentation par ligne aérienne, surtensions d'orage et parafoudre.
+
+Autres communes desservies sans page dédiée : Pons, Saujon, Île d'Oléron.
 
 ## Précisions utiles
 
