@@ -32,13 +32,15 @@
 - [Rénovation électrique d'une maison ancienne](https://www.aurora-solutions-electricite.fr/renovation-electrique-maison-ancienne.html) : reconnaître une installation à reprendre (fils sous isolant textile, prises sans terre, fusibles à porcelaine), choisir entre rénovation complète, partielle ou mise en sécurité, faire passer les câbles en encastré, en saillie ou en semi-encastré sans fragiliser un mur ancien, créer une prise de terre par piquet là où il n'y en a jamais eu, et organiser le chantier pour continuer à habiter le logement.
 - [Domotique et installation électrique connectée](https://www.aurora-solutions-electricite.fr/domotique.html) : choix entre pilotage filaire et radio, pré-câblage à prévoir avant de refermer les murs, pilotage de l'éclairage, des volets, du chauffage et de la climatisation, motorisation de portail et contrôle d'accès. Traite aussi ce qui doit continuer à fonctionner sans connexion internet et la reprise d'une installation connectée existante. Aurora Solutions n'a de partenariat commercial avec aucune marque de domotique.
 - [Dépannage de portail électrique](https://www.aurora-solutions-electricite.fr/depannage-portail-electrique.html) : portail bloqué, débrayage manuel pour ouvrir à la main en cas de coupure, vérifications à faire avant d'appeler (piles de télécommande, protection au tableau, cellules de sécurité, obstacle au sol), causes fréquentes de panne, alimentation enterrée et section du câble. Aurora Solutions ne supprime pas les cellules de sécurité d'un portail.
+- [Installation électrique neuve](https://www.aurora-solutions-electricite.fr/installation-electrique-neuve.html) : construction, extension, véranda et aménagement de combles. Six étapes du chantier, point de non-retour à la fermeture des cloisons, minima de la norme NF C 15-100 pièce par pièce (5 prises dans un séjour jusqu'à 28 m², 3 par chambre, 6 en cuisine, 4 circuits spécialisés), attentes à prévoir pour la borne de recharge et la climatisation.
+- [Électricité pour commerces et locaux professionnels](https://www.aurora-solutions-electricite.fr/electricite-commerces-locaux-professionnels.html) : éclairage de sécurité, levée des observations d'un rapport de vérification périodique, organisation des travaux sans fermer le commerce, éclairage de vitrine et de réserve, circuits dédiés aux équipements. Aurora Solutions ne réalise pas les vérifications périodiques : elles relèvent d'un organisme accrédité.
 - [Tous les services](https://www.aurora-solutions-electricite.fr/services.html) : vue d'ensemble des prestations, dont la rénovation électrique et l'installation neuve.
 
 ## Pages de référence
 
 - [Accueil](https://www.aurora-solutions-electricite.fr/) : présentation de l'entreprise, services, avis clients, formulaire de devis.
 - [Questions fréquentes](https://www.aurora-solutions-electricite.fr/faq.html) : réponses aux questions courantes sur le dépannage, le devis, la mise aux normes, les bornes de recharge et la climatisation.
-- [À propos](https://www.aurora-solutions-electricite.fr/about.html) : parcours de Thomas, formation, qualifications, garanties, méthode de travail.
+- [À propos](https://www.aurora-solutions-electricite.fr/about.html) : parcours de Thomas, formation, qualifications, garanties, méthode de travail, et une section « Ce que nous ne faisons pas » qui énonce explicitement les limites de l'entreprise (pas de RGE ni d'aides, pas de diagnostic immobilier, pas de mise en service sous fluide, pas de vérification périodique, aucun tarif publié, aucun partenariat de marque).
 - [Réalisations](https://www.aurora-solutions-electricite.fr/realisations.html) : chantiers réalisés en Charente-Maritime, avec photographies de chantiers réels.
 
 ## Zone d'intervention
@@ -65,4 +67,4 @@ Autres communes desservies sans page dédiée : Pons, Saujon, Île d'Oléron.
 - [Mentions légales](https://www.aurora-solutions-electricite.fr/mentions-legales.html)
 - [Politique de confidentialité](https://www.aurora-solutions-electricite.fr/politique-confidentialite.html)
 
-Dernière mise à jour : 2 septembre 2026
+Dernière mise à jour : 7 septembre 2026
