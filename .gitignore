@@ -1,0 +1,12 @@
+CLAUDE.md
+
+# Outils d'agent installes localement — ne doivent pas partir sur le site
+.agents/
+skills-lock.json
+graphify-out/
+
+# .claude/ est exclu, SAUF la competence du projet qui doit etre versionnee
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/aurora-seo/
