@@ -129,7 +129,50 @@
       ],
       "founder": {
         "@type": "Person",
-        "name": "Thomas"
+        "@id": "https://www.aurora-solutions-electricite.fr/#thomas",
+        "name": "Thomas",
+        "jobTitle": "Artisan électricien",
+        "worksFor": {
+          "@id": "https://www.aurora-solutions-electricite.fr/#business"
+        },
+        "knowsAbout": [
+          "Installation électrique",
+          "Rénovation électrique",
+          "Mise aux normes NF C 15-100",
+          "Dépannage électrique",
+          "Borne de recharge IRVE",
+          "Climatisation réversible",
+          "Pompe à chaleur air/air",
+          "Domotique",
+          "Éclairage intérieur et extérieur",
+          "Motorisation de portail"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "diplôme",
+            "name": "Bac professionnel Électricité"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "diplôme",
+            "name": "BTS Électrotechnique"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Qualification IRVE"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "formation",
+            "name": "Formation au dimensionnement des climatisations réversibles",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Thermor (groupe Atlantic)"
+            }
+          }
+        ]
       },
       "hasCredential": [
         {
@@ -153,7 +196,13 @@
         "Pompe à chaleur air/air",
         "Climatisation réversible",
         "Installation électrique",
-        "Dépannage électrique"
+        "Dépannage électrique",
+        "Rénovation électrique",
+        "Tableau électrique",
+        "Domotique",
+        "Éclairage intérieur et extérieur",
+        "Motorisation de portail",
+        "Borne de recharge pour véhicule électrique"
       ],
       "makesOffer": {
         "@type": "OfferCatalog",
@@ -308,44 +357,8 @@
           "availableLanguage": "fr"
         },
         "serviceUrl": "https://www.aurora-solutions-electricite.fr/tableau-electrique-mise-aux-normes.html"
-      }
-    },
-    {
-      "@type": "HowTo",
-      "name": "Comment se déroule le remplacement d'un tableau électrique",
-      "description": "Les cinq étapes suivies par Aurora Solutions pour remplacer un tableau électrique existant et le mettre en conformité avec la norme NF C 15-100.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "État des lieux de l'installation",
-          "text": "Relevé des circuits existants, de la section des conducteurs, de la présence et de la qualité de la mise à la terre, de la puissance souscrite et de l'emplacement disponible pour la gaine technique. C'est cet état des lieux qui détermine l'étendue réelle des travaux."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Coupure et dépose de l'ancien tableau",
-          "text": "Coupure au disjoncteur de branchement, consignation, repérage et étiquetage de chaque conducteur avant démontage, puis dépose de l'ancien tableau et évacuation du matériel déposé."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Pose et câblage du nouveau tableau",
-          "text": "Fixation du coffret modulaire, mise en place de l'appareillage, raccordement circuit par circuit sur les peignes d'alimentation, répartition des départs sous les interrupteurs différentiels 30 mA et réserve d'emplacements libres."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Repérage et essais",
-          "text": "Étiquetage lisible de chaque protection, essai de déclenchement des différentiels, contrôle de la continuité de la terre et vérification circuit par circuit avant remise sous tension définitive."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Remise en service et explications",
-          "text": "Remise sous tension, essai des circuits en fonctionnement réel, remise du schéma du tableau et explication de ce qui a été repris, de ce qui reste éventuellement à prévoir et dans quel ordre."
-        }
-      ]
+      },
+      "@id": "https://www.aurora-solutions-electricite.fr/tableau-electrique-mise-aux-normes.html#service-remplacement-de-tableau-electrique-et-mise-aux-n"
     },
     {
       "@type": "FAQPage",
@@ -806,6 +819,15 @@ details[open] summary { color: var(--navy); }
   background: var(--border); margin-top: 44px; border: 1px solid var(--border); }
 @media (max-width: 900px) { .signes-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .signes-grid { grid-template-columns: 1fr; } }
+
+/* tableau comparatif */
+.twrap { overflow-x: auto; margin-top: 36px; border: 1px solid var(--border); border-radius: 2px; background: var(--white); }
+.twrap table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 520px; }
+.twrap th { text-align: left; padding: 13px 18px; background: var(--navy); color: #fff; font-size: 0.78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.twrap td { padding: 13px 18px; border-bottom: 1px solid var(--border); color: var(--muted); line-height: 1.7; }
+.twrap tbody tr:last-child td { border-bottom: 0; }
+.twrap tbody tr:nth-child(even) { background: var(--off); }
+.twrap td:first-child { color: var(--navy); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -984,6 +1006,19 @@ details[open] summary { color: var(--navy); }
       <h2 class="ttl">Mise en sécurité ou mise aux normes complète&nbsp;: quelle différence&nbsp;?</h2>
       <div class="rule"></div>
       <p class="body-text">La mise en sécurité traite les points dangereux d'une installation existante sans la reprendre entièrement : différentiel 30 mA, mise à la terre, dépose des matériels vétustes. La mise aux normes rend l'installation conforme à la NF C 15-100 en vigueur, circuits et sections compris.</p>
+      <div class="twrap">
+        <table>
+          <thead><tr><th scope="col">Crit&egrave;re</th><th scope="col">Mise en s&eacute;curit&eacute;</th><th scope="col">Mise aux normes compl&egrave;te</th></tr></thead>
+          <tbody>
+            <tr><td>Objectif</td><td>Supprimer le risque d'&eacute;lectrisation et d'incendie</td><td>Rendre l'installation conforme &agrave; la norme en vigueur</td></tr>
+            <tr><td>P&eacute;rim&egrave;tre</td><td>Les points dangereux, sans toucher aux circuits sains</td><td>L'installation enti&egrave;re, l'amont des prises compris</td></tr>
+            <tr><td>Diff&eacute;rentiels 30&nbsp;mA</td><td>Oui</td><td>Oui</td></tr>
+            <tr><td>Mise &agrave; la terre</td><td>Cr&eacute;ation ou reprise</td><td>Cr&eacute;ation ou reprise</td></tr>
+            <tr><td>Circuits et sections</td><td>Conserv&eacute;s s'ils sont sains</td><td>Repris et redimensionn&eacute;s</td></tr>
+            <tr><td>Rep&eacute;rage au tableau</td><td>Oui</td><td>Oui</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="fi d1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:44px">
       <div style="border:1px solid var(--border);border-radius:2px;padding:34px 30px;background:var(--off)">
@@ -1625,7 +1660,7 @@ details[open] summary { color: var(--navy); }
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
-      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="payment-flow-logo.png" alt="Payment Flow" loading="lazy" width="48" height="48">Payment Flow</a></span>
+      <span class="foot-credit">Site réalisé par&nbsp;<span class="foot-credit-name" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6)"><img src="payment-flow-logo.png" alt="Payment Flow" loading="lazy" width="48" height="48">Payment Flow</span></span>
       <span><a href="mentions-legales.html">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="politique-confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
@@ -1669,7 +1704,7 @@ details[open] summary { color: var(--navy); }
 <!-- BANDEAU CONSENTEMENT COOKIES -->
 <div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
   <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
-    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">En savoir plus</a></p>
+    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">Notre politique de confidentialit&eacute;</a></p>
     <div style="display:flex;gap:10px;flex-shrink:0;">
       <button id="cookieRefuse" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;font-family:inherit;">Refuser</button>
       <button id="cookieAccept" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:#e09a10;color:#0b1827;border:none;border-radius:2px;cursor:pointer;font-family:inherit;">Accepter</button>

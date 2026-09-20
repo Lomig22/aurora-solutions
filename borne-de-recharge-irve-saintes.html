@@ -129,7 +129,50 @@
       ],
       "founder": {
         "@type": "Person",
-        "name": "Thomas"
+        "@id": "https://www.aurora-solutions-electricite.fr/#thomas",
+        "name": "Thomas",
+        "jobTitle": "Artisan électricien",
+        "worksFor": {
+          "@id": "https://www.aurora-solutions-electricite.fr/#business"
+        },
+        "knowsAbout": [
+          "Installation électrique",
+          "Rénovation électrique",
+          "Mise aux normes NF C 15-100",
+          "Dépannage électrique",
+          "Borne de recharge IRVE",
+          "Climatisation réversible",
+          "Pompe à chaleur air/air",
+          "Domotique",
+          "Éclairage intérieur et extérieur",
+          "Motorisation de portail"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "diplôme",
+            "name": "Bac professionnel Électricité"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "diplôme",
+            "name": "BTS Électrotechnique"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Qualification IRVE"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "formation",
+            "name": "Formation au dimensionnement des climatisations réversibles",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Thermor (groupe Atlantic)"
+            }
+          }
+        ]
       },
       "hasCredential": [
         {
@@ -153,7 +196,13 @@
         "Pompe à chaleur air/air",
         "Climatisation réversible",
         "Installation électrique",
-        "Dépannage électrique"
+        "Dépannage électrique",
+        "Rénovation électrique",
+        "Tableau électrique",
+        "Domotique",
+        "Éclairage intérieur et extérieur",
+        "Motorisation de portail",
+        "Borne de recharge pour véhicule électrique"
       ],
       "makesOffer": {
         "@type": "OfferCatalog",
@@ -1415,7 +1464,7 @@ details[open] summary { color: var(--navy); }
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Aurora Solutions &mdash; SIRET 945 006 609 000 16</span>
-      <span class="foot-credit">Site réalisé par&nbsp;<a href="https://www.payment-flow.fr" target="_blank" rel="noopener"><img src="payment-flow-logo.png" alt="Payment Flow" loading="lazy" width="48" height="48">Payment Flow</a></span>
+      <span class="foot-credit">Site réalisé par&nbsp;<span class="foot-credit-name" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6)"><img src="payment-flow-logo.png" alt="Payment Flow" loading="lazy" width="48" height="48">Payment Flow</span></span>
       <span><a href="mentions-legales.html">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="politique-confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
@@ -1459,7 +1508,7 @@ details[open] summary { color: var(--navy); }
 <!-- BANDEAU CONSENTEMENT COOKIES -->
 <div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
   <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
-    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">En savoir plus</a></p>
+    <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">Notre politique de confidentialit&eacute;</a></p>
     <div style="display:flex;gap:10px;flex-shrink:0;">
       <button id="cookieRefuse" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;font-family:inherit;">Refuser</button>
       <button id="cookieAccept" type="button" style="padding:11px 20px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:#e09a10;color:#0b1827;border:none;border-radius:2px;cursor:pointer;font-family:inherit;">Accepter</button>
