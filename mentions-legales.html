@@ -99,7 +99,7 @@ ul { list-style: none; }
   position: fixed; inset: 0 0 auto 0; z-index: 1000;
   height: 70px; display: flex; align-items: center;
   background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px); transition: box-shadow var(--ease);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: box-shadow var(--ease);
 }
 .nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
 .nav .container {
@@ -125,7 +125,7 @@ ul { list-style: none; }
 .ham span { display: block; width: 20px; height: 1.5px; background: var(--navy); }
 @media (max-width: 1240px) { .nav-links { gap: 30px; padding-right: 26px; } .nav-right { gap: 18px; } }
 @media (max-width: 1080px) { .nav-links { gap: 20px; } .nav-links a { letter-spacing: 0.06em; } }
-@media (max-width: 1120px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
+@media (max-width: 1200px) { .nav-links { display: none; } .nav-right { display: none; } .ham { display: flex; } }
 .ham.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
 .ham.open span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
 .ham.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
@@ -197,7 +197,7 @@ ul { list-style: none; }
   display: none;
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 2900;
   background: rgba(13,31,53,0.97);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255,255,255,0.12);
   padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
   gap: 10px;
@@ -211,7 +211,7 @@ ul { list-style: none; }
 .callbar .cb-tel { background: var(--gold-btn); color: var(--dark); flex: 1.4; }
 .callbar .cb-devis { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
 .callbar svg { flex-shrink: 0; }
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
   .callbar { display: flex; }
   /* Menu ouvert : la barre du bas s'efface pour ne pas doubler ses actions */
   .mob-menu.open ~ .callbar { display: none; }
@@ -254,7 +254,7 @@ details[open] summary { color: var(--navy); }
    Sous 420px, la marque ne rétrécissait pas : elle poussait le bouton menu
    hors de l'écran (bord gauche à 341px sur un écran de 320px), et la page
    ne défilant pas horizontalement, le menu devenait inatteignable. */
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
   .ham { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; flex-shrink: 0; }
 }
 @media (max-width: 420px) {
@@ -267,6 +267,11 @@ details[open] summary { color: var(--navy); }
   .brand-sub { display: none; }
   .brand-icon { height: 28px; }
 }
+
+/* iPhone : pas d'agrandissement automatique du texte en paysage ;
+   sous-titre de l'en-tête raccourci pour tenir sur une ligne */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (max-width: 480px) { .brand-sub-long { display: none; } }
 </style>
 </head>
 <body>
@@ -278,18 +283,18 @@ details[open] summary { color: var(--navy); }
       <img src="aurora-solutions-logo-icon.png" alt="Aurora Solutions" class="brand-icon" width="96" height="96" loading="eager">
       <span class="brand-text">
         <span class="brand-name">Aurora Solutions</span>
-        <span class="brand-sub">Électricien &middot; Pons, Charente-Maritime</span>
+        <span class="brand-sub">Électricien &middot; Pons<span class="brand-sub-long">, Charente-Maritime</span></span>
       </span>
     </a>
     <ul class="nav-links">
       <li><a href="services.html">Services</a></li>
       <li><a href="realisations.html">Réalisations</a></li>
       <li><a href="about.html">À propos</a></li>
-      <li><a href="/#avis">Avis clients</a></li>
+      <li><a href="/#avis">Avis</a></li>
       <li><a href="/#contact">Contact</a></li>
       <li><a href="faq.html">FAQ</a></li>
     </ul>
-    <div class="nav-right" style="padding:0 48px">
+    <div class="nav-right">
       <a href="tel:+33763094824" class="nav-tel">07 63 09 48 24</a>
       <button class="btn btn-gold" onclick="window.location.href='/#contact'">Devis gratuit</button>
     </div>
@@ -316,7 +321,7 @@ details[open] summary { color: var(--navy); }
     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     Appeler
   </a>
-  <a href="#contact" class="cb-devis" data-devis>Devis gratuit</a>
+  <a href="/#contact" class="cb-devis" data-devis>Devis gratuit</a>
 </div>
 
 <main id="contenu">
@@ -452,7 +457,7 @@ details[open] summary { color: var(--navy); }
         <ul>
           <li><a href="about.html">À propos</a></li>
           <li><a href="realisations.html">Réalisations</a></li>
-          <li><a href="/#avis">Avis clients</a></li>
+          <li><a href="/#avis">Avis</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
