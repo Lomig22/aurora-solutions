@@ -206,6 +206,32 @@ for t, n in collections.Counter(titres).items():
     if n > 1:
         err("(site)", "title dupliqué sur %d pages : %s" % (n, t[:60]))
 
+# ── sécurité : chaque script écrit dans une page doit être autorisé ─────────
+# La CSP de vercel.json n'accepte plus 'unsafe-inline' pour les scripts : chacun
+# est autorisé par son empreinte sha256. Modifier un script sans mettre à jour
+# l'empreinte le fait bloquer par le navigateur, sans message visible — c'est
+# ainsi que le formulaire de devis a cessé de fonctionner en septembre 2026.
+import hashlib, base64
+chemin_vj = os.path.join(RACINE, "vercel.json")
+if os.path.exists(chemin_vj):
+    csp = ""
+    for bloc in json.load(open(chemin_vj, encoding="utf-8")).get("headers", []):
+        for h in bloc.get("headers", []):
+            if h["key"].lower() == "content-security-policy":
+                csp = h["value"]
+    m_src = re.search(r"script-src ([^;]*)", csp)
+    autorises = set(re.findall(r"'sha256-([^']+)'", m_src.group(1))) if m_src else set()
+    if autorises:
+        for f in sorted(glob.glob(os.path.join(RACINE, "*.html"))):
+            s = open(f, encoding="utf-8").read()
+            nom = os.path.basename(f)
+            for m in re.finditer(r'(?is)<script(?![^>]*\bsrc=)(?![^>]*application/ld\+json)[^>]*>(.*?)</script>', s):
+                e = base64.b64encode(hashlib.sha256(m.group(1).encode("utf-8")).digest()).decode()
+                if e not in autorises:
+                    err(nom, "script modifié : ajouter 'sha256-%s' à script-src dans vercel.json" % e)
+            if re.search(r'<[^>]+\son[a-z]+\s*=\s*["\']', s):
+                err(nom, "attribut onclick/onload… bloqué par la CSP (script-src-attr 'none')")
+
 # ── rapport ─────────────────────────────────────────────────────────────────
 print("Aurora Solutions — contrôle avant livraison")
 print("  %d pages de contenu · %d questions FAQ · duplication max %.1f%% (%s)"

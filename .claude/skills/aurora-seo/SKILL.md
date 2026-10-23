@@ -127,9 +127,12 @@ et il finirait par produire des variations.
 ## 6. Pièges connus de ce dépôt
 
 - **Deux composants d'avis coexistent.** `index.html` utilise `.testi` / `.testi-name`
-  / `.testi-body` ; les 18 autres pages utilisent `.pv-card` / `.pv-who` / `.pv-ini`.
-  Une modification d'avis doit traiter les deux. Total actuel : 22 cartes, 19 Google et
-  3 PagesJaunes.
+  / `.testi-body` ; les 20 autres pages utilisent `.pv-card` / `.pv-who` / `.pv-ini`.
+  Une modification d'avis doit traiter les deux. Total actuel : 24 cartes, 21 Google et
+  3 PagesJaunes. Compteurs à mettre à jour : `.pv-src` (20 pages), `.hr-count` et
+  `.rating-note` (index.html), total de cartes dans `.pv-hint` (20 pages) et dans
+  l'intro « N avis vérifiés » d'index.html, ligne « Avis clients » de `llms.txt`. Texte toujours
+  verbatim, nouvelle carte en tête de bande.
 - **Le CSS n'est pas partagé.** Une page qui n'a jamais eu de FAQ n'a pas les règles
   `.faq-list` / `.faq-item` : les blocs s'affichent sans cadre. Copier le bloc CSS
   depuis une page qui en a une.
@@ -144,8 +147,10 @@ et il finirait par produire des variations.
 ## 7. Ce qui compte vraiment, et ce qui ne compte pas
 
 L'audit de septembre 2026 a noté le site **SEO 8/10, GEO 8/10, AEO 9/10**. L'optimisation
-interne est faite. Le seul point **critique** est externe : quatre profils `sameAs`
-seulement, ce qui ne suffit pas à porter vingt pages.
+interne est faite. Le seul point **critique** est externe : cinq profils `sameAs`
+(Google, PagesJaunes, Facebook, Instagram, registre officiel data.gouv.fr — ajouté en
+octobre 2026), ce qui ne suffit pas à porter vingt pages. Houzz est à ajouter dès que
+l'adresse de la fiche est connue.
 
 **Ajouter des pages à un site déjà à 8/10 ne change presque rien.** Si Thomas demande
 comment progresser, la réponse est : les annuaires et les citations locales, pas du
