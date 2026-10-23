@@ -132,6 +132,7 @@
         "@type": "Person",
         "@id": "https://www.aurora-solutions-electricite.fr/#thomas",
         "name": "Thomas",
+        "image": "https://www.aurora-solutions-electricite.fr/thomas-electricien-aurora-solutions-pons.jpg",
         "jobTitle": "Artisan électricien",
         "worksFor": {
           "@id": "https://www.aurora-solutions-electricite.fr/#business"
@@ -292,7 +293,7 @@
       "about": {
         "@id": "https://www.aurora-solutions-electricite.fr/#business"
       },
-      "dateModified": "2026-10-10",
+      "dateModified": "2026-10-21",
       "datePublished": "2026-09-08"
     },
     {
@@ -383,6 +384,22 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Oui, 7 jours sur 7. En centre-ville, prévenez-nous des contraintes d'accès — stationnement, rue étroite, étage sans ascenseur — car elles pèsent sur le délai autant que la distance. Appelez le 07 63 09 48 24."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les caves voûtées du centre ancien de Saintes posent-elles un problème pour l'électricité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'humidité y est permanente, et c'est elle qui décide du matériel. Nous posons des luminaires et des prises adaptés aux locaux humides, en saillie plutôt qu'encastrés dans la pierre, et le circuit de la cave passe sous protection différentielle 30 mA. Une cave éclairée par une rallonge depuis l'étage est à reprendre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mon appartement à Saintes est chauffé par d'anciens convecteurs : peut-on les remplacer sans tout refaire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, le plus souvent. Un radiateur récent se raccorde sur le circuit existant si sa section et sa protection correspondent à la puissance, ce que nous vérifions au tableau. Nous profitons du remplacement pour raccorder le fil pilote, qui permet de programmer le chauffage pièce par pièce."
           }
         }
       ]
@@ -791,6 +808,14 @@ details[open] summary { color: var(--navy); }
    sous-titre de l'en-tête raccourci pour tenir sur une ligne */
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 480px) { .brand-sub-long { display: none; } }
+
+/* Encadré « L'essentiel » : trois points à retenir, en tête de page */
+.essentiel { background: var(--white, #fff); padding: 34px 0 6px; }
+.essentiel-box { max-width: 780px; background: var(--off, #f6f8fb); border-left: 3px solid var(--gold, #c8960c); padding: 18px 22px 18px 20px; }
+.essentiel-ttl { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #96660a; margin-bottom: 10px; }
+.essentiel ul { list-style: none; display: grid; gap: 7px; margin: 0; padding: 0; }
+.essentiel li { position: relative; padding-left: 16px; font-size: 0.9rem; line-height: 1.6; color: var(--navy, #0d1f35); }
+.essentiel li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold, #c8960c); }
 </style>
 </head>
 <body>
@@ -869,6 +894,20 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     </div>
   </div>
 </div>
+
+<!-- L'ESSENTIEL -->
+<aside class="essentiel" aria-label="L'essentiel">
+  <div class="container">
+    <div class="essentiel-box">
+      <p class="essentiel-ttl">L'essentiel</p>
+      <ul>
+        <li>Dans le bâti en pierre du centre historique, les câbles passent sans saignées systématiques.</li>
+        <li>En copropriété, nous intervenons sur les parties privatives de votre logement.</li>
+        <li>Après une inondation de la Charente, l'installation se contrôle avant toute remise sous tension.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
 
 <!-- PRESTATIONS -->
 <div id="prestations">
@@ -1018,6 +1057,14 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       <details class="faq-item">
         <summary>Proposez-vous un dépannage électrique en urgence à Saintes ?</summary>
         <p>Oui, 7 jours sur 7. En centre-ville, prévenez-nous des contraintes d'accès — stationnement, rue étroite, étage sans ascenseur — car elles pèsent sur le délai autant que la distance. Appelez le 07 63 09 48 24.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Les caves voûtées du centre ancien de Saintes posent-elles un problème pour l'électricité ?</summary>
+        <p>L'humidité y est permanente, et c'est elle qui décide du matériel. Nous posons des luminaires et des prises adaptés aux locaux humides, en saillie plutôt qu'encastrés dans la pierre, et le circuit de la cave passe sous protection différentielle 30 mA. Une cave éclairée par une rallonge depuis l'étage est à reprendre.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Mon appartement à Saintes est chauffé par d'anciens convecteurs : peut-on les remplacer sans tout refaire ?</summary>
+        <p>Oui, le plus souvent. Un radiateur récent se raccorde sur le circuit existant si sa section et sa protection correspondent à la puissance, ce que nous vérifions au tableau. Nous profitons du remplacement pour raccorder le fil pilote, qui permet de programmer le chauffage pièce par pièce.</p>
       </details>
     </div>
   </div>
@@ -1456,7 +1503,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.5 8.5 2.5 8.9 2.5 12s0 3.5.07 4.8c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.3.07 1.7.07 4.8.07s3.5 0 4.8-.07c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.07-1.3.07-1.7.07-4.8s0-3.5-.07-4.8c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.84-1.3-.4-.4-.8-.64-1.3-.84-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4z"/><path fill="currentColor" d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2z"/><circle fill="currentColor" cx="17" cy="7" r="1.1"/></svg>
           </a>
         </div>
-        <p style="margin-top:14px;font-size:0.72rem;color:rgba(255,255,255,0.25)">Page mise à jour le 10 octobre 2026</p>
+        <p style="margin-top:14px;font-size:0.72rem;color:rgba(255,255,255,0.25)">Page mise à jour le 21 octobre 2026</p>
       </div>
       <div class="foot-col">
         <h3>Services</h3>

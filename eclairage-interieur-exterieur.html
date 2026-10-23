@@ -132,6 +132,7 @@
         "@type": "Person",
         "@id": "https://www.aurora-solutions-electricite.fr/#thomas",
         "name": "Thomas",
+        "image": "https://www.aurora-solutions-electricite.fr/thomas-electricien-aurora-solutions-pons.jpg",
         "jobTitle": "Artisan électricien",
         "worksFor": {
           "@id": "https://www.aurora-solutions-electricite.fr/#business"
@@ -295,7 +296,7 @@
       "description": "Création de points lumineux, éclairage extérieur, va-et-vient, télérupteur et détecteurs de présence. Règles NF C 15-100 et pièges du passage aux LED.",
       "inLanguage": "fr-FR",
       "datePublished": "2026-09-16",
-      "dateModified": "2026-10-10",
+      "dateModified": "2026-10-21",
       "isPartOf": {
         "@id": "https://www.aurora-solutions-electricite.fr/#website"
       },
@@ -805,6 +806,14 @@ details[open] summary { color: var(--navy); }
    sous-titre de l'en-tête raccourci pour tenir sur une ligne */
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 480px) { .brand-sub-long { display: none; } }
+
+/* Encadré « L'essentiel » : trois points à retenir, en tête de page */
+.essentiel { background: var(--white, #fff); padding: 34px 0 6px; }
+.essentiel-box { max-width: 780px; background: var(--off, #f6f8fb); border-left: 3px solid var(--gold, #c8960c); padding: 18px 22px 18px 20px; }
+.essentiel-ttl { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #96660a; margin-bottom: 10px; }
+.essentiel ul { list-style: none; display: grid; gap: 7px; margin: 0; padding: 0; }
+.essentiel li { position: relative; padding-left: 16px; font-size: 0.9rem; line-height: 1.6; color: var(--navy, #0d1f35); }
+.essentiel li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold, #c8960c); }
 </style>
 </head>
 <body>
@@ -885,12 +894,26 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   </div>
 </div>
 
+<!-- L'ESSENTIEL -->
+<aside class="essentiel" aria-label="L'essentiel">
+  <div class="container">
+    <div class="essentiel-box">
+      <p class="essentiel-ttl">L'essentiel</p>
+      <ul>
+        <li>Huit points lumineux au maximum par circuit d'éclairage, selon la NF C 15-100.</li>
+        <li>La température de couleur, en kelvins, change l'ambiance d'une pièce davantage que la puissance.</li>
+        <li>Va-et-vient, télérupteur ou détecteur : la commande se choisit selon l'usage de chaque pièce.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
 <!-- CIRCUITS -->
 <section class="section bg-white" id="circuits">
   <div class="container">
     <div class="fi" style="max-width:760px">
       <span class="lbl">Ce que dit la norme</span>
-      <h2 class="ttl">Huit points lumineux par circuit, et pourquoi ça compte</h2>
+      <h2 class="ttl">Combien de points lumineux peut-on mettre sur un circuit&nbsp;?</h2>
       <div class="rule"></div>
       <p class="body-text">La norme NF C 15-100 limite à <strong>huit le nombre de points d'éclairage alimentés par un même circuit</strong>. Un point d'éclairage, c'est un plafonnier, une applique, une suspension ou une prise commandée qui lui est dédiée. Le circuit est câblé en 1,5 mm² et protégé par un disjoncteur de 16 A au maximum, le plus souvent 10 A dans un logement.</p>
       <p class="body-text" style="margin-top:18px">Une règle est moins connue et pose bien plus de problèmes en rénovation : pour les <strong>spots et les bandeaux LED</strong>, on ne compte pas les luminaires un par un. Dans une même pièce, on compte un point d'éclairage par tranche de 300 VA. Autrement dit, une enfilade de spots encastrés ne se traite pas comme une enfilade de plafonniers, et c'est exactement là que les installations improvisées finissent hors des clous.</p>
@@ -914,7 +937,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   <div class="container">
     <div class="fi" style="max-width:760px">
       <span class="lbl">Le choix qu'on regrette</span>
-      <h2 class="ttl">La température de couleur décide de l'ambiance, pas la puissance</h2>
+      <h2 class="ttl">Quelle température de couleur choisir pour chaque pièce&nbsp;?</h2>
       <div class="rule"></div>
       <p class="body-text">C'est le premier regret que nous entendons après une pose d'éclairage, et il n'a rien à voir avec la quantité de lumière. Une pièce peut être parfaitement éclairée et vous déplaire quand même, parce que la <strong>teinte</strong> ne correspond pas à son usage. Elle s'exprime en kelvins, un chiffre inscrit sur chaque emballage et que presque personne ne regarde.</p>
     </div>
@@ -962,7 +985,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   <div class="container">
     <div class="fi" style="max-width:760px">
       <span class="lbl">Remplacer l'existant</span>
-      <h2 class="ttl">Passer aux LED : trois pièges dans une maison ancienne</h2>
+      <h2 class="ttl">Quels pièges éviter en passant aux LED dans une maison ancienne&nbsp;?</h2>
       <div class="rule"></div>
       <p class="body-text">Remplacer des ampoules par des LED semble être l'opération la plus simple du monde. Elle l'est, tant qu'on ne touche ni à un variateur, ni à un transformateur, ni à un luminaire encastré dans un plafond isolé.</p>
       <h3 style="font-size:1.1rem;font-weight:700;color:var(--navy);margin:30px 0 10px">Le variateur qui fait scintiller</h3>
@@ -1452,7 +1475,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.5 8.5 2.5 8.9 2.5 12s0 3.5.07 4.8c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.3.07 1.7.07 4.8.07s3.5 0 4.8-.07c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.07-1.3.07-1.7.07-4.8s0-3.5-.07-4.8c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.84-1.3-.4-.4-.8-.64-1.3-.84-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4z"/><path fill="currentColor" d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2z"/><circle fill="currentColor" cx="17" cy="7" r="1.1"/></svg>
           </a>
         </div>
-        <p style="margin-top:14px;font-size:0.72rem;color:rgba(255,255,255,0.25)">Page mise à jour le 10 octobre 2026</p>
+        <p style="margin-top:14px;font-size:0.72rem;color:rgba(255,255,255,0.25)">Page mise à jour le 21 octobre 2026</p>
       </div>
       <div class="foot-col">
         <h3>Services</h3>

@@ -132,6 +132,7 @@
         "@type": "Person",
         "@id": "https://www.aurora-solutions-electricite.fr/#thomas",
         "name": "Thomas",
+        "image": "https://www.aurora-solutions-electricite.fr/thomas-electricien-aurora-solutions-pons.jpg",
         "jobTitle": "Artisan électricien",
         "worksFor": {
           "@id": "https://www.aurora-solutions-electricite.fr/#business"
@@ -830,6 +831,14 @@ details[open] summary { color: var(--navy); }
    sous-titre de l'en-tête raccourci pour tenir sur une ligne */
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 480px) { .brand-sub-long { display: none; } }
+
+/* Encadré « L'essentiel » : trois points à retenir, en tête de page */
+.essentiel { background: var(--white, #fff); padding: 34px 0 6px; }
+.essentiel-box { max-width: 780px; background: var(--off, #f6f8fb); border-left: 3px solid var(--gold, #c8960c); padding: 18px 22px 18px 20px; }
+.essentiel-ttl { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #96660a; margin-bottom: 10px; }
+.essentiel ul { list-style: none; display: grid; gap: 7px; margin: 0; padding: 0; }
+.essentiel li { position: relative; padding-left: 16px; font-size: 0.9rem; line-height: 1.6; color: var(--navy, #0d1f35); }
+.essentiel li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold, #c8960c); }
 </style>
 </head>
 <body>
@@ -909,6 +918,20 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     </div>
   </div>
 </div>
+
+<!-- L'ESSENTIEL -->
+<aside class="essentiel" aria-label="L'essentiel">
+  <div class="container">
+    <div class="essentiel-box">
+      <p class="essentiel-ttl">L'essentiel</p>
+      <ul>
+        <li>Prise renforcée jusqu'à 3,7 kW ou borne murale au-delà : le choix dépend de votre usage et de votre tableau.</li>
+        <li>Chaque point de charge a son propre circuit et ses protections, dans un garage, sous un carport ou en copropriété.</li>
+        <li>Après une visite sur place, l'installation à domicile tient le plus souvent dans la journée.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
 
 <!-- SIGNES -->
 <section class="section bg-off" id="signes">

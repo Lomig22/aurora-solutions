@@ -45,6 +45,11 @@
       "source": "/realisations",
       "destination": "/realisations.html",
       "permanent": true
+    },
+    {
+      "source": "/.claude/:path*",
+      "destination": "/",
+      "permanent": false
     }
   ],
   "headers": [
@@ -70,6 +75,10 @@
         {
           "key": "Permissions-Policy",
           "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
         },
         {
           "key": "Content-Security-Policy",

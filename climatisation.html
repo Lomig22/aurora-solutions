@@ -132,6 +132,7 @@
         "@type": "Person",
         "@id": "https://www.aurora-solutions-electricite.fr/#thomas",
         "name": "Thomas",
+        "image": "https://www.aurora-solutions-electricite.fr/thomas-electricien-aurora-solutions-pons.jpg",
         "jobTitle": "Artisan électricien",
         "worksFor": {
           "@id": "https://www.aurora-solutions-electricite.fr/#business"
@@ -292,7 +293,7 @@
       "url": "https://www.aurora-solutions-electricite.fr/climatisation.html",
       "name": "Climatisation à Pons – Aurora Solutions | Charente-Maritime",
       "description": "Aurora Solutions – Climatisation réversible (mono/multi-split, PAC air/air) à Pons et en Charente-Maritime. Matériel Thermor. Devis gratuit.",
-      "dateModified": "2026-10-10",
+      "dateModified": "2026-10-21",
       "isPartOf": {
         "@id": "https://www.aurora-solutions-electricite.fr/#website"
       },
@@ -853,6 +854,14 @@ details[open] summary { color: var(--navy); }
    sous-titre de l'en-tête raccourci pour tenir sur une ligne */
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 480px) { .brand-sub-long { display: none; } }
+
+/* Encadré « L'essentiel » : trois points à retenir, en tête de page */
+.essentiel { background: var(--white, #fff); padding: 34px 0 6px; }
+.essentiel-box { max-width: 780px; background: var(--off, #f6f8fb); border-left: 3px solid var(--gold, #c8960c); padding: 18px 22px 18px 20px; }
+.essentiel-ttl { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #96660a; margin-bottom: 10px; }
+.essentiel ul { list-style: none; display: grid; gap: 7px; margin: 0; padding: 0; }
+.essentiel li { position: relative; padding-left: 16px; font-size: 0.9rem; line-height: 1.6; color: var(--navy, #0d1f35); }
+.essentiel li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold, #c8960c); }
 </style>
 </head>
 <body>
@@ -932,6 +941,20 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     </div>
   </div>
 </div>
+
+<!-- L'ESSENTIEL -->
+<aside class="essentiel" aria-label="L'essentiel">
+  <div class="container">
+    <div class="essentiel-box">
+      <p class="essentiel-ttl">L'essentiel</p>
+      <ul>
+        <li>Mono-split pour une pièce, multi-split pour plusieurs : une seule unité extérieure peut desservir jusqu'à cinq pièces.</li>
+        <li>En chauffage, un appareil récent restitue environ 3,5 à 4,5 kWh de chaleur par kWh consommé sur une saison.</li>
+        <li>Nous réalisons l'étude, la pose et le raccordement ; la mise en service sous fluide est confiée à un intervenant titulaire de l'attestation de capacité.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
 
 <!-- INTRO / DESCRIPTION -->
 <div id="installations">
@@ -1077,7 +1100,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   <div class="container">
     <div class="fi" style="text-align:center;max-width:500px;margin:0 auto">
       <span class="lbl">Notre méthode</span>
-      <h2 class="ttl">De l'étude à la mise en service</h2>
+      <h2 class="ttl">Comment se déroule l'installation d'une climatisation réversible&nbsp;?</h2>
       <div class="rule rule-center"></div>
       <p class="body-text">Chaque installation de climatisation suit le même protocole, du premier échange à la mise en route.</p>
     </div>
@@ -1127,7 +1150,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   <div class="container">
     <div class="fi" style="max-width:760px">
       <span class="lbl lbl-light">Voisinage</span>
-      <h2 class="ttl ttl-light">Le bruit, la question qu'on pose trop tard</h2>
+      <h2 class="ttl ttl-light">L'unité extérieure fait-elle du bruit chez les voisins&nbsp;?</h2>
       <div class="rule"></div>
       <p style="font-size:0.93rem;color:rgba(255,255,255,0.55);line-height:1.9;font-weight:300;margin-bottom:18px">C'est le sujet qui revient le plus souvent une fois l'appareil posé, et presque jamais avant. Il y a deux bruits distincts, et ils ne posent pas le même problème. L'unité intérieure produit un souffle, que l'on règle et auquel on s'habitue. L'unité extérieure abrite le compresseur et un ventilateur : c'est elle qui concerne le voisinage.</p>
       <p style="font-size:0.93rem;color:rgba(255,255,255,0.55);line-height:1.9;font-weight:300;margin-bottom:18px">Elle se remarque surtout la nuit et en hiver — au moment où elle travaille le plus, et où tout est silencieux autour. Un appareil parfaitement acceptable un après-midi de juillet peut devenir le sujet d'une conversation de voisinage un matin de janvier.</p>
@@ -1696,7 +1719,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       <span class="foot-credit">Site réalisé par&nbsp;<span class="foot-credit-name" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6)"><img src="payment-flow-logo.png" alt="Payment Flow" loading="lazy" width="48" height="48">Payment Flow</span></span>
       <span><a href="mentions-legales.html">Mentions légales</a> &nbsp;&middot;&nbsp; <a href="politique-confidentialite.html">Confidentialité</a></span>
     </div>
-    <p style="text-align:center;font-size:0.68rem;color:rgba(255,255,255,0.15);margin-top:14px">Page mise à jour le 10 octobre 2026</p>
+    <p style="text-align:center;font-size:0.68rem;color:rgba(255,255,255,0.15);margin-top:14px">Page mise à jour le 21 octobre 2026</p>
   </div>
 </footer>
 
