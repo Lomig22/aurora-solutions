@@ -1,1 +1,4 @@
-
+Contact: mailto:aurora.solutions.17800@gmail.com
+Expires: 2027-10-23T00:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://www.aurora-solutions-electricite.fr/.well-known/security.txt
