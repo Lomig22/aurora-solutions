@@ -50,6 +50,11 @@
       "source": "/.claude/:path*",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/.gitignore",
+      "destination": "/",
+      "permanent": false
     }
   ],
   "headers": [
@@ -74,7 +79,7 @@
         },
         {
           "key": "Permissions-Policy",
-          "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+          "value": "geolocation=(), microphone=(), camera=(), payment=(), usb=(), accelerometer=(), gyroscope=(), magnetometer=(), display-capture=(), browsing-topics=()"
         },
         {
           "key": "Cross-Origin-Opener-Policy",
@@ -82,7 +87,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-RVua+jgMpMjhOzupZo0UZjKWShhzlqOmtuv+rB2DT9E=' 'sha256-dunSXZzKEzBKdzuWXqi0nH1VB22o8DHMLI3W5n2bUDY=' 'sha256-hvwJ5DiUqHNqZpLy4duc4Spq5mAoo/SRIbku8deEIHo=' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw=' 'sha256-wtyzp7cscpUnedvmtGBl53Me/XPCtjY/JLvuudxUyXs=' 'sha256-GLj0w+W7iiNDigKd+dgqshuEZ38Uh+stOB0gL8C7Lc8=' 'sha256-4mLM6h6CLlbQRwF8pCz3rJC02/fG391ETIlTQl18ySY=' 'sha256-fKOP0PA3m4Mz9ONZG0+EHtOVnqeiN21Cu6MSxA5AHjI=' 'sha256-Qw1R7oPApR+EhLkLUQVq+tEepLc0Ze0FPtLrTQ9lhR0=' 'sha256-9jwr+wE/V6FWxPEZ34UY/zWJNzDbOzvDm8ZcmqxHeRU=' 'sha256-3VeypwuUe/4t92o0OdG5IxIwFuDA4xyCRnx8l/s0KwU=' 'sha256-IVNvrGyAMfVZi2DGuBPWmsRbAJPIo/QEj399z14qEuU=' 'sha256-J0WBG9ejso5t9WCETLmH66iS3MD2n4E5Mwwtt76EcFM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-src 'none'; frame-ancestors 'self'; worker-src 'none'; manifest-src 'self'; media-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
         }
       ]
     }

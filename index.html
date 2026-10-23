@@ -3017,11 +3017,11 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   box-shadow:0 8px 32px rgba(0,0,0,0.18);
   display:none; align-items:center; gap:14px;
   font-family:'Inter',-apple-system,sans-serif; font-size:0.9rem; font-weight:500;
-  max-width:calc(100vw - 48px); white-space:nowrap;
+  max-width:calc(100vw - 32px); width:max-content; box-sizing:border-box; line-height:1.45;
 ">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" stroke="#5fe89e" stroke-width="1.8"/><path d="M7.5 12.5l3 3 6-6" stroke="#5fe89e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <span>Votre demande a bien été envoyée. Nous vous recontacterons sous 24h.</span>
-  <button onclick="document.getElementById('toastMerci').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:1.2rem;line-height:1;padding:0 0 0 8px;flex-shrink:0;">&times;</button>
+  <button id="toastClose" aria-label="Fermer" style="background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:1.2rem;line-height:1;padding:0 0 0 8px;flex-shrink:0;">&times;</button>
 </div>
 
 <script>
@@ -3085,6 +3085,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     history.replaceState(null, '', window.location.pathname);
     setTimeout(function () { toast.style.display = 'none'; }, 7000);
   }
+  var toastClose = document.getElementById('toastClose');
+  if (toastClose) toastClose.addEventListener('click', function () { document.getElementById('toastMerci').style.display = 'none'; });
 })();
 </script>
 
