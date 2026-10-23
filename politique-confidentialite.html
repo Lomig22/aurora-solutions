@@ -1,22 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) — chargé uniquement après consentement cookies -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.auroraLoadGA = function () {
-    if (window.auroraGALoaded) return;
-    window.auroraGALoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY';
-    document.head.appendChild(s);
-    gtag('js', new Date());
-    gtag('config', 'G-5WL3YGM6LY');
-  };
-  if (localStorage.getItem('auroraCookieConsent') === 'accepted') { window.auroraLoadGA(); }
-</script>
+<!-- Mesure d’audience chargée uniquement après consentement -->
+<script src="consent.js"></script>
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -351,7 +337,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       <div class="legal-section">
         <h2>Responsable du traitement</h2>
         <p><strong>Aurora Solutions</strong> — SAS au capital variable<br>
-        7 B Impasse des Géraniums, 17800 Pons<br>
+        Pons (17800), Charente-Maritime<br>
         SIRET : 945 006 609 000 16<br>
         Contact : <a href="mailto:aurora.solutions.17800@gmail.com">aurora.solutions.17800@gmail.com</a></p>
       </div>
@@ -399,7 +385,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         <h2>Cookies et traceurs</h2>
         <p>Ce site utilise <strong>Google Analytics</strong> (service de mesure d'audience de Google LLC) pour analyser la fréquentation du site. Cet outil dépose des cookies de mesure d'audience sur votre appareil, uniquement après votre consentement explicite recueilli via le bandeau affiché lors de votre première visite.</p>
         <p>Les données collectées (pages visitées, durée, provenance) sont anonymisées et ne permettent pas de vous identifier personnellement. Google LLC peut être amené à transférer ces données aux États-Unis dans le cadre du Privacy Shield / Data Privacy Framework.</p>
-        <p>Vous pouvez à tout moment retirer votre consentement en effaçant les données de navigation de ce site dans les paramètres de votre navigateur (le bandeau de consentement s'affichera à nouveau), ou désactiver ces cookies via l'extension <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out</a>.</p>
+        <p>Vous pouvez modifier votre choix ou retirer votre consentement à tout moment en cliquant sur « Gérer mes cookies », accessible en bas de chaque page. Votre choix est conservé pendant 180 jours, puis demandé à nouveau. Le retrait bloque la mesure d’audience et supprime les cookies Analytics accessibles au site ; il ne supprime pas les données déjà collectées.</p>
       </div>
 
       <div class="legal-section">
@@ -420,7 +406,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       <div class="legal-section">
         <h2>Mise à jour</h2>
         <p>Cette politique de confidentialité peut être mise à jour à tout moment. La date de dernière mise à jour est indiquée ci-dessous.</p>
-        <p>Dernière mise à jour : août 2026</p>
+        <p>Dernière mise à jour : 23 octobre 2026</p>
       </div>
 
     </div>
@@ -510,6 +496,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       </a>
     </div>
   </div>
+<div style="text-align:center;color:#ffffff;padding:8px 16px"><button type="button" data-cookie-settings aria-controls="cookieBanner" aria-expanded="false" style="font:inherit;color:inherit;background:transparent;border:0;padding:8px;min-height:44px;cursor:pointer;text-decoration:underline">Gérer mes cookies</button></div>
 </footer>
 
 <script>
@@ -529,7 +516,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 </script>
 
 <!-- BANDEAU CONSENTEMENT COOKIES -->
-<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+<div id="cookieBanner" role="region" aria-label="Choix des cookies" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
   <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
     <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">Notre politique de confidentialit&eacute;</a></p>
     <div style="display:flex;gap:10px;flex-shrink:0;">
@@ -538,24 +525,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     </div>
   </div>
 </div>
-<script>
-(function () {
-  var consent = localStorage.getItem('auroraCookieConsent');
-  var banner = document.getElementById('cookieBanner');
-  if (!consent && banner) { banner.style.display = 'block'; }
-  var acceptBtn = document.getElementById('cookieAccept');
-  var refuseBtn = document.getElementById('cookieRefuse');
-  if (acceptBtn) acceptBtn.addEventListener('click', function () {
-    localStorage.setItem('auroraCookieConsent', 'accepted');
-    banner.style.display = 'none';
-    if (window.auroraLoadGA) window.auroraLoadGA();
-  });
-  if (refuseBtn) refuseBtn.addEventListener('click', function () {
-    localStorage.setItem('auroraCookieConsent', 'refused');
-    banner.style.display = 'none';
-  });
-})();
-</script>
+
 
 </body>
 </html>

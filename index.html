@@ -1,22 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) — chargé uniquement après consentement cookies -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.auroraLoadGA = function () {
-    if (window.auroraGALoaded) return;
-    window.auroraGALoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5WL3YGM6LY';
-    document.head.appendChild(s);
-    gtag('js', new Date());
-    gtag('config', 'G-5WL3YGM6LY');
-  };
-  if (localStorage.getItem('auroraCookieConsent') === 'accepted') { window.auroraLoadGA(); }
-</script>
+<!-- Mesure d’audience chargée uniquement après consentement -->
+<script src="consent.js"></script>
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,22 +90,6 @@
         "latitude": 45.5786,
         "longitude": -0.5486
       },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
-      ],
       "priceRange": "€€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Espèces, Virement, Chèque",
@@ -277,7 +247,7 @@
       "about": {
         "@id": "https://www.aurora-solutions-electricite.fr/#business"
       },
-      "dateModified": "2026-10-21",
+      "dateModified": "2026-10-23",
       "datePublished": "2026-09-07"
     },
     {
@@ -296,7 +266,7 @@
           "name": "Dans quelle zone intervenez-vous ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Jonzac, Gémozac, Île d'Oléron et Saujon, ainsi qu'à Cognac, en Charente. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune."
+            "text": "Nous intervenons à Pons et dans plusieurs communes de Charente-Maritime : Saintes, Royan, Jonzac, Gémozac, Île d'Oléron et Saujon, ainsi qu'à Cognac, en Charente. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune."
           }
         },
         {
@@ -1727,7 +1697,7 @@ ul { list-style: none; }
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 2000;
+  z-index: 3100;
   background: rgba(9,20,35,0.78);
   align-items: center;
   justify-content: center;
@@ -2026,7 +1996,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         <h1>Votre électricien à Pons, 7 jours sur 7</h1>
         <p class="hero-sub">Installation, dépannage et rénovation électrique pour les particuliers et les professionnels de Charente-Maritime.</p>
         <ul class="hero-promises">
-          <li>Intervention le jour même, 7 jours sur 7</li>
+          <li>Dépannage urgent 7j/7 — délai confirmé lors de votre appel</li>
           <li>Devis gratuit, prix ferme sans surprise</li>
           <li>Travaux garantis, conformes aux normes en vigueur</li>
         </ul>
@@ -2308,7 +2278,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       <div class="rule"></div>
       <p class="body-text">Aurora Solutions est basée à Pons, en Charente-Maritime, et n'en bouge pas. Ce n'est pas une adresse de façade destinée à couvrir un département entier depuis une grande ville : c'est là que part la camionnette le matin, et c'est ce qui explique nos délais sur les communes voisines.</p>
       <p class="body-text" style="margin-top:18px">Travailler dans un secteur qu'on connaît change des choses très concrètes. On sait que le centre de Pons, avec ses maisons anciennes en pierre calcaire adossées au coteau, ne se câble pas comme un pavillon des années 1990 en périphérie. On sait qu'un hameau alimenté par une ligne aérienne encaisse les orages différemment d'un branchement enterré de centre-bourg. Et on sait qu'entre deux communes voisines, un lieu-dit peut porter le même nom, ce qui vaut mieux qu'on demande votre position avant de partir.</p>
-      <p class="body-text" style="margin-top:18px">Notre zone tient dans une trentaine de kilomètres autour de Pons, et nous préférons l'assumer plutôt que d'annoncer un département entier que nous ne pourrions pas desservir correctement. Concrètement, cela couvre Gémozac et Saintes au nord, Jonzac au sud, Saujon, Royan et l'île d'Oléron vers la côte, et Cognac à l'est, en Charente.</p>
+      <p class="body-text" style="margin-top:18px">Basés à Pons, nous intervenons notamment à Gémozac, Saintes, Jonzac, Cognac, Saujon et Royan, ainsi que sur l’île d’Oléron. Selon votre commune et la nature de la demande, nous confirmons les possibilités de déplacement et le délai d’intervention lors de notre premier échange.</p>
       <p class="body-text" style="margin-top:18px">Chaque commune a sa page, avec ce qui lui est propre — le bâti, les contraintes, les demandes qui reviennent :</p>
       <div class="zone-card-grid fi d1" style="margin-top:26px">
         <a href="electricien-saintes.html" class="zone-card">
@@ -2764,7 +2734,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       </details>
       <details class="faq-item fi">
         <summary>Dans quelle zone intervenez-vous ?</summary>
-        <p>Nous intervenons à Pons et dans toute la Charente-Maritime environnante : Saintes, Royan, Jonzac, Gémozac, Île d'Oléron et Saujon, ainsi qu'à Cognac, en Charente. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune.</p>
+        <p>Nous intervenons à Pons et dans plusieurs communes de Charente-Maritime : Saintes, Royan, Jonzac, Gémozac, Île d'Oléron et Saujon, ainsi qu'à Cognac, en Charente. Que vous soyez un particulier ou un professionnel, contactez-nous pour vérifier la faisabilité de votre projet dans votre commune.</p>
       </details>
       <details class="faq-item fi">
         <summary>Le devis est-il vraiment gratuit ?</summary>
@@ -2868,7 +2838,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         </div>
         <div>
           <button type="submit" class="btn btn-gold" style="padding:14px 30px">Envoyer la demande</button>
-          <p class="fnote" style="margin-top:12px">Vos informations restent confidentielles et ne sont jamais transmises à des tiers.</p>
+          <p class="fnote" style="margin-top:12px">Vos informations sont utilisées pour répondre à votre demande et acheminées par FormSubmit. Consultez notre <a href="politique-confidentialite.html">politique de confidentialité</a> pour connaître les destinataires des données et vos droits.</p>
         </div>
       </form>
     </div>
@@ -2876,12 +2846,12 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 </section>
 
 <!-- MODAL DEVIS -->
-<div class="modal-overlay" id="devisModal">
+<div class="modal-overlay" id="devisModal" role="dialog" aria-modal="true" aria-labelledby="devisTitle" tabindex="-1">
   <div class="modal-box">
     <button class="modal-close" id="modalClose" aria-label="Fermer">&times;</button>
     <span class="lbl">Demande de devis</span>
-    <h2 class="ttl" style="margin-bottom:6px">Parlons de votre projet</h2>
-    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:28px">Nous vous recontactons sous 24h avec un devis détaillé et sans engagement.</p>
+    <h2 id="devisTitle" class="ttl" style="margin-bottom:6px">Parlons de votre projet</h2>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:28px">Nous vous recontactons sous 24h pour préciser votre besoin et organiser, si nécessaire, une visite avant l’établissement du devis gratuit.</p>
     <form class="mform" action="https://formsubmit.co/aurora.solutions.17800@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nouvelle demande de devis – Aurora Solutions">
       <input type="hidden" name="_captcha" value="false">
@@ -2921,7 +2891,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       </div>
       <div>
         <button type="submit" class="btn btn-gold" style="padding:14px 30px;width:100%">Envoyer la demande</button>
-        <p class="fnote" style="margin-top:10px">Vos informations restent confidentielles.</p>
+        <p class="fnote" style="margin-top:10px">Vos informations sont utilisées pour répondre à votre demande et acheminées par FormSubmit. Consultez notre <a href="politique-confidentialite.html">politique de confidentialité</a> pour connaître les destinataires des données et vos droits.</p>
       </div>
     </form>
   </div>
@@ -3004,8 +2974,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         <a href="politique-confidentialite.html">Politique de confidentialité</a>
       </span>
     </div>
-    <div class="foot-updated">Page mise à jour le 21 octobre 2026</div>
+    <div class="foot-updated">Page mise à jour le 23 octobre 2026</div>
   </div>
+<div style="text-align:center;color:#ffffff;padding:8px 16px"><button type="button" data-cookie-settings aria-controls="cookieBanner" aria-expanded="false" style="font:inherit;color:inherit;background:transparent;border:0;padding:8px;min-height:44px;cursor:pointer;text-decoration:underline">Gérer mes cookies</button></div>
 </footer>
 
 <!-- MOBILE BAR -->
@@ -3067,16 +3038,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     obs.observe(el);
   });
 
-  /* ── Modal devis ── */
-  var modal = document.getElementById('devisModal');
-  function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
-  document.querySelectorAll('[data-devis]').forEach(function (el) {
-    el.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
-  });
-  document.getElementById('modalClose').addEventListener('click', closeModal);
-  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
   /* ── Toast confirmation devis ── */
   if (new URLSearchParams(window.location.search).get('merci') === '1') {
@@ -3092,7 +3053,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 <script src="forms.js"></script>
 <!-- BANDEAU CONSENTEMENT COOKIES -->
-<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+<div id="cookieBanner" role="region" aria-label="Choix des cookies" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:3000;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
   <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
     <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;flex:1;min-width:240px;">Nous utilisons des cookies de mesure d'audience (Google Analytics) uniquement avec votre accord. <a href="politique-confidentialite.html" style="color:#e09a10;text-decoration:underline;">Notre politique de confidentialit&eacute;</a></p>
     <div style="display:flex;gap:10px;flex-shrink:0;">
@@ -3101,24 +3062,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     </div>
   </div>
 </div>
-<script>
-(function () {
-  var consent = localStorage.getItem('auroraCookieConsent');
-  var banner = document.getElementById('cookieBanner');
-  if (!consent && banner) { banner.style.display = 'block'; }
-  var acceptBtn = document.getElementById('cookieAccept');
-  var refuseBtn = document.getElementById('cookieRefuse');
-  if (acceptBtn) acceptBtn.addEventListener('click', function () {
-    localStorage.setItem('auroraCookieConsent', 'accepted');
-    banner.style.display = 'none';
-    if (window.auroraLoadGA) window.auroraLoadGA();
-  });
-  if (refuseBtn) refuseBtn.addEventListener('click', function () {
-    localStorage.setItem('auroraCookieConsent', 'refused');
-    banner.style.display = 'none';
-  });
-})();
-</script>
 
+
+<script src="devis.js"></script>
 </body>
 </html>
